@@ -1,0 +1,672 @@
+﻿/*estilos de los mensajes*/
+.info, .success, .warning, .errorMessage, .validation
+{
+    position: absolute; /*right: 20px;      top: 20px; */
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+}
+.info
+{
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('../Images/icon/info.png');
+}
+.success
+{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url('../Images/icon/success.png');
+}
+.warning
+{
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('../Images/icon/warning.png');
+}
+.errorMessage
+{
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../Images/icon/error.png');
+}
+.validation
+{
+    color: #D63301;
+    background-color: #FFCCBA;
+    background-image: url('../Images/icon/error.png');
+}
+.errorAdvertencia
+{
+    /*position: absolute; right: 20px;      top: 20px; */
+    border: 1px solid; /*margin: 10px 0px;*/ /*padding: 15px 10px 15px 50px;*/
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: .5em; /*border-radius: .5em;*/
+    color: #D8000C;
+    background-color: #FFCCBA;
+}
+/*Fin Estilos mensajes*/
+
+
+
+.BordeContenido
+{
+    /*border: 1px solid gray;     border-bottom: 3px solid gray;     margin:2px 2px 2px 2px;*/
+}
+.BordeContenidoInterno
+{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 3px solid gray;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.BordeContenidoInterno th
+{
+    border-bottom: 1px solid gray;
+    background-color: #009999; /*verde azulado*/
+}
+
+.GrillaRenderizada th
+{
+    border-bottom: 1px solid gray;
+    background-color: #009999; /*verde azulado*/
+}
+
+.EncabezadoTabla
+{
+    border-bottom: 1px solid gray;
+    background-color: #009999;
+    font-weight: 700;
+}
+
+.Titulo
+{
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.Subtitulo
+{
+    text-align: left;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.botonNegro
+{
+    background-color: Black;
+    color: #CCCCCC;
+    font-weight: bold;
+    font-family: "Calibri";
+    font-size: small;
+}
+
+.login
+{
+    border: 1px solid gray;
+    background-color: #F4F4F4;
+    width: 60%;
+}
+
+.MensajeCerrar
+{
+    background-color: #BC1010;
+    color: white;
+    font-weight: bold;
+    width: 75%;
+    height: 50%;
+    border: 1px solid gray;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.error
+{
+    color: #BC1010;
+    font-weight: bold;
+}
+
+.error1
+{
+    background-color: #BC1010;
+    padding: 6px 12px; /*border-radius: 4px;*/
+    color: white;
+    font-weight: bold;
+    margin-left: 16px;
+    margin-top: 6px;
+    position: absolute;
+}
+.error1:before
+{
+    /* Este es un truco para crear una flechita */
+    content: '';
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #BC1010;
+    border-left: 8px solid transparent;
+    left: -16px;
+    position: absolute;
+    top: 5px;
+}
+
+/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background-color: Silver; /*#b6b7bc;*/ /*background-image: url(../Images/fgris.jpg);/**/
+    font-size: .80em;
+    font-family: Calibri, Arial, sans-serif; /*font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;*/
+    margin: 0px;
+    padding: 0px;
+    color: Black; /*#696969;*/
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: Calibri, Arial, Verdana, sans-serif;
+    font-size: 1.5em;
+    color: #666666; /*font-variant: small-caps;*/
+    text-transform: none;
+    font-weight: 200;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    /*height: 100%;*/
+    width: 960px;
+    background-color: White; /*#fff;*/
+    margin: 10px auto 0px auto;
+    border: 1px solid Black; /*#496077;*/
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #009999; /*verde azulado*/ /*#3366CC; /*#4b6c9e;*/ /*background-image: url(../Images/fNaranja.jpg);*/
+    width: 100%;
+}
+
+.titulo
+{
+    padding: 5px;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: Black; /*Gray; /*#f9f9f9;*/
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    /*padding: 2px 2px;     margin: 4px 2px 2px 4px;*/
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #6699FF; /*#4b6c9e;*/ /*background-image: url(../Images/fNaranja.jpg);*/
+    width: 100%;
+    color: #4e5766;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+#MenuPrincipal
+{
+    background-color: Silver; /*#3a4f63;*/ /*background-image: url(../Images/fgris.jpg);*/
+    width: 100%;
+    border-top: 1px solid Gray;
+    border-bottom: 2px solid Gray;
+}
+
+#MenuSys
+{
+    background-color: Silver;
+    border-right: 1px solid Gray; /*margin-top: 20px;     margin-bottom: 20px;     margin-left: 5px;*/
+    padding: 2px;
+    width: 186px;
+    height: 416px;
+    float: left;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    z-index: 100;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: Silver; /*#bfcbd6; /*#465c71;*/ /*background-image: url(../Images/fgris.jpg);*/
+    border: 1px Black solid; /*#4e667d solid;*/
+    color: Black; /*#dde4ec;*/
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: Black; /*#6699FF;/*#bfcbd6;*/
+    color: #009999; /*verde azulado*/ /*#6699FF; /*#bfcbd6; /*#465c71;*/
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+div.menu.SeparadorMenu
+{
+    border-top: 3px solid Black;
+}
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline
+{
+    display: inline;
+}
+
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.loginWidth
+{
+    width: 60%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* PABLO  
+----------------------------------------------------------*/
+
+.Centrado
+{
+    text-align: center;
+}
+.Derecha
+{
+    text-align: right;
+}
+.Izquierda
+{
+    text-align: left;
+}
+
+.FlotanteDerecha
+{
+    float: right;
+}
+
+#Logo
+{
+    /*float:right;*/
+    border: 1px solid Black;
+    margin: 10px;
+}
+
+.Nota
+{
+    color: #000000;
+    background-color: #FFFF66;
+    border: 1px solid #000000;
+    font-weight: bold;
+}
+
+a.Hiperlink
+{
+    text-decoration: underline;
+    color: Blue;
+    cursor: pointer;
+}
+
+/* Horarios
+---------------------------------------------------------- */
+
+.dia-hora
+{
+    float:left;
+    width:15px;
+    height:30px;
+    border-right:1px solid #000000;
+    background:#FFFFFF;  
+}
+    
+.seleccionado
+{
+    background-color:Red;
+}
+
+.desseleccionado
+{
+    background-color:#FFFFFF;
+}
+        
+.fila
+{    
+     width:465px;
+     border-bottom:1px solid #000000;
+     border-left::1px solid #000000;
+     height:30px
+}
+
+.dia
+{
+    width:80px;
+    height:30px; 
+    float:left;
+    text-align:center;
+    vertical-align:middle;
+    border-right:1px solid #000000;
+    position:relative;
+}
+
+.dia span
+{
+    position:absolute; 
+    bottom:5px;
+    left:5px;
+    }
+
+#horarios
+{
+     border-top:1px solid #000000;
+     border-left:1px solid #000000;
+     width:465px;  
+}
+
+.celeste
+{
+    background:#C3FCF4;
+}
+
+.rojo
+{
+    background:red;
+}
+
+.seleccionar-columna
+{
+    margin-top:5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #000;
+    cursor:pointer;
+}
+
+.left
+{
+    float:left;
+}
+
+.right
+{
+    float:right
+}
+
+.seleccionar-fila
+{
+    margin-top:10px;
+    margin-right:2px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #000;
+    border-bottom: 5px solid transparent;
+    cursor:pointer;
+}
+
+#horarios-referencias
+{
+    width:300px;
+    border:1px dotted #000000;
+    margin-top:15px;
+    padding:5px;
+    /*border-bottom-style:dotted*/
+}
+    
+.cuadrado
+{
+    width:10px;
+    height:10px;
+    border:1px solid gray; 
+    float:left;
+    margin-right:5px;   
+}
+
+.tdInput
+{
+    width:200px;
+    text-align:left;
+    }
+    
+.tdLabel
+{
+    width:150px;
+    text-align:right;
+    
+    }
+    
+
+/*Grilla
+-------------------------------------------*/
+
+
+.grilla { /*padding: 1em; background-color: #EEEEDD; border: 1px solid #CCC;  */}
+.grilla input { font-family: Arial; }
+.grilla b { font-weight: bold; }
+.grilla p { margin-top: 0.9em; margin-bottom: 0.9em; }
+.grilla select[multiple] { width: 100%; height: 8em; }
+.grilla h2 { margin-top: 0.4em; }
+
+.ko-grid { margin-bottom: 1em; width: 900px; border: 1px solid silver; background-color:White; }
+.ko-grid th { text-align:left; background-color: rgb(0, 153, 153); color:White; text-align:center; }
+.ko-grid td, th { padding: 0.4em; }
+.ko-grid tr:nth-child(odd) { background-color: #DDD; }
+.ko-grid-pageLinks { margin-bottom: 1em; width:900px; word-wrap: break-word; }
+.ko-grid-pageLinks a { padding: 0.5em; margin-bottom:25px !important; }
+.ko-grid-pageLinks a.selected { background-color: rgb(0, 153, 153); color: White; }
+.grilla { /*height:20em;*/ overflow:auto } /* Mobile Safari reflows pages slowly, so fix the height to avoid the need for reflows */
+

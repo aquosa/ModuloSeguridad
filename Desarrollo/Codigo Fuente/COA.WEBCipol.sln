@@ -1,0 +1,286 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrameworkCOA", "FrameworkCOA", "{F5B791A8-18B7-454A-8E0A-A31C8913396A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitio Web Service Cipol", "Sitio Web Service Cipol", "{F3AFDC43-4924-4E5A-BBD1-99636F075E73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitios Comun", "Sitios Comun", "{E93BC276-6D24-4742-B010-E91AB26D495A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitio Inicio", "Sitio Inicio", "{D4C6E6DA-9C20-4923-9B22-9BFE2DA707D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitio Admin Seguridad", "Sitio Admin Seguridad", "{640920B5-BEDF-4DCC-B45B-C445A5FC2ED1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "frmkAccesoDatos", "COA.WebCipol\FrameworkCOA\AccesoDatos\frmkAccesoDatos.vbproj", "{2DB17444-A744-4D2B-AC19-DB3FFE31E744}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "frmkEntidadesEmpresariales", "COA.WebCipol\FrameworkCOA\EntidadesEmpresariales\frmkEntidadesEmpresariales.vbproj", "{DC802DC9-8DC3-42D6-B436-E5E42B30CC37}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UtilidadesCOA", "COA.WebCipol\FrameworkCOA\UtilidadesCOA\UtilidadesCOA.vbproj", "{ECD0FB0B-D5AB-43B2-9A07-4404274E2936}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "wsTransporte", "COA.WebCipol\FrameworkCOA\wsTransporte\wsTransporte.vbproj", "{2EB3EB6E-2F0D-4720-BA64-B2C29B4F1772}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "frmkReglasNegocio", "COA.WebCipol\FrameworkCOA\ReglasNegocio\frmkReglasNegocio.vbproj", "{1A2DB683-F966-450A-8552-3051F7F9716B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "frmkFachada", "COA.WebCipol\FrameworkCOA\Fachada\frmkFachada.vbproj", "{1E3EC879-1D8F-4A7C-AF45-1B778432CBAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COA.WebCipol.Presentacion", "COA.WebCipol\Sitio Admin Seguridad\COA.WebCipol.Presentacion\COA.WebCipol.Presentacion.csproj", "{29E84F3E-2AAC-4A18-8E88-E0C5134A5AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COA.WebCipol.Inicio", "COA.WebCipol\Sitio Inicio\COA.WebCipol.Inicio\COA.WebCipol.Inicio.csproj", "{5BE1D679-DBAA-4F88-8FB7-C6EE57907DFA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AccesoADatos", "COA.WebCipol\Sitio Web Service Cipol\AccesoADatos\AccesoADatos.vbproj", "{5FFD67AE-90D9-4189-B0C7-596BECB3CC20}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EntidadesEmpresariales", "COA.WebCipol\Sitio Web Service Cipol\EntidadesEmpresariales\EntidadesEmpresariales.vbproj", "{2A941D54-AFF8-4DA4-BE46-FB2DDF0B468E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ReglasNegocio", "COA.WebCipol\Sitio Web Service Cipol\ReglasNegocio\ReglasNegocio.vbproj", "{4DE4DA6B-F49B-46D1-9230-738AF77B01B1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "webCIPOL", "COA.WebCipol\Sitio Web Service Cipol\webCIPOL\webCIPOL.vbproj", "{4D05F5E2-8E32-41D0-9B66-AB1AE340D38D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COA.WebCipol.Comun", "COA.WebCipol\Sitios Comun\COA.WebCipol.Comun\COA.WebCipol.Comun.csproj", "{46B8F321-AD6C-4EF4-8C0C-9CDC7C539B95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COA.WebCipol.Fachada", "COA.WebCipol\Sitios Comun\COA.WebCipol.Fachada\COA.WebCipol.Fachada.csproj", "{45206D17-E4A5-4FC8-B1B0-EC806F5CED91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COA.WebCipol.Entidades.Core", "COA.WebCipol\Sitios Comun\Entidades.WebCipol.Core\COA.WebCipol.Entidades.Core.csproj", "{2E97DEE2-AB64-4258-8D28-600B1B3DA676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COA.WebCipol.Entidades", "COA.WebCipol\Sitios Comun\Entidates.WebCipol\COA.WebCipol.Entidades.csproj", "{F636E939-5C7B-48E2-90EE-BF20B2345DB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wsCipolServices", "COA.WebCipol\Sitios Comun\wsCipolServices\wsCipolServices.csproj", "{86DFC171-01A0-4F32-8639-3B462577848E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COA.Logger", "COA.WebCipol\FrameworkCOA\COA.Logger\COA.Logger.csproj", "{2D1F1635-D708-46B2-A3CA-BB68C1DB12AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{8FF0654A-FF00-483E-8A42-A1554BB6128E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupWebCipol", "COA.WebCipol\Setup\SetupWebCipol\SetupWebCipol.vdproj", "{92E82871-6B2F-49F0-A499-B54A1C51908E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigurarEntorno", "ConfigurarEntorno", "{975ADD25-4BED-4309-ABA8-6DEF0988F3CB}"
+	ProjectSection(SolutionItems) = preProject
+		COA.WebCipol\FrameworkCOA\ConfigurarEntorno\ConfigurarEntorno.exe = COA.WebCipol\FrameworkCOA\ConfigurarEntorno\ConfigurarEntorno.exe
+		COA.WebCipol\FrameworkCOA\ConfigurarEntorno\UtilidadesCOA.dll = COA.WebCipol\FrameworkCOA\ConfigurarEntorno\UtilidadesCOA.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInstall", "COA.WebCipol\Setup\CustomInstall\CustomInstall.csproj", "{3BFF130E-47C7-4AED-8A3C-A948E6E08128}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Dependencias", "_Dependencias", "{25AF7F21-4DE0-40D4-A831-DF19F28846E9}"
+	ProjectSection(SolutionItems) = preProject
+		COA.WebCipol\_Dependencias\Microsoft.Practices.EnterpriseLibrary.Common.dll = COA.WebCipol\_Dependencias\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		COA.WebCipol\_Dependencias\Microsoft.Practices.EnterpriseLibrary.Logging.dll = COA.WebCipol\_Dependencias\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+		COA.WebCipol\_Dependencias\Microsoft.Practices.ServiceLocation.dll = COA.WebCipol\_Dependencias\Microsoft.Practices.ServiceLocation.dll
+		COA.WebCipol\_Dependencias\Microsoft.Practices.Unity.dll = COA.WebCipol\_Dependencias\Microsoft.Practices.Unity.dll
+		COA.WebCipol\_Dependencias\Microsoft.Practices.Unity.Interception.dll = COA.WebCipol\_Dependencias\Microsoft.Practices.Unity.Interception.dll
+		COA.WebCipol\_Dependencias\ReportViewer.exe = COA.WebCipol\_Dependencias\ReportViewer.exe
+		COA.WebCipol\_Dependencias\ReportViewerLP.exe = COA.WebCipol\_Dependencias\ReportViewerLP.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MockServices", "MockServices", "{DCE2EF9A-8F72-4046-B019-804B3ECEC296}"
+	ProjectSection(SolutionItems) = preProject
+		COA.WebCipol\MockServices\JPMC---Token-soapui-project.xml = COA.WebCipol\MockServices\JPMC---Token-soapui-project.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COA.ConectorServicio", "COA.WebCipol\Sitio Inicio\COA.ConectorServicio\COA.ConectorServicio.csproj", "{B8ECACF7-9456-4AEE-89A5-02670969752F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 22
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.coasa.com.ar/tfs/coa
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = COA.WebCipol\\FrameworkCOA\\wsTransporte\\wsTransporte.vbproj
+		SccProjectTopLevelParentUniqueName1 = COA.WEBCipol.sln
+		SccProjectName1 = COA.WebCipol/FrameworkCOA/wsTransporte
+		SccLocalPath1 = COA.WebCipol\\FrameworkCOA\\wsTransporte
+		SccProjectUniqueName2 = COA.WebCipol\\FrameworkCOA\\ReglasNegocio\\frmkReglasNegocio.vbproj
+		SccProjectTopLevelParentUniqueName2 = COA.WEBCipol.sln
+		SccProjectName2 = COA.WebCipol/FrameworkCOA/ReglasNegocio
+		SccLocalPath2 = COA.WebCipol\\FrameworkCOA\\ReglasNegocio
+		SccProjectUniqueName3 = COA.WebCipol\\FrameworkCOA\\Fachada\\frmkFachada.vbproj
+		SccProjectTopLevelParentUniqueName3 = COA.WEBCipol.sln
+		SccProjectName3 = COA.WebCipol/FrameworkCOA/Fachada
+		SccLocalPath3 = COA.WebCipol\\FrameworkCOA\\Fachada
+		SccProjectUniqueName4 = COA.WebCipol\\Sitio\u0020Admin\u0020Seguridad\\COA.WebCipol.Presentacion\\COA.WebCipol.Presentacion.csproj
+		SccProjectTopLevelParentUniqueName4 = COA.WEBCipol.sln
+		SccProjectName4 = COA.WebCipol/Sitio\u0020Admin\u0020Seguridad/COA.WebCipol.Presentacion
+		SccLocalPath4 = COA.WebCipol\\Sitio\u0020Admin\u0020Seguridad\\COA.WebCipol.Presentacion
+		SccProjectUniqueName5 = COA.WebCipol\\Sitio\u0020Inicio\\COA.WebCipol.Inicio\\COA.WebCipol.Inicio.csproj
+		SccProjectTopLevelParentUniqueName5 = COA.WEBCipol.sln
+		SccProjectName5 = COA.WebCipol/Sitio\u0020Inicio/COA.WebCipol.Inicio
+		SccLocalPath5 = COA.WebCipol\\Sitio\u0020Inicio\\COA.WebCipol.Inicio
+		SccProjectUniqueName6 = COA.WebCipol\\Sitio\u0020Web\u0020Service\u0020Cipol\\AccesoADatos\\AccesoADatos.vbproj
+		SccProjectTopLevelParentUniqueName6 = COA.WEBCipol.sln
+		SccProjectName6 = COA.WebCipol/Sitio\u0020Web\u0020Service\u0020Cipol/AccesoADatos
+		SccLocalPath6 = COA.WebCipol\\Sitio\u0020Web\u0020Service\u0020Cipol\\AccesoADatos
+		SccProjectUniqueName7 = COA.WebCipol\\Sitio\u0020Web\u0020Service\u0020Cipol\\EntidadesEmpresariales\\EntidadesEmpresariales.vbproj
+		SccProjectTopLevelParentUniqueName7 = COA.WEBCipol.sln
+		SccProjectName7 = COA.WebCipol/Sitio\u0020Web\u0020Service\u0020Cipol/EntidadesEmpresariales
+		SccLocalPath7 = COA.WebCipol\\Sitio\u0020Web\u0020Service\u0020Cipol\\EntidadesEmpresariales
+		SccProjectUniqueName8 = COA.WebCipol\\Sitio\u0020Web\u0020Service\u0020Cipol\\ReglasNegocio\\ReglasNegocio.vbproj
+		SccProjectTopLevelParentUniqueName8 = COA.WEBCipol.sln
+		SccProjectName8 = COA.WebCipol/Sitio\u0020Web\u0020Service\u0020Cipol/ReglasNegocio
+		SccLocalPath8 = COA.WebCipol\\Sitio\u0020Web\u0020Service\u0020Cipol\\ReglasNegocio
+		SccProjectUniqueName9 = COA.WebCipol\\Sitio\u0020Web\u0020Service\u0020Cipol\\webCIPOL\\webCIPOL.vbproj
+		SccProjectTopLevelParentUniqueName9 = COA.WEBCipol.sln
+		SccProjectName9 = COA.WebCipol/Sitio\u0020Web\u0020Service\u0020Cipol/webCIPOL
+		SccLocalPath9 = COA.WebCipol\\Sitio\u0020Web\u0020Service\u0020Cipol\\webCIPOL
+		SccProjectUniqueName10 = COA.WebCipol\\Sitios\u0020Comun\\COA.WebCipol.Comun\\COA.WebCipol.Comun.csproj
+		SccProjectTopLevelParentUniqueName10 = COA.WEBCipol.sln
+		SccProjectName10 = COA.WebCipol/Sitios\u0020Comun/COA.WebCipol.Comun
+		SccLocalPath10 = COA.WebCipol\\Sitios\u0020Comun\\COA.WebCipol.Comun
+		SccProjectUniqueName11 = COA.WebCipol\\Sitios\u0020Comun\\COA.WebCipol.Fachada\\COA.WebCipol.Fachada.csproj
+		SccProjectTopLevelParentUniqueName11 = COA.WEBCipol.sln
+		SccProjectName11 = COA.WebCipol/Sitios\u0020Comun/COA.WebCipol.Fachada
+		SccLocalPath11 = COA.WebCipol\\Sitios\u0020Comun\\COA.WebCipol.Fachada
+		SccProjectUniqueName12 = COA.WebCipol\\Sitios\u0020Comun\\Entidades.WebCipol.Core\\COA.WebCipol.Entidades.Core.csproj
+		SccProjectTopLevelParentUniqueName12 = COA.WEBCipol.sln
+		SccProjectName12 = COA.WebCipol/Sitios\u0020Comun/Entidades.WebCipol.Core
+		SccLocalPath12 = COA.WebCipol\\Sitios\u0020Comun\\Entidades.WebCipol.Core
+		SccProjectUniqueName13 = COA.WebCipol\\Sitios\u0020Comun\\Entidates.WebCipol\\COA.WebCipol.Entidades.csproj
+		SccProjectTopLevelParentUniqueName13 = COA.WEBCipol.sln
+		SccProjectName13 = COA.WebCipol/Sitios\u0020Comun/Entidates.WebCipol
+		SccLocalPath13 = COA.WebCipol\\Sitios\u0020Comun\\Entidates.WebCipol
+		SccProjectUniqueName14 = COA.WebCipol\\Sitios\u0020Comun\\wsCipolServices\\wsCipolServices.csproj
+		SccProjectTopLevelParentUniqueName14 = COA.WEBCipol.sln
+		SccProjectName14 = COA.WebCipol/Sitios\u0020Comun/wsCipolServices
+		SccLocalPath14 = COA.WebCipol\\Sitios\u0020Comun\\wsCipolServices
+		SccProjectUniqueName15 = COA.WebCipol\\FrameworkCOA\\COA.Logger\\COA.Logger.csproj
+		SccProjectTopLevelParentUniqueName15 = COA.WEBCipol.sln
+		SccProjectName15 = COA.WebCipol/FrameworkCOA/COA.Logger
+		SccLocalPath15 = COA.WebCipol\\FrameworkCOA\\COA.Logger
+		SccProjectUniqueName16 = COA.WebCipol\\Setup\\SetupWebCipol\\SetupWebCipol.vdproj
+		SccProjectTopLevelParentUniqueName16 = COA.WEBCipol.sln
+		SccProjectName16 = COA.WebCipol/Setup/SetupWebCipol
+		SccLocalPath16 = COA.WebCipol\\Setup\\SetupWebCipol
+		SccProjectUniqueName17 = COA.WebCipol\\Setup\\CustomInstall\\CustomInstall.csproj
+		SccProjectName17 = COA.WebCipol/Setup/CustomInstall
+		SccLocalPath17 = COA.WebCipol\\Setup\\CustomInstall
+		SccProjectUniqueName18 = COA.WebCipol\\FrameworkCOA\\AccesoDatos\\frmkAccesoDatos.vbproj
+		SccProjectTopLevelParentUniqueName18 = COA.WEBCipol.sln
+		SccProjectName18 = COA.WebCipol/FrameworkCOA/AccesoDatos
+		SccLocalPath18 = COA.WebCipol\\FrameworkCOA\\AccesoDatos
+		SccProjectUniqueName19 = COA.WebCipol\\FrameworkCOA\\EntidadesEmpresariales\\frmkEntidadesEmpresariales.vbproj
+		SccProjectTopLevelParentUniqueName19 = COA.WEBCipol.sln
+		SccProjectName19 = COA.WebCipol/FrameworkCOA/EntidadesEmpresariales
+		SccLocalPath19 = COA.WebCipol\\FrameworkCOA\\EntidadesEmpresariales
+		SccProjectUniqueName20 = COA.WebCipol\\FrameworkCOA\\UtilidadesCOA\\UtilidadesCOA.vbproj
+		SccProjectTopLevelParentUniqueName20 = COA.WEBCipol.sln
+		SccProjectName20 = COA.WebCipol/FrameworkCOA/UtilidadesCOA
+		SccLocalPath20 = COA.WebCipol\\FrameworkCOA\\UtilidadesCOA
+		SccProjectUniqueName21 = COA.WebCipol\\Sitio\u0020Inicio\\COA.ConectorServicio\\COA.ConectorServicio.csproj
+		SccProjectTopLevelParentUniqueName21 = COA.WEBCipol.sln
+		SccProjectName21 = COA.WebCipol/Sitio\u0020Inicio/COA.ConectorServicio
+		SccLocalPath21 = COA.WebCipol\\Sitio\u0020Inicio\\COA.ConectorServicio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DB17444-A744-4D2B-AC19-DB3FFE31E744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DB17444-A744-4D2B-AC19-DB3FFE31E744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DB17444-A744-4D2B-AC19-DB3FFE31E744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DB17444-A744-4D2B-AC19-DB3FFE31E744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC802DC9-8DC3-42D6-B436-E5E42B30CC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC802DC9-8DC3-42D6-B436-E5E42B30CC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC802DC9-8DC3-42D6-B436-E5E42B30CC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC802DC9-8DC3-42D6-B436-E5E42B30CC37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD0FB0B-D5AB-43B2-9A07-4404274E2936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD0FB0B-D5AB-43B2-9A07-4404274E2936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD0FB0B-D5AB-43B2-9A07-4404274E2936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD0FB0B-D5AB-43B2-9A07-4404274E2936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB3EB6E-2F0D-4720-BA64-B2C29B4F1772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB3EB6E-2F0D-4720-BA64-B2C29B4F1772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB3EB6E-2F0D-4720-BA64-B2C29B4F1772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB3EB6E-2F0D-4720-BA64-B2C29B4F1772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A2DB683-F966-450A-8552-3051F7F9716B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2DB683-F966-450A-8552-3051F7F9716B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2DB683-F966-450A-8552-3051F7F9716B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2DB683-F966-450A-8552-3051F7F9716B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E3EC879-1D8F-4A7C-AF45-1B778432CBAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E3EC879-1D8F-4A7C-AF45-1B778432CBAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E3EC879-1D8F-4A7C-AF45-1B778432CBAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E3EC879-1D8F-4A7C-AF45-1B778432CBAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E84F3E-2AAC-4A18-8E88-E0C5134A5AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E84F3E-2AAC-4A18-8E88-E0C5134A5AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E84F3E-2AAC-4A18-8E88-E0C5134A5AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E84F3E-2AAC-4A18-8E88-E0C5134A5AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE1D679-DBAA-4F88-8FB7-C6EE57907DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE1D679-DBAA-4F88-8FB7-C6EE57907DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE1D679-DBAA-4F88-8FB7-C6EE57907DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE1D679-DBAA-4F88-8FB7-C6EE57907DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FFD67AE-90D9-4189-B0C7-596BECB3CC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FFD67AE-90D9-4189-B0C7-596BECB3CC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FFD67AE-90D9-4189-B0C7-596BECB3CC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FFD67AE-90D9-4189-B0C7-596BECB3CC20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A941D54-AFF8-4DA4-BE46-FB2DDF0B468E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A941D54-AFF8-4DA4-BE46-FB2DDF0B468E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A941D54-AFF8-4DA4-BE46-FB2DDF0B468E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A941D54-AFF8-4DA4-BE46-FB2DDF0B468E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE4DA6B-F49B-46D1-9230-738AF77B01B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE4DA6B-F49B-46D1-9230-738AF77B01B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE4DA6B-F49B-46D1-9230-738AF77B01B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE4DA6B-F49B-46D1-9230-738AF77B01B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D05F5E2-8E32-41D0-9B66-AB1AE340D38D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D05F5E2-8E32-41D0-9B66-AB1AE340D38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D05F5E2-8E32-41D0-9B66-AB1AE340D38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D05F5E2-8E32-41D0-9B66-AB1AE340D38D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B8F321-AD6C-4EF4-8C0C-9CDC7C539B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B8F321-AD6C-4EF4-8C0C-9CDC7C539B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B8F321-AD6C-4EF4-8C0C-9CDC7C539B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B8F321-AD6C-4EF4-8C0C-9CDC7C539B95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45206D17-E4A5-4FC8-B1B0-EC806F5CED91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45206D17-E4A5-4FC8-B1B0-EC806F5CED91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45206D17-E4A5-4FC8-B1B0-EC806F5CED91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45206D17-E4A5-4FC8-B1B0-EC806F5CED91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E97DEE2-AB64-4258-8D28-600B1B3DA676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E97DEE2-AB64-4258-8D28-600B1B3DA676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E97DEE2-AB64-4258-8D28-600B1B3DA676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E97DEE2-AB64-4258-8D28-600B1B3DA676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F636E939-5C7B-48E2-90EE-BF20B2345DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F636E939-5C7B-48E2-90EE-BF20B2345DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F636E939-5C7B-48E2-90EE-BF20B2345DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F636E939-5C7B-48E2-90EE-BF20B2345DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86DFC171-01A0-4F32-8639-3B462577848E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86DFC171-01A0-4F32-8639-3B462577848E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86DFC171-01A0-4F32-8639-3B462577848E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86DFC171-01A0-4F32-8639-3B462577848E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D1F1635-D708-46B2-A3CA-BB68C1DB12AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1F1635-D708-46B2-A3CA-BB68C1DB12AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D1F1635-D708-46B2-A3CA-BB68C1DB12AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D1F1635-D708-46B2-A3CA-BB68C1DB12AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E82871-6B2F-49F0-A499-B54A1C51908E}.Debug|Any CPU.ActiveCfg = Debug
+		{92E82871-6B2F-49F0-A499-B54A1C51908E}.Release|Any CPU.ActiveCfg = Release
+		{3BFF130E-47C7-4AED-8A3C-A948E6E08128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BFF130E-47C7-4AED-8A3C-A948E6E08128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BFF130E-47C7-4AED-8A3C-A948E6E08128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BFF130E-47C7-4AED-8A3C-A948E6E08128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8ECACF7-9456-4AEE-89A5-02670969752F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8ECACF7-9456-4AEE-89A5-02670969752F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8ECACF7-9456-4AEE-89A5-02670969752F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8ECACF7-9456-4AEE-89A5-02670969752F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2DB17444-A744-4D2B-AC19-DB3FFE31E744} = {F5B791A8-18B7-454A-8E0A-A31C8913396A}
+		{DC802DC9-8DC3-42D6-B436-E5E42B30CC37} = {F5B791A8-18B7-454A-8E0A-A31C8913396A}
+		{ECD0FB0B-D5AB-43B2-9A07-4404274E2936} = {F5B791A8-18B7-454A-8E0A-A31C8913396A}
+		{2EB3EB6E-2F0D-4720-BA64-B2C29B4F1772} = {F5B791A8-18B7-454A-8E0A-A31C8913396A}
+		{1A2DB683-F966-450A-8552-3051F7F9716B} = {F5B791A8-18B7-454A-8E0A-A31C8913396A}
+		{1E3EC879-1D8F-4A7C-AF45-1B778432CBAC} = {F5B791A8-18B7-454A-8E0A-A31C8913396A}
+		{29E84F3E-2AAC-4A18-8E88-E0C5134A5AEC} = {640920B5-BEDF-4DCC-B45B-C445A5FC2ED1}
+		{5BE1D679-DBAA-4F88-8FB7-C6EE57907DFA} = {D4C6E6DA-9C20-4923-9B22-9BFE2DA707D5}
+		{5FFD67AE-90D9-4189-B0C7-596BECB3CC20} = {F3AFDC43-4924-4E5A-BBD1-99636F075E73}
+		{2A941D54-AFF8-4DA4-BE46-FB2DDF0B468E} = {F3AFDC43-4924-4E5A-BBD1-99636F075E73}
+		{4DE4DA6B-F49B-46D1-9230-738AF77B01B1} = {F3AFDC43-4924-4E5A-BBD1-99636F075E73}
+		{4D05F5E2-8E32-41D0-9B66-AB1AE340D38D} = {F3AFDC43-4924-4E5A-BBD1-99636F075E73}
+		{46B8F321-AD6C-4EF4-8C0C-9CDC7C539B95} = {E93BC276-6D24-4742-B010-E91AB26D495A}
+		{45206D17-E4A5-4FC8-B1B0-EC806F5CED91} = {E93BC276-6D24-4742-B010-E91AB26D495A}
+		{2E97DEE2-AB64-4258-8D28-600B1B3DA676} = {E93BC276-6D24-4742-B010-E91AB26D495A}
+		{F636E939-5C7B-48E2-90EE-BF20B2345DB4} = {E93BC276-6D24-4742-B010-E91AB26D495A}
+		{86DFC171-01A0-4F32-8639-3B462577848E} = {E93BC276-6D24-4742-B010-E91AB26D495A}
+		{2D1F1635-D708-46B2-A3CA-BB68C1DB12AE} = {F5B791A8-18B7-454A-8E0A-A31C8913396A}
+		{92E82871-6B2F-49F0-A499-B54A1C51908E} = {8FF0654A-FF00-483E-8A42-A1554BB6128E}
+		{975ADD25-4BED-4309-ABA8-6DEF0988F3CB} = {F5B791A8-18B7-454A-8E0A-A31C8913396A}
+		{B8ECACF7-9456-4AEE-89A5-02670969752F} = {D4C6E6DA-9C20-4923-9B22-9BFE2DA707D5}
+	EndGlobalSection
+EndGlobal

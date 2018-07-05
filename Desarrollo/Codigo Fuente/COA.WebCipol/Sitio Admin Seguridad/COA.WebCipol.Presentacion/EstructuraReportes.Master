@@ -1,0 +1,13 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EstructuraReportes.master.cs"
+    Inherits="COA.WebCipol.Presentacion.EstructuraReportes" MasterPageFile="~/EstructuraSitio.Master" %>
+
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="HeadContent">
+    <script type="text/javascript" src="js/jsCIPOLReportes.js">
+    </script>
+</asp:Content>
+<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="CuerpoPagina">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <asp:ContentPlaceHolder ID="ContenidoReportViewer" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

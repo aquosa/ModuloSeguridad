@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsTareas" targetNamespace="http://tempuri.org/dtsTareas.xsd" xmlns:mstns="http://tempuri.org/dtsTareas.xsd" xmlns="http://tempuri.org/dtsTareas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsTareas" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="dtsTareas" msprop:Generator_DataSetName="dtsTareas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_TAREASAUTORIZADAS" msprop:Generator_UserTableName="SE_TAREASAUTORIZADAS" msprop:Generator_RowDeletedName="SE_TAREASAUTORIZADASRowDeleted" msprop:Generator_RowChangedName="SE_TAREASAUTORIZADASRowChanged" msprop:Generator_RowClassName="SE_TAREASAUTORIZADASRow" msprop:Generator_RowChangingName="SE_TAREASAUTORIZADASRowChanging" msprop:Generator_RowEvArgName="SE_TAREASAUTORIZADASRowChangeEvent" msprop:Generator_RowEvHandlerName="SE_TAREASAUTORIZADASRowChangeEventHandler" msprop:Generator_TableClassName="SE_TAREASAUTORIZADASDataTable" msprop:Generator_TableVarName="tableSE_TAREASAUTORIZADAS" msprop:Generator_RowDeletingName="SE_TAREASAUTORIZADASRowDeleting" msprop:Generator_TablePropName="SE_TAREASAUTORIZADAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTAREA" msprop:Generator_UserColumnName="IDTAREA" msprop:Generator_ColumnPropNameInRow="IDTAREA" msprop:Generator_ColumnVarNameInTable="columnIDTAREA" msprop:Generator_ColumnPropNameInTable="IDTAREAColumn" type="xs:int" />
+              <xs:element name="DESCRIPCIONTAREA" msprop:Generator_UserColumnName="DESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONTAREA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONTAREAColumn" type="xs:string" default="_" />
+              <xs:element name="IDAUTORIZACION" msprop:Generator_UserColumnName="IDAUTORIZACION" msprop:Generator_ColumnPropNameInRow="IDAUTORIZACION" msprop:Generator_ColumnVarNameInTable="columnIDAUTORIZACION" msprop:Generator_ColumnPropNameInTable="IDAUTORIZACIONColumn" type="xs:int" default="-1" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TAREAS" msprop:Generator_UserTableName="TAREAS" msprop:Generator_RowDeletedName="TAREASRowDeleted" msprop:Generator_RowChangedName="TAREASRowChanged" msprop:Generator_RowClassName="TAREASRow" msprop:Generator_RowChangingName="TAREASRowChanging" msprop:Generator_RowEvArgName="TAREASRowChangeEvent" msprop:Generator_RowEvHandlerName="TAREASRowChangeEventHandler" msprop:Generator_TableClassName="TAREASDataTable" msprop:Generator_TableVarName="tableTAREAS" msprop:Generator_RowDeletingName="TAREASRowDeleting" msprop:Generator_TablePropName="TAREAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTAREA" msprop:Generator_UserColumnName="IDTAREA" msprop:Generator_ColumnPropNameInRow="IDTAREA" msprop:Generator_ColumnVarNameInTable="columnIDTAREA" msprop:Generator_ColumnPropNameInTable="IDTAREAColumn" type="xs:int" />
+              <xs:element name="CODIGOTAREA" msprop:Generator_UserColumnName="CODIGOTAREA" msprop:Generator_ColumnPropNameInRow="CODIGOTAREA" msprop:Generator_ColumnVarNameInTable="columnCODIGOTAREA" msprop:Generator_ColumnPropNameInTable="CODIGOTAREAColumn" type="xs:string" />
+              <xs:element name="DESCRIPCIONTAREA" msprop:Generator_UserColumnName="DESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONTAREA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONTAREAColumn" type="xs:string" />
+              <xs:element name="REQUIEREAUDITORIA" msprop:Generator_UserColumnName="REQUIEREAUDITORIA" msprop:Generator_ColumnPropNameInRow="REQUIEREAUDITORIA" msprop:Generator_ColumnVarNameInTable="columnREQUIEREAUDITORIA" msprop:Generator_ColumnPropNameInTable="REQUIEREAUDITORIAColumn" type="xs:string" />
+              <xs:element name="IDSISTEMA" msprop:Generator_UserColumnName="IDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDSISTEMA" msprop:Generator_ColumnPropNameInTable="IDSISTEMAColumn" type="xs:int" />
+              <xs:element name="DESCSISTEMA" msprop:Generator_UserColumnName="DESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AUDITORIA" msprop:Generator_UserColumnName="AUDITORIA" msprop:Generator_ColumnPropNameInRow="AUDITORIA" msprop:Generator_ColumnVarNameInTable="columnAUDITORIA" msprop:Generator_ColumnPropNameInTable="AUDITORIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDAUTORIZACION" msprop:Generator_UserColumnName="IDAUTORIZACION" msprop:Generator_ColumnVarNameInTable="columnIDAUTORIZACION" msprop:Generator_ColumnPropNameInRow="IDAUTORIZACION" msprop:Generator_ColumnPropNameInTable="IDAUTORIZACIONColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDGRUPO" msprop:Generator_UserColumnName="IDGRUPO" msprop:Generator_ColumnVarNameInTable="columnIDGRUPO" msprop:Generator_ColumnPropNameInRow="IDGRUPO" msprop:Generator_ColumnPropNameInTable="IDGRUPOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDAUTORIZACIONBOOL" msdata:ReadOnly="true" msdata:Expression="IIF(IDAUTORIZACION &gt; 0, TRUE, FALSE)" msprop:Generator_UserColumnName="IDAUTORIZACIONBOOL" msprop:Generator_ColumnPropNameInRow="IDAUTORIZACIONBOOL" msprop:Generator_ColumnVarNameInTable="columnIDAUTORIZACIONBOOL" msprop:Generator_ColumnPropNameInTable="IDAUTORIZACIONBOOLColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_TAREAS" msprop:Generator_UserTableName="SE_TAREAS" msprop:Generator_RowDeletedName="SE_TAREASRowDeleted" msprop:Generator_RowChangedName="SE_TAREASRowChanged" msprop:Generator_RowClassName="SE_TAREASRow" msprop:Generator_RowChangingName="SE_TAREASRowChanging" msprop:Generator_RowEvArgName="SE_TAREASRowChangeEvent" msprop:Generator_RowEvHandlerName="SE_TAREASRowChangeEventHandler" msprop:Generator_TableClassName="SE_TAREASDataTable" msprop:Generator_TableVarName="tableSE_TAREAS" msprop:Generator_RowDeletingName="SE_TAREASRowDeleting" msprop:Generator_TablePropName="SE_TAREAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTAREA" msprop:Generator_UserColumnName="IDTAREA" msprop:Generator_ColumnPropNameInRow="IDTAREA" msprop:Generator_ColumnVarNameInTable="columnIDTAREA" msprop:Generator_ColumnPropNameInTable="IDTAREAColumn" type="xs:int" />
+              <xs:element name="DESCRIPCIONTAREA" msprop:Generator_UserColumnName="DESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONTAREA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONTAREAColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_SIST_HABILITADOS" msprop:Generator_UserTableName="SE_SIST_HABILITADOS" msprop:Generator_RowDeletedName="SE_SIST_HABILITADOSRowDeleted" msprop:Generator_RowChangedName="SE_SIST_HABILITADOSRowChanged" msprop:Generator_RowClassName="SE_SIST_HABILITADOSRow" msprop:Generator_RowChangingName="SE_SIST_HABILITADOSRowChanging" msprop:Generator_RowEvArgName="SE_SIST_HABILITADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="SE_SIST_HABILITADOSRowChangeEventHandler" msprop:Generator_TableClassName="SE_SIST_HABILITADOSDataTable" msprop:Generator_TableVarName="tableSE_SIST_HABILITADOS" msprop:Generator_RowDeletingName="SE_SIST_HABILITADOSRowDeleting" msprop:Generator_TablePropName="SE_SIST_HABILITADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DESCSISTEMA" msprop:Generator_UserColumnName="DESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDSISTEMA" msprop:Generator_UserColumnName="IDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDSISTEMA" msprop:Generator_ColumnPropNameInTable="IDSISTEMAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CODSISTEMA" msprop:Generator_UserColumnName="CODSISTEMA" msprop:Generator_ColumnPropNameInRow="CODSISTEMA" msprop:Generator_ColumnVarNameInTable="columnCODSISTEMA" msprop:Generator_ColumnPropNameInTable="CODSISTEMAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDCODSISTEMA" msprop:Generator_UserColumnName="IDCODSISTEMA" msprop:Generator_ColumnPropNameInRow="IDCODSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDCODSISTEMA" msprop:Generator_ColumnPropNameInTable="IDCODSISTEMAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtsTareasKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_TAREASAUTORIZADAS" />
+      <xs:field xpath="mstns:IDTAREA" />
+    </xs:unique>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TAREAS" />
+      <xs:field xpath="mstns:IDTAREA" />
+    </xs:unique>
+    <xs:unique name="dtsGruposKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_TAREAS" />
+      <xs:field xpath="mstns:IDTAREA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46B8F321-AD6C-4EF4-8C0C-9CDC7C539B95}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COA.WebCipol.Comun</RootNamespace>
+    <AssemblyName>COA.WebCipol.Comun</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autorizantes.cs" />
+    <Compile Include="Constantes.cs" />
+    <Compile Include="DatosCIPOL.cs" />
+    <Compile Include="DatosSistema.cs" />
+    <Compile Include="FormatoFecha.cs" />
+    <Compile Include="Principal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serializacion.cs" />
+    <Compile Include="Se_Menues.cs" />
+    <Compile Include="Se_SistemasHabilitados.cs" />
+    <Compile Include="Tareas.cs" />
+    <Compile Include="Validaciones.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FrameworkCOA\EntidadesEmpresariales\frmkEntidadesEmpresariales.vbproj">
+      <Project>{dc802dc9-8dc3-42d6-b436-e5e42b30cc37}</Project>
+      <Name>frmkEntidadesEmpresariales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FrameworkCOA\Fachada\frmkFachada.vbproj">
+      <Project>{1e3ec879-1d8f-4a7c-af45-1b778432cbac}</Project>
+      <Name>frmkFachada</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FrameworkCOA\UtilidadesCOA\UtilidadesCOA.vbproj">
+      <Project>{ecd0fb0b-d5ab-43b2-9a07-4404274e2936}</Project>
+      <Name>UtilidadesCOA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

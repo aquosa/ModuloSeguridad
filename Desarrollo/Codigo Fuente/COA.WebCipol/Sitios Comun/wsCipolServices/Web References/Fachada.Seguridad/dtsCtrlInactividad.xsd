@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsCtrlInactividad.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsCtrlInactividad.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsCtrlInactividad.xsd" id="dtsCtrlInactividad" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dtsCtrlInactividad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Sist_Usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element default="-2" name="IdUsuario" type="xs:int" />
+              <xs:element minOccurs="0" default="_" name="Usuario" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Nombres" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="NombreArea" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Domicilio" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="TipoAbreviado" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="NroDocumento" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="ForzarCambio" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="ForzarCambioDes" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueada" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueadaDes" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueadaDesLetra" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Comentario" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaAlta" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FechaBloqueo" type="xs:dateTime" />
+              <xs:element minOccurs="0" default="_" name="FICTICIA" type="xs:string" />
+              <xs:element minOccurs="0" default="-1" name="IdTipoDoc" type="xs:int" />
+              <xs:element minOccurs="0" default="-1" name="idArea" type="xs:int" />
+              <xs:element minOccurs="0" name="CantIntInvUsoCta" type="xs:string" />
+              <xs:element minOccurs="0" name="ALIAS_USUARIO" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaUltUsoCta" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LapsoInactividad" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dtsUsuariosKey1">
+      <xs:selector xpath=".//mstns:Sist_Usuarios" />
+      <xs:field xpath="mstns:IdUsuario" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

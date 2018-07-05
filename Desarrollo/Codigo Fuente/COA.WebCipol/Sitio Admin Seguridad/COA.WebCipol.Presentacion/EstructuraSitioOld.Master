@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EstructuraSitioOld.Master.cs"
+    Inherits="COA.WebCipol.Presentacion.Formularios.EstructuraSitio" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Sistema de Seguridad</title>
+    <link href="Estilos/overcast/jquery-ui-1.8.18.custom.css" rel="Stylesheet" type="text/css" />
+    <link href="Estilos/estilos_base.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery-1.10.2.min.js">
+    </script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.10.3.custom.js">
+    </script>
+    <script type="text/javascript" src="Scripts/jquery.ui.datepicker-es.js">
+    </script>
+    <script type="text/javascript" src="Scripts/jsValidarCampos.js">
+    </script>
+    <script type="text/javascript" src="Scripts/jsCIPOLPRESENTACION.js">
+    </script>
+    <script type="text/javascript" src="Scripts/blockUI-2.39.js">
+    </script>
+    <script type="text/javascript" src="Scripts/json2.js">
+    </script>
+    <script type="text/javascript" src="Scripts/jquery-migrate-1.2.1.min.js">
+    </script>
+    <script type="text/javascript" src="Scripts/knockout-3.0.0.js">
+    </script>
+    <script type="text/javascript" src="Scripts/knockout.simpleGrid.3.0_COA.js">
+    </script>
+    <script type="text/javascript" src="Scripts/jsControles.js">
+    </script>
+    <script type="text/javascript" src="Scripts/jsSelectAutocomplete.js">
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #titulo
+        {
+            position: relative;
+        }
+        #datos
+        {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <form id="Form1" runat="server" onsubmit="return appCIPOLPRESENTACION.Verifyonsubmit();">
+    <div class="page">
+        <div class="header">
+            <div id="titulo" class="titulo">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="Izquierda">
+                            <img src="Imagenes/prod_cipol.gif" alt="CIPOL" id="LogoCIPOL" />
+                        </td>
+                        <td class="Izquierda">
+                            <h1>
+                                CIPOL - Sistema de Seguridad
+                            </h1>
+                        </td>
+                    </tr>
+                </table>
+                <div id="datos" runat="server">
+                </div>
+            </div>
+            <div id="popup">
+            </div>
+            <div id="MenuPrincipal">
+                <asp:Menu ID="Menu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false"
+                    Orientation="Horizontal">
+                    <Items>
+                        <%--prueba--%>
+                        <asp:MenuItem NavigateUrl="~/frmPrincipal.aspx" Text="Inicio" ToolTip="Inicio" Value="Inicio" />
+                        <%--prueba--%>
+                        <asp:MenuItem Text="Sistema" Value="Sistema">
+                            <asp:MenuItem NavigateUrl="~/frmParametros.aspx" Text="Definición de Políticas Generales"
+                                ToolTip="Definición de Políticas Generales" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmABMTerminales.aspx" Text="Habilitación de Terminales Operativas"
+                                ToolTip="Habilitación de Terminales Operativas" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmABMGruposTareas.aspx" Text="Agrupamiento de Tareas"
+                                ToolTip="Agrupamiento de Tareas" Value="" SeparatorImageUrl="" />
+                            <asp:MenuItem NavigateUrl="~/frmABMSistemasBloqueados.aspx" Text="Bloqueo de Sistemas"
+                                ToolTip="Bloqueo de Sistemas" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmABMRoles.aspx" Text="Administración de Roles" ToolTip="Administración de Roles"
+                                Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmABMUsuarios.aspx" Text="Administración de Usuarios"
+                                ToolTip="Administración de Usuarios" Value="" />
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Visor de Sucesos" Value="Visor de Sucesos">
+                            <asp:MenuItem NavigateUrl="~/frmVisorSucesosSeguridad.aspx" Text="Seguridad" ToolTip="Seguridad"
+                                Value="Seguridad" />
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Reportes" Value="Reportes">
+                            <asp:MenuItem NavigateUrl="~/frmRptUsuariosXRoles.aspx" Text="Usuarios por Roles"
+                                ToolTip="Usuarios por Roles" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmRptUsuariosXArea.aspx" Text="Usuarios por Áreas"
+                                ToolTip="Usuarios por Áreas" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmRptRolesXUsuarios.aspx" Text="Roles por Usuarios"
+                                ToolTip="Roles por Usuarios" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmRptRolesDetalle.aspx" Text="Descripción de Roles"
+                                ToolTip="Descripción de Roles" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmRptAreas.aspx" Text="Áreas" ToolTip="Áreas" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmRptTerminales.aspx" Text="Terminales" ToolTip="Terminales"
+                                Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmRptUsuarios.aspx" Text="Usuarios" ToolTip="Usuarios"
+                                Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmRptUsuariosSinAcceso.aspx" Text="Usuarios sin Acceso"
+                                ToolTip="Usuarios sin Acceso" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmRptControlInactividad.aspx" Text="Control de Inactividad"
+                                ToolTip="Control de Inactividad" Value="" />
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Herramientas" Value="Herramientas">
+                            <asp:MenuItem NavigateUrl="~/frmMonitorActividades.aspx" Text="Monitor de Actividades"
+                                ToolTip="Monitor de Actividades" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmABMAreas.aspx" Text="ABM de Áreas" ToolTip="ABM de Áreas"
+                                Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmABMSistemas.aspx" Text="ABM de Sistemas" ToolTip="ABM de Sistemas"
+                                Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmABMTareasAutorizantes.aspx" Text="ABM de Tareas Autorizantes"
+                                ToolTip="ABM de Tareas Autorizantes" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmABMTareasPrimitivas.aspx" Text="ABM de Tareas Primitivas"
+                                ToolTip="ABM de Tareas Primitivas" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmAnalisisDeAuditoria.aspx" Text="Análisis de Auditoría"
+                                ToolTip="Análisis de Auditoría" Value="" />
+                            <asp:MenuItem NavigateUrl="~/frmTipoSeguridad.aspx?CambiarDominio=true" Text="Cambiar Nombre de Dominio"
+                                ToolTip="Cambiar Nombre de Dominio" Value="" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/frmCambiarContrasenia.aspx?Obligatorio=1" Text="Cambiar Contraseña" ToolTip="Cambiar Contraseña" Value="" />
+                        <%--   <asp:MenuItem NavigateUrl="~/.aspx" Text="Acerca de..." ToolTip="Acerca de..." Value="" />--%>
+                        <asp:MenuItem NavigateUrl="~/frmMensaje.aspx" Text="Salir" ToolTip="Salir" Value="" />
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="CuerpoPagina" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    </form>
+</body>
+</html>

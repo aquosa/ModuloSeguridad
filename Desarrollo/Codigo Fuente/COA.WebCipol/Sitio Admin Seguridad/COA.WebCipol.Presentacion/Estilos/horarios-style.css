@@ -1,0 +1,133 @@
+﻿
+        /* Horarios
+---------------------------------------------------------- */
+
+.dia-hora
+{
+    float:left;
+    width:15px;
+    height:30px;
+    border-right:1px solid #000000;
+    cursor:pointer; cursor: hand;
+    
+}
+
+.dia-hora-h
+{
+     float:left;
+    width:15px;
+    height:30px;
+    border-right:1px solid #000000;
+    }
+    
+.seleccionado
+{
+    cursor:pointer; cursor: hand;    
+}
+
+
+        
+.fila
+{    
+     width:450px;
+     border-bottom:1px solid #000000;
+     border-left::1px solid #000000;
+     /*height:30px*/
+}
+
+.dia
+{
+    width:90px;
+    height:30px;
+    float:left;
+    text-align:center;
+    vertical-align:middle;
+    border-right:1px solid #000000;
+    position:relative;
+}
+
+.dia span
+{
+    position:absolute; 
+    bottom:5px;
+    left:5px;
+    color:White;
+    font-size:12px
+    }
+
+#horarios
+{
+     border-top:1px solid #000000;
+     border-left:1px solid #000000;
+     width:450px;
+      
+}
+
+
+.seleccionar-columna
+{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #000;
+    cursor:pointer; cursor: hand;
+}
+
+.left
+{
+    float:left;
+}
+
+.right
+{
+    float:right
+}
+
+.seleccionar-fila
+{
+    margin-top:10px;
+    margin-right:2px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #000;
+    border-bottom: 5px solid transparent;
+   cursor:pointer; cursor: hand;
+}
+
+#horarios-referencias
+{
+    width:400px;
+    border:1px dotted #000000;
+    margin-top:15px;
+    padding:5px;
+    /*border-bottom-style:dotted*/
+}
+    
+.cuadrado
+{
+    width:10px;
+    height:22px;
+    border:1px solid gray; 
+    float:left;
+    margin-right:5px;
+       
+}
+ 
+
+.tdInput
+{
+    width:200px;
+    text-align:left;
+    }
+    
+.tdLabel
+{
+    width:150px;
+    text-align:right;
+    
+    }
+    
+.dia-hora-superior span{ font-size:10px;color:White;}
+

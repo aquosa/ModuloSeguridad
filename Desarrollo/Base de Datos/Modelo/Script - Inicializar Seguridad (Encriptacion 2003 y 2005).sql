@@ -1,0 +1,1 @@
+update se_sist_habilitados set observaciones = 'byxqrZ9hQqI=' where idsistema = 1

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsGrupos" targetNamespace="http://tempuri.org/dtsGrupos.xsd" xmlns:mstns="http://tempuri.org/dtsGrupos.xsd" xmlns="http://tempuri.org/dtsGrupos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsGrupos" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="dtsGrupos" msprop:Generator_UserDSName="dtsGrupos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_SIST_HABILITADOS" msprop:Generator_TableClassName="SE_SIST_HABILITADOSDataTable" msprop:Generator_TableVarName="tableSE_SIST_HABILITADOS" msprop:Generator_TablePropName="SE_SIST_HABILITADOS" msprop:Generator_RowDeletingName="SE_SIST_HABILITADOSRowDeleting" msprop:Generator_UserTableName="SE_SIST_HABILITADOS" msprop:Generator_RowChangingName="SE_SIST_HABILITADOSRowChanging" msprop:Generator_RowEvHandlerName="SE_SIST_HABILITADOSRowChangeEventHandler" msprop:Generator_RowDeletedName="SE_SIST_HABILITADOSRowDeleted" msprop:Generator_RowEvArgName="SE_SIST_HABILITADOSRowChangeEvent" msprop:Generator_RowChangedName="SE_SIST_HABILITADOSRowChanged" msprop:Generator_RowClassName="SE_SIST_HABILITADOSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSISTEMA" msprop:Generator_ColumnPropNameInTable="IDSISTEMAColumn" msprop:Generator_UserColumnName="IDSISTEMA" type="xs:short" />
+              <xs:element name="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" msprop:Generator_UserColumnName="DESCSISTEMA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_GRUPO_TAREA" msprop:Generator_TableClassName="SE_GRUPO_TAREADataTable" msprop:Generator_TableVarName="tableSE_GRUPO_TAREA" msprop:Generator_TablePropName="SE_GRUPO_TAREA" msprop:Generator_RowDeletingName="SE_GRUPO_TAREARowDeleting" msprop:Generator_UserTableName="SE_GRUPO_TAREA" msprop:Generator_RowChangingName="SE_GRUPO_TAREARowChanging" msprop:Generator_RowEvHandlerName="SE_GRUPO_TAREARowChangeEventHandler" msprop:Generator_RowDeletedName="SE_GRUPO_TAREARowDeleted" msprop:Generator_RowEvArgName="SE_GRUPO_TAREARowChangeEvent" msprop:Generator_RowChangedName="SE_GRUPO_TAREARowChanged" msprop:Generator_RowClassName="SE_GRUPO_TAREARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPO" msprop:Generator_ColumnVarNameInTable="columnIDGRUPO" msprop:Generator_ColumnPropNameInRow="IDGRUPO" msprop:Generator_ColumnPropNameInTable="IDGRUPOColumn" msprop:Generator_UserColumnName="IDGRUPO" type="xs:short" />
+              <xs:element name="DESCGRUPO" msprop:Generator_ColumnVarNameInTable="columnDESCGRUPO" msprop:Generator_ColumnPropNameInRow="DESCGRUPO" msprop:Generator_ColumnPropNameInTable="DESCGRUPOColumn" msprop:Generator_UserColumnName="DESCGRUPO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_TAREAS" msprop:Generator_TableClassName="SE_TAREASDataTable" msprop:Generator_TableVarName="tableSE_TAREAS" msprop:Generator_TablePropName="SE_TAREAS" msprop:Generator_RowDeletingName="SE_TAREASRowDeleting" msprop:Generator_UserTableName="SE_TAREAS" msprop:Generator_RowChangingName="SE_TAREASRowChanging" msprop:Generator_RowEvHandlerName="SE_TAREASRowChangeEventHandler" msprop:Generator_RowDeletedName="SE_TAREASRowDeleted" msprop:Generator_RowEvArgName="SE_TAREASRowChangeEvent" msprop:Generator_RowChangedName="SE_TAREASRowChanged" msprop:Generator_RowClassName="SE_TAREASRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTAREA" msprop:Generator_ColumnVarNameInTable="columnIDTAREA" msprop:Generator_ColumnPropNameInRow="IDTAREA" msprop:Generator_ColumnPropNameInTable="IDTAREAColumn" msprop:Generator_UserColumnName="IDTAREA" type="xs:int" />
+              <xs:element name="DESCRIPCIONTAREA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONTAREAColumn" msprop:Generator_UserColumnName="DESCRIPCIONTAREA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_TAREAS_ASIGNADAS" msprop:Generator_TableClassName="SE_TAREAS_ASIGNADASDataTable" msprop:Generator_TableVarName="tableSE_TAREAS_ASIGNADAS" msprop:Generator_TablePropName="SE_TAREAS_ASIGNADAS" msprop:Generator_RowDeletingName="SE_TAREAS_ASIGNADASRowDeleting" msprop:Generator_UserTableName="SE_TAREAS_ASIGNADAS" msprop:Generator_RowChangingName="SE_TAREAS_ASIGNADASRowChanging" msprop:Generator_RowEvHandlerName="SE_TAREAS_ASIGNADASRowChangeEventHandler" msprop:Generator_RowDeletedName="SE_TAREAS_ASIGNADASRowDeleted" msprop:Generator_RowEvArgName="SE_TAREAS_ASIGNADASRowChangeEvent" msprop:Generator_RowChangedName="SE_TAREAS_ASIGNADASRowChanged" msprop:Generator_RowClassName="SE_TAREAS_ASIGNADASRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTAREA" msprop:Generator_ColumnVarNameInTable="columnIDTAREA" msprop:Generator_ColumnPropNameInRow="IDTAREA" msprop:Generator_ColumnPropNameInTable="IDTAREAColumn" msprop:Generator_UserColumnName="IDTAREA" type="xs:int" />
+              <xs:element name="DESCRIPCIONTAREA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONTAREAColumn" msprop:Generator_UserColumnName="DESCRIPCIONTAREA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GRUPO_EXCLUYENTE" msprop:Generator_TableClassName="GRUPO_EXCLUYENTEDataTable" msprop:Generator_TableVarName="tableGRUPO_EXCLUYENTE" msprop:Generator_TablePropName="GRUPO_EXCLUYENTE" msprop:Generator_RowDeletingName="GRUPO_EXCLUYENTERowDeleting" msprop:Generator_UserTableName="GRUPO_EXCLUYENTE" msprop:Generator_RowChangingName="GRUPO_EXCLUYENTERowChanging" msprop:Generator_RowEvHandlerName="GRUPO_EXCLUYENTERowChangeEventHandler" msprop:Generator_RowDeletedName="GRUPO_EXCLUYENTERowDeleted" msprop:Generator_RowEvArgName="GRUPO_EXCLUYENTERowChangeEvent" msprop:Generator_RowChangedName="GRUPO_EXCLUYENTERowChanged" msprop:Generator_RowClassName="GRUPO_EXCLUYENTERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPO" msprop:Generator_ColumnVarNameInTable="columnIDGRUPO" msprop:Generator_ColumnPropNameInRow="IDGRUPO" msprop:Generator_ColumnPropNameInTable="IDGRUPOColumn" msprop:Generator_UserColumnName="IDGRUPO" type="xs:short" />
+              <xs:element name="DESCGRUPO" msprop:Generator_ColumnVarNameInTable="columnDESCGRUPO" msprop:Generator_ColumnPropNameInRow="DESCGRUPO" msprop:Generator_ColumnPropNameInTable="DESCGRUPOColumn" msprop:Generator_UserColumnName="DESCGRUPO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GRUPO_NO_EXCLUYENTE" msprop:Generator_TableClassName="GRUPO_NO_EXCLUYENTEDataTable" msprop:Generator_TableVarName="tableGRUPO_NO_EXCLUYENTE" msprop:Generator_TablePropName="GRUPO_NO_EXCLUYENTE" msprop:Generator_RowDeletingName="GRUPO_NO_EXCLUYENTERowDeleting" msprop:Generator_UserTableName="GRUPO_NO_EXCLUYENTE" msprop:Generator_RowChangingName="GRUPO_NO_EXCLUYENTERowChanging" msprop:Generator_RowEvHandlerName="GRUPO_NO_EXCLUYENTERowChangeEventHandler" msprop:Generator_RowDeletedName="GRUPO_NO_EXCLUYENTERowDeleted" msprop:Generator_RowEvArgName="GRUPO_NO_EXCLUYENTERowChangeEvent" msprop:Generator_RowChangedName="GRUPO_NO_EXCLUYENTERowChanged" msprop:Generator_RowClassName="GRUPO_NO_EXCLUYENTERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPO" msprop:Generator_ColumnVarNameInTable="columnIDGRUPO" msprop:Generator_ColumnPropNameInRow="IDGRUPO" msprop:Generator_ColumnPropNameInTable="IDGRUPOColumn" msprop:Generator_UserColumnName="IDGRUPO" type="xs:short" />
+              <xs:element name="DESCGRUPO" msprop:Generator_ColumnVarNameInTable="columnDESCGRUPO" msprop:Generator_ColumnPropNameInRow="DESCGRUPO" msprop:Generator_ColumnPropNameInTable="DESCGRUPOColumn" msprop:Generator_UserColumnName="DESCGRUPO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Auditoria" msprop:Generator_TableClassName="AuditoriaDataTable" msprop:Generator_TableVarName="tableAuditoria" msprop:Generator_TablePropName="Auditoria" msprop:Generator_RowDeletingName="AuditoriaRowDeleting" msprop:Generator_UserTableName="Auditoria" msprop:Generator_RowChangingName="AuditoriaRowChanging" msprop:Generator_RowEvHandlerName="AuditoriaRowChangeEventHandler" msprop:Generator_RowDeletedName="AuditoriaRowDeleted" msprop:Generator_RowEvArgName="AuditoriaRowChangeEvent" msprop:Generator_RowChangedName="AuditoriaRowChanged" msprop:Generator_RowClassName="AuditoriaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SQLAuditar" msprop:Generator_ColumnVarNameInTable="columnSQLAuditar" msprop:Generator_ColumnPropNameInRow="SQLAuditar" msprop:Generator_ColumnPropNameInTable="SQLAuditarColumn" msprop:Generator_UserColumnName="SQLAuditar" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Auditoria1" msprop:Generator_TableClassName="Auditoria1DataTable" msprop:Generator_TableVarName="tableAuditoria1" msprop:Generator_TablePropName="Auditoria1" msprop:Generator_RowDeletingName="Auditoria1RowDeleting" msprop:Generator_UserTableName="Auditoria1" msprop:Generator_RowChangingName="Auditoria1RowChanging" msprop:Generator_RowEvHandlerName="Auditoria1RowChangeEventHandler" msprop:Generator_RowDeletedName="Auditoria1RowDeleted" msprop:Generator_RowEvArgName="Auditoria1RowChangeEvent" msprop:Generator_RowChangedName="Auditoria1RowChanged" msprop:Generator_RowClassName="Auditoria1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SQLAuditar" msprop:Generator_ColumnVarNameInTable="columnSQLAuditar" msprop:Generator_ColumnPropNameInRow="SQLAuditar" msprop:Generator_ColumnPropNameInTable="SQLAuditarColumn" msprop:Generator_UserColumnName="SQLAuditar" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_Grupo_Exclusion" msprop:Generator_TableClassName="SE_Grupo_ExclusionDataTable" msprop:Generator_TableVarName="tableSE_Grupo_Exclusion" msprop:Generator_TablePropName="SE_Grupo_Exclusion" msprop:Generator_RowDeletingName="SE_Grupo_ExclusionRowDeleting" msprop:Generator_UserTableName="SE_Grupo_Exclusion" msprop:Generator_RowChangingName="SE_Grupo_ExclusionRowChanging" msprop:Generator_RowEvHandlerName="SE_Grupo_ExclusionRowChangeEventHandler" msprop:Generator_RowDeletedName="SE_Grupo_ExclusionRowDeleted" msprop:Generator_RowEvArgName="SE_Grupo_ExclusionRowChangeEvent" msprop:Generator_RowChangedName="SE_Grupo_ExclusionRowChanged" msprop:Generator_RowClassName="SE_Grupo_ExclusionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdGrupoActual" msprop:Generator_ColumnVarNameInTable="columnIdGrupoActual" msprop:Generator_ColumnPropNameInRow="IdGrupoActual" msprop:Generator_ColumnPropNameInTable="IdGrupoActualColumn" msprop:Generator_UserColumnName="IdGrupoActual" type="xs:integer" minOccurs="0" />
+              <xs:element name="IdGrupExcluyente" msprop:Generator_ColumnVarNameInTable="columnIdGrupExcluyente" msprop:Generator_ColumnPropNameInRow="IdGrupExcluyente" msprop:Generator_ColumnPropNameInTable="IdGrupExcluyenteColumn" msprop:Generator_UserColumnName="IdGrupExcluyente" type="xs:integer" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtsGruposKey2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_GRUPO_TAREA" />
+      <xs:field xpath="mstns:IDGRUPO" />
+    </xs:unique>
+    <xs:unique name="dtsGruposKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_TAREAS" />
+      <xs:field xpath="mstns:IDTAREA" />
+    </xs:unique>
+    <xs:unique name="dtsGruposKey4" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_TAREAS_ASIGNADAS" />
+      <xs:field xpath="mstns:IDTAREA" />
+    </xs:unique>
+    <xs:unique name="dtsGruposKey3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GRUPO_EXCLUYENTE" />
+      <xs:field xpath="mstns:IDGRUPO" />
+    </xs:unique>
+    <xs:unique name="dtsGruposKey5" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GRUPO_NO_EXCLUYENTE" />
+      <xs:field xpath="mstns:IDGRUPO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

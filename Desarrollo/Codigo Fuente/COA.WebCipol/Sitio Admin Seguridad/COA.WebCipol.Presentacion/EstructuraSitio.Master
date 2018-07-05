@@ -1,0 +1,215 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EstructuraSitio.master.cs"
+    Inherits="COA.WebCipol.Presentacion.EstructuraSitio" %>
+
+<%@ Register TagPrefix="UCMessage" TagName="Message" Src="~/UIControlsHelper/UIMessages.ascx" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta charset="utf-8" />
+    <title>Ingreso al sistema. COA S.A</title>
+    <!-- jQuery -->
+    <script type="text/javascript" src="Scripts/jquery-1.10.2.min.js"></script>
+    <!-- jQuery ui -->
+    <script type="text/javascript" src="Scripts/jquery.ui/jquery-ui-1.10.4.custom.min.js"></script>
+    <link rel="stylesheet" href="Scripts/jquery.ui/css/smoothness/jquery-ui-1.10.4.custom.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="Estilos/bootstrap.min.css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="Estilos/bootstrap-theme.min.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="Estilos/styles.css" />
+    <link href="Estilos/iconFont.min.css" rel="stylesheet" type="text/css" />
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootbox.js"></script>
+    <script src="Scripts/jsControles.js" type="text/javascript"></script>
+    <!-- html5shiv -->
+    <!--[if lt IE 9]>
+            <script src="Scripts/html5shiv-printshiv.js"></script>
+        <![endif]-->
+    <!-- respond.js -->
+    <!--[if lt IE 9]>
+    <script src="Scripts/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery magnific-popup -->
+    <%--    <script type="text/javascript" src="Scripts/jquery.magnic-popup/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="Scripts/jquery.magnic-popup/magnific-popup.css">--%>
+    <!-- jQuery jstree -->
+    <script type="text/javascript" src="Scripts/jstree/jstree.min.js"></script>
+    <link rel="stylesheet" href="Scripts/jstree/themes/default/style.css" />
+    <!-- global.js -->
+    <script type="text/javascript" src="Scripts/global.js"></script>
+    <!--[if IE]>
+    <link rel="stylesheet" href="Estilos/ie.css">
+    <![endif]-->
+    <script type="text/javascript" src="Scripts/jquery.ui.datepicker-es.js"></script>
+    <script type="text/javascript" src="Scripts/jsValidarCampos.js"></script>
+    <script type="text/javascript" src="Scripts/jsCIPOLPRESENTACION.js"></script>
+    <script type="text/javascript" src="Scripts/blockUI-2.39.js"></script>
+    <script type="text/javascript" src="Scripts/json2.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="Scripts/knockout.simpleGrid.3.0_COA.js"></script>
+    <script type="text/javascript" src="Scripts/jsControles.js"></script>
+    <script type="text/javascript" src="Scripts/jsSelectAutocomplete.js"></script>
+    <script type="text/javascript" src="Scripts/jsMessages.js"></script>
+    <script src="Scripts/jquery.numeric.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        if (window.jQuery && window.jQuery.ui.dialog) {
+            $(document).unbind("focusin.dialog");
+        }
+
+        function slideSidebar(idBox, idImg) {
+            $("#" + idBox).slideToggle();
+            var atrimg = $("#" + idImg).attr("src");
+            if (atrimg == "Imagenes/menos.png") {
+                $("#" + idImg).attr("src", "Imagenes/mas.png");
+            } else {
+                $("#" + idImg).attr("src", "Imagenes/menos.png");
+            }
+        }
+
+        function slideSidebarOpen(idBox, idImg) {
+            var atrimg = $("#" + idImg).attr("src");
+            if (atrimg == "Imagenes/mas.png") {
+                $("#" + idBox).slideToggle();
+                $("#" + idImg).attr("src", "Imagenes/menos.png");
+
+            }
+        }
+
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="cuerpo" runat="server">
+    <form runat="server">
+    <header>
+        <INPUT id="supervisor" type="hidden" size="6" name="supervisor">
+    	<div class="title">
+        	<h1>CIPOL / Sistema de seguridad</h1>
+             <div id="user-info">
+                    <span>Usuario: <asp:Label ID="lblUsuario" runat="server"></asp:Label> [ <a href="frmMensaje.aspx">Salir</a> ]  /  <asp:Label ID="lblVersion" runat="server"></asp:Label> / </span>
+             </div>
+        </div>
+
+              <div class="green">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 nav-fixer">
+
+                            <nav class="navbar navbar-default" role="navigation">
+                                <!-- Toggle -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Mostrar menú</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <!-- Nav items for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li class="first-node"><a href="frmPrincipal.aspx">INICIO</a></li>
+                                        <li class="first-node dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">SISTEMAS <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="frmParametros.aspx">DEFINICIÓN DE POLÍTICAS GENERALES</a></li>
+                                                <li><a href="frmABMTerminales.aspx">HABILITACIÓN DE TERMINALES OPERATIVAS</a></li>
+                                                <li><a href="frmABMGruposTareas.aspx">AGRUPAMIENTO DE TAREAS</a></li>
+                                                <li><a href="frmABMSistemasBloqueados.aspx">BLOQUEO DE SISTEMAS</a></li>
+                                                <li><a href="frmABMRoles.aspx">ADMINISTRACIÓN DE ROLES</a></li>
+                                                <li><a href="frmABMUsuarios.aspx">ADMINISTRACIÓN DE USUARIOS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="first-node dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">VISOR DE SUCESOS <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="frmVisorSucesosSeguridad.aspx">SEGURIDAD</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="first-node dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">REPORTES <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                 <li><a href="frmRptUsuariosXRoles.aspx">USUARIOS POR ROLES</a></li>
+                                                 <li><a href="frmRptUsuariosXArea.aspx">USUARIOS POR ÁREAS</a></li>
+                                                 <li><a href="frmRptRolesXUsuarios.aspx">ROLES POR USUARIOS</a></li>
+                                                 <li><a href="frmRptRolesDetalle.aspx">DESCRIPCIÓN DE ROLES</a></li>
+                                                 <li><a href="frmRptAreas.aspx">ÁREAS</a></li>
+                                                 <li><a href="frmRptTerminales.aspx">TERMINALES</a></li>
+                                                 <li><a href="frmRptUsuarios.aspx">USUARIOS</a></li>
+                                                 <li><a href="frmRptUsuariosSinAcceso.aspx">USUARIOS SIN ACCESO</a></li>
+                                                 <li><a href="frmRptControlInactividad.aspx">CONTROL DE INACTIVIDAD</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="first-node dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">HERRAMIENTAS <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                 <li><a href="frmMonitorActividades.aspx">MONITOR DE ACTIVIDADES</a></li>
+                                                 <li><a href="frmABMAreas.aspx">ABM ÁREAS</a></li>
+                                                 <li><a href="frmABMSistemas.aspx">ABM SISTEMAS</a></li>
+                                                 <li><a href="frmABMTareasAutorizantes.aspx">ABM TAREAS AUTORIZANTES</a></li>
+                                                 <li><a href="frmABMTareasPrimitivas.aspx">ABM TAREAS PRIMITIVAS</a></li>
+                                                 <li><a href="frmAnalisisDeAuditoria.aspx">ANÁLISIS DE AUDITORIA</a></li>
+                                                 <li><a href="frmTipoSeguridad.aspx?CambiarDominio=true">CAMBIAR NOMBRE DE DOMINIO</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a id="mnuCambiarContrasenia1" runat="server" href="frmCambiarContrasenia.aspx?Obligatorio=1">CAMBIAR CONTRASEÑA</a></li>
+                                        <li class="first-node"><a href="frmAcercaDe.aspx">ACERCA DE</a></li>
+                                    </ul>
+                                </div><!-- /.navbar-collapse -->
+                            </nav>                     
+                        </div>   
+                    </div>
+                </div>
+            </div>
+    </header>
+    <asp:ContentPlaceHolder ID="CuerpoPagina" runat="server">
+    </asp:ContentPlaceHolder>
+    <UCMessage:Message ID="ucMessage" runat="server" />
+    <div id="dialogAutorizarTarea" class="ui-dialog">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box1">
+                    <div class="row">
+                        <div class="head">
+                            <span class="white">Autorización</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-10">
+                            <div class="row">
+                                <div id="login-block" class="col-xs-offset-3 col-xs-6 block white">
+                                    <div class="form col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12" style="padding-top: 20px;">
+                                                <h2>
+                                                    Ingrese la autorización</h2>
+                                                <label class="col-md-12" for="user" style="padding-top: 20px;">
+                                                    Usuario</label>
+                                                <div id="reemplazarcbosupervisores">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" style="padding-top: 20px;">
+                                                <label class="col-md-12" for="password">
+                                                    Contraseña</label>
+                                                <asp:TextBox ID="Password" runat="server" class="col-md-12" TextMode="Password"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </form>
+</body>
+</html>

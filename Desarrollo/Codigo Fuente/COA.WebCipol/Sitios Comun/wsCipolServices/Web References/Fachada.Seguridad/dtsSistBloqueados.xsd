@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/Inhabilitacion.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:mstns="http://tempuri.org/Inhabilitacion.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/Inhabilitacion.xsd" id="dtsSistBloqueados" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dtsSistBloqueados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SIST_BLOQUEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" type="xs:short" />
+              <xs:element name="DESCSISTEMA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_USUARIOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="IDGRUPO" name="IDUSUARIO" type="xs:short" />
+              <xs:element msdata:Caption="DESCGRUPO" name="NOMBRES" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="USU_DESBLOQUEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="IDGRUPO" name="IDUSUARIO" type="xs:short" />
+              <xs:element msdata:Caption="DESCGRUPO" name="NOMBRES" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_SIST_BLOQUEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="IDSistema" msprop:Generator_ColumnVarNameInTable="columnIDSistema" msprop:Generator_ColumnPropNameInRow="IDSistema" msprop:Generator_ColumnPropNameInTable="IDSistemaColumn" msprop:Generator_UserColumnName="IDSISTEMA" name="IDSISTEMA" type="xs:decimal" />
+              <xs:element msdata:Caption="IDUsuario" msprop:Generator_ColumnVarNameInTable="columnIDUsuario" msprop:Generator_ColumnPropNameInRow="IDUsuario" msprop:Generator_ColumnPropNameInTable="IDUsuarioColumn" msprop:Generator_UserColumnName="IDUSUARIO" name="IDUSUARIO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCSISTEMA" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRES" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SIST_DESBLOQUEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" type="xs:short" />
+              <xs:element name="DESCSISTEMA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="USU_BLOQUEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="IDGRUPO" name="IDUSUARIO" type="xs:short" />
+              <xs:element msdata:Caption="DESCGRUPO" name="NOMBRES" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_SIST_HABILITADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" type="xs:short" />
+              <xs:element name="DESCSISTEMA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:SIST_BLOQUEADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dtsGruposKey5">
+      <xs:selector xpath=".//mstns:SE_USUARIOS" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="dtsGruposKey5" msdata:PrimaryKey="true" name="USU_DESBLOQUEADOS_dtsGruposKey5">
+      <xs:selector xpath=".//mstns:USU_DESBLOQUEADOS" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="SE_SIST_BLOQUEADOS_Constraint1">
+      <xs:selector xpath=".//mstns:SE_SIST_BLOQUEADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="SIST_DESBLOQUEADOS_Constraint1">
+      <xs:selector xpath=".//mstns:SIST_DESBLOQUEADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="dtsGruposKey5" msdata:PrimaryKey="true" name="USU_BLOQUEADOS_dtsGruposKey5">
+      <xs:selector xpath=".//mstns:USU_BLOQUEADOS" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="SE_SIST_HABILITADOS_Constraint1">
+      <xs:selector xpath=".//mstns:SE_SIST_HABILITADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EstructuraSitioSimple.master.cs"
+    Inherits="COA.WebCipol.Presentacion.Formularios.EstructuraSitioSimple" MasterPageFile="~/EstructuraSitioSimplePadre.Master" %>
+
+
+<asp:Content ContentPlaceHolderID="HeadContent" runat="server">
+    <script type="text/javascript">
+        function Salir() {
+            $.ajax({
+                type: "POST",
+                url: "./PageBuilders/wsAjaxwsSeguridad.asmx/SalirSistema",
+                data: "",
+                contentType: "application/json; charset=iso-8859-1",
+                dataType: "json",
+                async: false,
+                success: function (data) {
+
+                    var PaginaCierre = 'frmLogin.aspx';
+
+                    try
+                    {
+                        PaginaCierre = "<%=ConfigurationManager.AppSettings["PaginaCierreSesion"] %>";
+
+                        if (PaginaCierre.length === 0)
+                            PaginaCierre = 'frmLogin.aspx';
+                    }
+                    catch(e)
+                    {
+                        //Si no existe la key en el web.config, se matiene la página original
+                        PaginaCierre = 'frmLogin.aspx';
+                    }
+
+                    if (PaginaCierre == 'Salir') {
+                        window.close();
+                    } else {
+                        window.location.href =  PaginaCierre; //'frmLogin.aspx';
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    throw xhr.responseJSON;
+                }
+            });
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContentSimple" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+
+<asp:Content ContentPlaceHolderID="CuerpoPagina" runat="server">
+    <header>
+    	<div class="title">
+        	<h1>CIPOL / Sistema de seguridad</h1>
+            <div id="user-info">
+                    <span>Usuario: <asp:Label ID="lblUsuario" runat="server"></asp:Label> [ <a href="" onclick="Salir(); return false;">Salir</a> ]  /  <asp:Label ID="lblVersion" runat="server"></asp:Label> / </span>
+             </div>
+        </div>
+    </header>
+    <asp:ContentPlaceHolder ID="CuerpoPaginaSimple" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

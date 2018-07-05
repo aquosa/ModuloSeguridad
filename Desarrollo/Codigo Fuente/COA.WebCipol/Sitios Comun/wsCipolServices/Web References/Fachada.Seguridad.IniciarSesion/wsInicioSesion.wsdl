@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://RGP/CIPOL/InicioSesion" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://RGP/CIPOL/InicioSesion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://RGP/CIPOL/InicioSesion">
+      <s:import namespace="http://tempuri.org/dtsUsuarios.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsInicioSesion.asmx?schema=dtsUsuarios" namespace="http://tempuri.org/dtsUsuarios.xsd" />
+      <s:element name="IniciarSesion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTerminal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTerminal_ActualizacionLAN" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniciarSesionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IniciarSesionResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTerminal_ActualizacionLAN" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClavePublica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClavePublicaCliente" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClavePublicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClavePublicaResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CerrarSesion">
+        <s:complexType />
+      </s:element>
+      <s:element name="CerrarSesionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ValidarContraseña">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarContraseñaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarContraseñaResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Auditar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeAuditoria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuditarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AuditarResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarContrasenia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CantidadContraseniasAlmacenadas" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIdUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeAuditoria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NuevaContrasenia" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DuracionContrasenia" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mbytObligatorio" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContraseñaActual" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TiempoEnDiasNoPermitirCambiarContrasenia" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarContraseniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CambiarContraseniaResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupervisarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTarea" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupervisarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SupervisarUsuarioResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarNombreDominio">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarNombreDominioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarNombreDominioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosXSistema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDSistema" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosXSistemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsuariosXSistemaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recuperar_UsuariosXSistema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDSistema" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtsRetorno">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recuperar_UsuariosXSistemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recuperar_UsuariosXSistemaResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtsRetorno">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarExpiroSesion">
+        <s:complexType />
+      </s:element>
+      <s:element name="RegistrarExpiroSesionResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IniciarSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:IniciarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IniciarSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:IniciarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClavePublicaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClavePublica" />
+  </wsdl:message>
+  <wsdl:message name="GetClavePublicaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClavePublicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CerrarSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:CerrarSesion" />
+  </wsdl:message>
+  <wsdl:message name="CerrarSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:CerrarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarContraseñaSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarContraseña" />
+  </wsdl:message>
+  <wsdl:message name="ValidarContraseñaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarContraseñaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditarSoapIn">
+    <wsdl:part name="parameters" element="tns:Auditar" />
+  </wsdl:message>
+  <wsdl:message name="AuditarSoapOut">
+    <wsdl:part name="parameters" element="tns:AuditarResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambiarContraseniaSoapIn">
+    <wsdl:part name="parameters" element="tns:CambiarContrasenia" />
+  </wsdl:message>
+  <wsdl:message name="CambiarContraseniaSoapOut">
+    <wsdl:part name="parameters" element="tns:CambiarContraseniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SupervisarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SupervisarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="SupervisarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SupervisarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarNombreDominioSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarNombreDominio" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarNombreDominioSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarNombreDominioResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosXSistemaSoapIn">
+    <wsdl:part name="parameters" element="tns:UsuariosXSistema" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosXSistemaSoapOut">
+    <wsdl:part name="parameters" element="tns:UsuariosXSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recuperar_UsuariosXSistemaSoapIn">
+    <wsdl:part name="parameters" element="tns:Recuperar_UsuariosXSistema" />
+  </wsdl:message>
+  <wsdl:message name="Recuperar_UsuariosXSistemaSoapOut">
+    <wsdl:part name="parameters" element="tns:Recuperar_UsuariosXSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarExpiroSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarExpiroSesion" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarExpiroSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarExpiroSesionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsInicioSesionSoap">
+    <wsdl:operation name="IniciarSesion">
+      <wsdl:input message="tns:IniciarSesionSoapIn" />
+      <wsdl:output message="tns:IniciarSesionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClavePublica">
+      <wsdl:input message="tns:GetClavePublicaSoapIn" />
+      <wsdl:output message="tns:GetClavePublicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSesion">
+      <wsdl:input message="tns:CerrarSesionSoapIn" />
+      <wsdl:output message="tns:CerrarSesionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarContraseña">
+      <wsdl:input message="tns:ValidarContraseñaSoapIn" />
+      <wsdl:output message="tns:ValidarContraseñaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Auditar">
+      <wsdl:input message="tns:AuditarSoapIn" />
+      <wsdl:output message="tns:AuditarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasenia">
+      <wsdl:input message="tns:CambiarContraseniaSoapIn" />
+      <wsdl:output message="tns:CambiarContraseniaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SupervisarUsuario">
+      <wsdl:input message="tns:SupervisarUsuarioSoapIn" />
+      <wsdl:output message="tns:SupervisarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarNombreDominio">
+      <wsdl:input message="tns:RecuperarNombreDominioSoapIn" />
+      <wsdl:output message="tns:RecuperarNombreDominioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosXSistema">
+      <wsdl:input message="tns:UsuariosXSistemaSoapIn" />
+      <wsdl:output message="tns:UsuariosXSistemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recuperar_UsuariosXSistema">
+      <wsdl:input message="tns:Recuperar_UsuariosXSistemaSoapIn" />
+      <wsdl:output message="tns:Recuperar_UsuariosXSistemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarExpiroSesion">
+      <wsdl:input message="tns:RegistrarExpiroSesionSoapIn" />
+      <wsdl:output message="tns:RegistrarExpiroSesionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsInicioSesionSoap" type="tns:wsInicioSesionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IniciarSesion">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/IniciarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClavePublica">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/GetClavePublica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSesion">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/CerrarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarContraseña">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/ValidarContraseña" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Auditar">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/Auditar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasenia">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/CambiarContrasenia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupervisarUsuario">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/SupervisarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarNombreDominio">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/RecuperarNombreDominio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosXSistema">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/UsuariosXSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recuperar_UsuariosXSistema">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/Recuperar_UsuariosXSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarExpiroSesion">
+      <soap:operation soapAction="http://RGP/CIPOL/InicioSesion/RegistrarExpiroSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsInicioSesionSoap12" type="tns:wsInicioSesionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IniciarSesion">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/IniciarSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClavePublica">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/GetClavePublica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSesion">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/CerrarSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarContraseña">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/ValidarContraseña" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Auditar">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/Auditar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasenia">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/CambiarContrasenia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupervisarUsuario">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/SupervisarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarNombreDominio">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/RecuperarNombreDominio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosXSistema">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/UsuariosXSistema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recuperar_UsuariosXSistema">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/Recuperar_UsuariosXSistema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarExpiroSesion">
+      <soap12:operation soapAction="http://RGP/CIPOL/InicioSesion/RegistrarExpiroSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsInicioSesion">
+    <wsdl:port name="wsInicioSesionSoap" binding="tns:wsInicioSesionSoap">
+      <soap:address location="http://localhost:59859/wsInicioSesion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsInicioSesionSoap12" binding="tns:wsInicioSesionSoap12">
+      <soap12:address location="http://localhost:59859/wsInicioSesion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,28 @@
+@charset "utf-8";
+select {
+	background:#fff !important;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	
+	nav ul.nav-pills li a {
+		padding: 10px 12px;
+		font-size:12px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	nav ul.nav-pills li a {
+		padding:10px 19px;
+		font-size:15px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	
+	nav ul.nav-pills li a {
+		padding:10px 35px;
+		font-size:15px;
+	}

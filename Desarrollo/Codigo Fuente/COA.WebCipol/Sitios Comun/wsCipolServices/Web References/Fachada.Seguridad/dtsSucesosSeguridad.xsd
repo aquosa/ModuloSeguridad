@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsSucesosSeguridad.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsSucesosSeguridad.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsSucesosSeguridad.xsd" id="dtsSucesosSeguridad" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dtsSucesosSeguridad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_AUDITORIA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHAHORALOG" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CODMENSAJE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TEXTOMENSAJE" type="xs:string" />
+              <xs:element minOccurs="0" name="USUARIOACTUANTE" type="xs:string" />
+              <xs:element minOccurs="0" name="USUARIOAFECTADO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_CODAUDITORIA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element default="_" name="CODAUDITORIA" type="xs:string" />
+              <xs:element default="_" name="TEXTOAUDITORIA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sist_UsuariosConTareasCipol">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element default="-2" name="IdUsuario" type="xs:int" />
+              <xs:element minOccurs="0" default="_" name="Usuario" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Nombres" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="NombreArea" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Domicilio" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="TipoAbreviado" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="NroDocumento" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="ForzarCambio" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="ForzarCambioDes" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueada" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueadaDes" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueadaDesLetra" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Comentario" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaAlta" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FechaBloqueo" type="xs:dateTime" />
+              <xs:element minOccurs="0" default="_" name="FICTICIA" type="xs:string" />
+              <xs:element minOccurs="0" default="-1" name="IdTipoDoc" type="xs:int" />
+              <xs:element minOccurs="0" default="-1" name="idArea" type="xs:int" />
+              <xs:element minOccurs="0" name="CantIntInvUsoCta" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sist_Usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element default="-2" name="IdUsuario" type="xs:int" />
+              <xs:element minOccurs="0" default="_" name="Usuario" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Nombres" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="NombreArea" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Domicilio" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="TipoAbreviado" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="NroDocumento" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="ForzarCambio" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="ForzarCambioDes" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueada" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueadaDes" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueadaDesLetra" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Comentario" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaAlta" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FechaBloqueo" type="xs:dateTime" />
+              <xs:element minOccurs="0" default="_" name="FICTICIA" type="xs:string" />
+              <xs:element minOccurs="0" default="-1" name="IdTipoDoc" type="xs:int" />
+              <xs:element minOccurs="0" default="-1" name="idArea" type="xs:int" />
+              <xs:element minOccurs="0" name="CantIntInvUsoCta" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dtsUsuariosKey1">
+      <xs:selector xpath=".//mstns:Sist_UsuariosConTareasCipol" />
+      <xs:field xpath="mstns:IdUsuario" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="dtsUsuariosKey1" msdata:PrimaryKey="true" name="Sist_Usuarios_dtsUsuariosKey1">
+      <xs:selector xpath=".//mstns:Sist_Usuarios" />
+      <xs:field xpath="mstns:IdUsuario" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

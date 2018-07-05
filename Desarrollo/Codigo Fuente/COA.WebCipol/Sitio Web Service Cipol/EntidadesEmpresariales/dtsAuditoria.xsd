@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dtsAuditoria" targetNamespace="http://tempuri.org/dtsAuditoria.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dtsAuditoria.xsd" xmlns:mstns="http://tempuri.org/dtsAuditoria.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dtsAuditoria" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="SE_AUDITORIA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FECHAHORALOG" type="xs:dateTime" />
+							<xs:element name="CODMENSAJE" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TEXTOMENSAJE" type="xs:string" minOccurs="0" />
+							<xs:element name="USUARIOACTUANTE" type="xs:string" minOccurs="0" />
+							<xs:element name="USUARIOAFECTADO" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

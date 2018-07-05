@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsUsuariosABM.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsUsuariosABM.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsUsuariosABM.xsd" id="dtsUsuariosABM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dtsUsuariosABM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_Term_Usuario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdTerminal" type="xs:int" />
+              <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+              <xs:element minOccurs="0" name="CODTERMINAL" type="xs:string" />
+              <xs:element minOccurs="0" name="idArea" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sist_Usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element default="-2" name="IdUsuario" type="xs:int" />
+              <xs:element minOccurs="0" default="_" name="Usuario" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Nombres" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="NombreArea" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="Domicilio" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="TipoAbreviado" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="NroDocumento" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="ForzarCambio" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="ForzarCambioDes" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueada" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueadaDes" type="xs:string" />
+              <xs:element minOccurs="0" default="_" name="CtaBloqueadaDesLetra" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaAlta" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FechaBloqueo" type="xs:dateTime" />
+              <xs:element minOccurs="0" default="_" name="FICTICIA" type="xs:string" />
+              <xs:element minOccurs="0" default="-1" name="IdTipoDoc" type="xs:int" />
+              <xs:element minOccurs="0" default="-1" name="idArea" type="xs:int" />
+              <xs:element minOccurs="0" name="CantIntInvUsoCta" type="xs:string" />
+              <xs:element minOccurs="0" name="ALIAS_USUARIO" type="xs:string" />
+              <xs:element minOccurs="0" default="false" name="IntegradoAlDominio" type="xs:boolean" />
+              <xs:element minOccurs="0" name="Email" type="xs:string" />
+              <xs:element minOccurs="0" name="Comentario" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_Horarios_Usuario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdHorario" type="xs:int" />
+              <xs:element minOccurs="0" name="idDia" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_TAREAS_USUARIO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTAREA" type="xs:int" />
+              <xs:element name="IDROL" type="xs:int" />
+              <xs:element name="IDUSUARIO" type="xs:int" />
+              <xs:element minOccurs="0" name="CANTIDADAUTORIZADA" type="xs:decimal" />
+              <xs:element name="TAREAINHIBIDA" type="xs:string" />
+              <xs:element name="FECHAULTMODIF" type="xs:dateTime" />
+              <xs:element name="IDUSUARIOULTMODIF" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Roles_Composicion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdRol" type="xs:int" />
+              <xs:element minOccurs="0" name="DescripcionPerfil" type="xs:string" />
+              <xs:element minOccurs="0" name="IdGrupo" type="xs:int" />
+              <xs:element minOccurs="0" name="DescGrupo" type="xs:string" />
+              <xs:element minOccurs="0" name="idSistema" type="xs:int" />
+              <xs:element minOccurs="0" name="DescSistema" type="xs:string" />
+              <xs:element minOccurs="0" name="idTarea" type="xs:int" />
+              <xs:element minOccurs="0" name="DescripcionTarea" type="xs:string" />
+              <xs:element minOccurs="0" name="TareaInhibida" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_HISTORIAL_USUARIO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ORDEN" type="xs:decimal" />
+              <xs:element name="SINONIMO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ParametrosDeABM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="IdTerminal" minOccurs="0" name="CambioContrasenia" type="xs:string" />
+              <xs:element msdata:Caption="IdUsuario" minOccurs="0" name="MensajesAuditoria" type="xs:string" />
+              <xs:element minOccurs="0" name="DiasVencimientoDeClave" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Roles_X_Usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DescripcionPerfil" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dtsUsuariosKey1">
+      <xs:selector xpath=".//mstns:Sist_Usuarios" />
+      <xs:field xpath="mstns:IdUsuario" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dtsUsuariosKey2">
+      <xs:selector xpath=".//mstns:SE_TAREAS_USUARIO" />
+      <xs:field xpath="mstns:IDTAREA" />
+      <xs:field xpath="mstns:IDROL" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:SE_HISTORIAL_USUARIO" />
+      <xs:field xpath="mstns:ORDEN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

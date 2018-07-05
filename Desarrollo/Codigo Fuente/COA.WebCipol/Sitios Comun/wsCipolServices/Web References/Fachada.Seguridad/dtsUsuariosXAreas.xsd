@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsUsuariosXAreas.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsUsuariosXAreas.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsUsuariosXAreas.xsd" id="dtsUsuariosXAreas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dtsUsuariosXAreas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UsuariosXAreas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDUSUARIO" type="xs:int" />
+              <xs:element minOccurs="0" name="USUARIO" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRES" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAALTA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FECHABAJA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NRODOCUMENTO" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCRIPCIONPERFIL" type="xs:string" />
+              <xs:element msdata:Caption="CANTTAREASROL" minOccurs="0" name="TIPOABREVIADO" type="xs:string" />
+              <xs:element minOccurs="0" name="IDAREA" type="xs:int" />
+              <xs:element minOccurs="0" name="NOMBREAREA" type="xs:string" />
+              <xs:element minOccurs="0" name="BAJA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,3477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://RGP/CIPOL/Seguridad" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://RGP/CIPOL/Seguridad" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://RGP/CIPOL/Seguridad">
+      <s:import namespace="http://tempuri.org/dtsKArea.xsd" />
+      <s:import namespace="http://tempuri.org/dtsRolesXUsuarios.xsd" />
+      <s:import namespace="http://tempuri.org/dtsUsuariosXAreas.xsd" />
+      <s:import namespace="http://tempuri.org/dtsRoles.xsd" />
+      <s:import namespace="http://tempuri.org/dtsUsuarios.xsd" />
+      <s:import namespace="http://tempuri.org/dtsReportes.xsd" />
+      <s:import namespace="http://tempuri.org/dtsCtrlInactividad.xsd" />
+      <s:import namespace="http://tempuri.org/dtsGrupos.xsd" />
+      <s:import namespace="http://tempuri.org/dtsTareas.xsd" />
+      <s:import namespace="http://tempuri.org/Inhabilitacion.xsd" />
+      <s:import namespace="http://tempuri.org/dtsTerminales.xsd" />
+      <s:import namespace="http://tempuri.org/dtsUsuariosABM.xsd" />
+      <s:import namespace="http://tempuri.org/dtsSucesosSeguridad.xsd" />
+      <s:import namespace="http://tempuri.org/dtsSistHabilitados.xsd" />
+      <s:import namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsReportes" namespace="http://tempuri.org/dtsReportes.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsUsuariosXAreas" namespace="http://tempuri.org/dtsUsuariosXAreas.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsCtrlInactividad" namespace="http://tempuri.org/dtsCtrlInactividad.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsSucesosSeguridad" namespace="http://tempuri.org/dtsSucesosSeguridad.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsSistHabilitados" namespace="http://tempuri.org/dtsSistHabilitados.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsRoles" namespace="http://tempuri.org/dtsRoles.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsSistBloqueados" namespace="http://tempuri.org/Inhabilitacion.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsTerminales" namespace="http://tempuri.org/dtsTerminales.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsKArea" namespace="http://tempuri.org/dtsKArea.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsTareas" namespace="http://tempuri.org/dtsTareas.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsUsuarios" namespace="http://tempuri.org/dtsUsuarios.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsGrupos" namespace="http://tempuri.org/dtsGrupos.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsRolesXUsuarios" namespace="http://tempuri.org/dtsRolesXUsuarios.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsUsuariosABM" namespace="http://tempuri.org/dtsUsuariosABM.xsd" />
+      <s:import schemaLocation="http://localhost:59859/wsSeguridad.asmx?schema=dtsAuditoriaEventos" namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+      <s:element name="RecuperarAreas">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarAreasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarAreasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsKArea.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaDeAreas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsKArea.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaDeAreasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AltaDeAreasResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarArea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsKArea.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarAreaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarAreaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarArea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idArea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarAreaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarAreaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarArea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idArea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarAreaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AgregarAreaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteRolesXUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pIdUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteRolesXUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarReporteRolesXUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRolesXUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteRolesXUsuarioDetalle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pIdUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtsRetorno">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRolesXUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteRolesXUsuarioDetalleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RecuperarReporteRolesXUsuarioDetalleResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtsRetorno">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRolesXUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteUsuariosXRolDetalle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pIdRol" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtsRetorno">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRolesXUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteUsuariosXRolDetalleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RecuperarReporteUsuariosXRolDetalleResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtsRetorno">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRolesXUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteUsuariosXRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pidRol" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteUsuariosXRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarReporteUsuariosXRolResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRolesXUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteUsuariosXArea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdArea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteUsuariosXAreaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarReporteUsuariosXAreaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuariosXAreas.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteRolesComposicion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pIdrol" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteRolesComposicionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarReporteRolesComposicionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRoles.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaReporteUsuariosXRoles">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaReporteUsuariosXRolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaReporteUsuariosXRolesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRoles.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaReporteRolesXUsuarios">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaReporteRolesXUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaReporteRolesXUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarTerminalesParaReporte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDArea" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Habilitadas" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TodasLasAreas" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarTerminalesParaReporteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarTerminalesParaReporteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsReportes.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pIdUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarReporteUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteUsuarioSinAcceso">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarReporteUsuarioSinAccesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarReporteUsuarioSinAccesoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteControlInactividad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FechaUltimoUsoCta" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="LapsoInactividad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarReporteControlInactividadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarReporteControlInactividadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsCtrlInactividad.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaTareasAutorizantesEnUso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pidTarea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaTareasAutorizantesEnUsoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerificaTareasAutorizantesEnUsoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTareasAutorizantes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pidTarea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTareasAutorizantesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarTareasAutorizantesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaABMGrupos">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaABMGruposResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaABMGruposResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsGrupos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosDelGrupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDGrupo" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosDelGrupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosDelGrupoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsGrupos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarTareasPorSistemaYGrupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDSistema" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDGrupo" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarTareasPorSistemaYGrupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarTareasPorSistemaYGrupoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsGrupos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarGrupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsGrupos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarGrupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AdministrarGrupoResult" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarGrupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDGrupo" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarGrupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarGrupoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaABMTareasAutorizantes">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaABMTareasAutorizantesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaABMTareasAutorizantesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTareas.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarTareasSinAutorizacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDSistema" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarTareasSinAutorizacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarTareasSinAutorizacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTareas.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarTareasQueRequierenAutorizacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTareaAutorizante" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarTareasQueRequierenAutorizacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarTareasQueRequierenAutorizacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTareas.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarTareasSupervisantes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTareas.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarTareasSupervisantesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AdministrarTareasSupervisantesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pidRol" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarRolResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaArbolDeGruposDeTareas">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaArbolDeGruposDeTareasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaArbolDeGruposDeTareasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRoles.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificarRolAsignadoAUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pidRol" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificarRolAsignadoAUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerificarRolAsignadoAUsuariosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaABMRoles">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaABMRolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaABMRolesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRoles.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarComposicionRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pIdRol" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SoloIdTareas" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarComposicionRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarComposicionRolResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRoles.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarRoles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pdtsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRoles.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrElementosEliminados" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarRolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AdministrarRolesResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pdtsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsRoles.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarTareasPrimitivas">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarTareasPrimitivasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarTareasPrimitivasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTareas.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarTareaPrimitiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsTareas">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTareas.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarTareaPrimitivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarTareaPrimitivaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTareaPrimitiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatosTareas">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTareas.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTareaPrimitivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarTareaPrimitivaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTareaPrimitiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsTareas">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTareas.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTareaPrimitivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarTareaPrimitivaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificarExistenciaIDTarea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTarea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificarExistenciaIDTareaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerificarExistenciaIDTareaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarSistBloqueados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDSistema" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUsuario" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarSistBloqueadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarSistBloqueadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Inhabilitacion.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarSistBloqueados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatosSistBloq">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Inhabilitacion.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarSistBloqueadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarSistBloqueadosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaABMTerminales">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaABMTerminalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaABMTerminalesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTerminales.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarTerminales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsTerminal">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsTerminales.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarTerminalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AdministrarTerminalesResult" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTerminal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTerminal" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTerminalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarTerminalResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarAbmUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pdtsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuariosABM.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="pstrError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeAuditoria" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CantidadMaximaHistorialContraseniaa" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarAbmUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AdministrarAbmUsuariosResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstrError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pidUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMensajeAuditoria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pidUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMensajeAuditoria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActivarUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaABMUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pIdUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaABMUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaABMUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuariosABM.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaGrillaABMUsuarios">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaGrillaABMUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaGrillaABMUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaGrillaABMUsuariosConParametros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pblnArea" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pblnNombre" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pblnSubCadena" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pblnUsu" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltroBaja" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaGrillaABMUsuariosConParametrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaGrillaABMUsuariosConParametrosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaGrillaABMUsuariosFiltro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filtro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaGrillaABMUsuariosFiltroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaGrillaABMUsuariosFiltroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsUsuarios.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarPoliticasGenerales">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarPoliticasGeneralesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarPoliticasGeneralesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaEntornoCIPOLAdministrador">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaEntornoCIPOLAdministradorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaEntornoCIPOLAdministradorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarPoliticasGenerales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdministrarPoliticasGeneralesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AdministrarPoliticasGeneralesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaVisorSucesosSeguridad">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaVisorSucesosSeguridadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaVisorSucesosSeguridadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsSucesosSeguridad.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarDatosParaMonitorActividades">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarDatosParaMonitorActividadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarDatosParaMonitorActividadesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarSesionActiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsCriterio">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarSesionActivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarSesionActivaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornarLogAuditoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fechadesde" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechahasta" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioActuante" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioafectado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoEvento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornarLogAuditoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornarLogAuditoriaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsSucesosSeguridad.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTipoSeguridad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TipoSeguridad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarTipoSeguridadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarTipoSeguridadResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarSistemasHabilitados">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarSistemasHabilitadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarSistemasHabilitadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsSistHabilitados.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarSistemaHabilitado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatosSistHab">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsSistHabilitados.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarSistemaHabilitadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarSistemaHabilitadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarSistemaHabilitado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatosSistHab">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsSistHabilitados.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarSistemaHabilitadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarSistemaHabilitadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarSistemaHabilitado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsDatosSistHab">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsSistHabilitados.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarSistemaHabilitadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarSistemaHabilitadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarSIST_Habilitados">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarSIST_HabilitadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarSIST_HabilitadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarUsuarios">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperaTablasDeSistemas">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperaTablasDeSistemasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperaTablasDeSistemasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperaTerminales">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperaTerminalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperaTerminalesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarFechaMinima">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarFechaMinimaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RecuperarFechaMinimaResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProbarStringSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewStringSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProbarStringSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProbarStringSQLResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarEventosAuditoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsFiltros">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarEventosAuditoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarEventosAuditoriaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaStringSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsFiltros">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaStringSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaStringSQLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarSupervisores">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarSupervisoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarSupervisoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dtsAuditoriaEventos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuditarIntentoInicioSesionConSesionActiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuditarIntentoInicioSesionConSesionActivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuditarIntentoInicioSesionConSesionActivaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RecuperarAreasSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarAreas" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarAreasSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarAreasResponse" />
+  </wsdl:message>
+  <wsdl:message name="AltaDeAreasSoapIn">
+    <wsdl:part name="parameters" element="tns:AltaDeAreas" />
+  </wsdl:message>
+  <wsdl:message name="AltaDeAreasSoapOut">
+    <wsdl:part name="parameters" element="tns:AltaDeAreasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarAreaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarArea" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarAreaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAreaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarArea" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAreaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarAreaSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarArea" />
+  </wsdl:message>
+  <wsdl:message name="AgregarAreaSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteRolesXUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteRolesXUsuario" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteRolesXUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteRolesXUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteRolesXUsuarioDetalleSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteRolesXUsuarioDetalle" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteRolesXUsuarioDetalleSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteRolesXUsuarioDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuariosXRolDetalleSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuariosXRolDetalle" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuariosXRolDetalleSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuariosXRolDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuariosXRolSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuariosXRol" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuariosXRolSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuariosXRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuariosXAreaSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuariosXArea" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuariosXAreaSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuariosXAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteRolesComposicionSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteRolesComposicion" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteRolesComposicionSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteRolesComposicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaReporteUsuariosXRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaReporteUsuariosXRoles" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaReporteUsuariosXRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaReporteUsuariosXRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaReporteRolesXUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaReporteRolesXUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaReporteRolesXUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaReporteRolesXUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTerminalesParaReporteSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarTerminalesParaReporte" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTerminalesParaReporteSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarTerminalesParaReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuario" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuarioSinAccesoSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuarioSinAcceso" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteUsuarioSinAccesoSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteUsuarioSinAccesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteControlInactividadSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteControlInactividad" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarReporteControlInactividadSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarReporteControlInactividadResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaTareasAutorizantesEnUsoSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaTareasAutorizantesEnUso" />
+  </wsdl:message>
+  <wsdl:message name="VerificaTareasAutorizantesEnUsoSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaTareasAutorizantesEnUsoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTareasAutorizantesSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarTareasAutorizantes" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTareasAutorizantesSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarTareasAutorizantesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMGruposSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMGrupos" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMGruposSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMGruposResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosDelGrupoSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosDelGrupo" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosDelGrupoSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosDelGrupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTareasPorSistemaYGrupoSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarTareasPorSistemaYGrupo" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTareasPorSistemaYGrupoSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarTareasPorSistemaYGrupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarGrupoSoapIn">
+    <wsdl:part name="parameters" element="tns:AdministrarGrupo" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarGrupoSoapOut">
+    <wsdl:part name="parameters" element="tns:AdministrarGrupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarGrupoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarGrupo" />
+  </wsdl:message>
+  <wsdl:message name="EliminarGrupoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarGrupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMTareasAutorizantesSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMTareasAutorizantes" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMTareasAutorizantesSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMTareasAutorizantesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTareasSinAutorizacionSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarTareasSinAutorizacion" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTareasSinAutorizacionSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarTareasSinAutorizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTareasQueRequierenAutorizacionSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarTareasQueRequierenAutorizacion" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTareasQueRequierenAutorizacionSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarTareasQueRequierenAutorizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarTareasSupervisantesSoapIn">
+    <wsdl:part name="parameters" element="tns:AdministrarTareasSupervisantes" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarTareasSupervisantesSoapOut">
+    <wsdl:part name="parameters" element="tns:AdministrarTareasSupervisantesResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarRol" />
+  </wsdl:message>
+  <wsdl:message name="EliminarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaArbolDeGruposDeTareasSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaArbolDeGruposDeTareas" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaArbolDeGruposDeTareasSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaArbolDeGruposDeTareasResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificarRolAsignadoAUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarRolAsignadoAUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="VerificarRolAsignadoAUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarRolAsignadoAUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMRoles" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarComposicionRolSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarComposicionRol" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarComposicionRolSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarComposicionRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:AdministrarRoles" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:AdministrarRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTareasPrimitivasSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarTareasPrimitivas" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarTareasPrimitivasSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarTareasPrimitivasResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarTareaPrimitivaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarTareaPrimitiva" />
+  </wsdl:message>
+  <wsdl:message name="InsertarTareaPrimitivaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarTareaPrimitivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTareaPrimitivaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarTareaPrimitiva" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTareaPrimitivaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarTareaPrimitivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTareaPrimitivaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarTareaPrimitiva" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTareaPrimitivaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarTareaPrimitivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificarExistenciaIDTareaSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarExistenciaIDTarea" />
+  </wsdl:message>
+  <wsdl:message name="VerificarExistenciaIDTareaSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarExistenciaIDTareaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSistBloqueadosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarSistBloqueados" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSistBloqueadosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarSistBloqueadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarSistBloqueadosSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarSistBloqueados" />
+  </wsdl:message>
+  <wsdl:message name="InsertarSistBloqueadosSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarSistBloqueadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMTerminalesSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMTerminales" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMTerminalesSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMTerminalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarTerminalesSoapIn">
+    <wsdl:part name="parameters" element="tns:AdministrarTerminales" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarTerminalesSoapOut">
+    <wsdl:part name="parameters" element="tns:AdministrarTerminalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTerminalSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarTerminal" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTerminalSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarTerminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarAbmUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:AdministrarAbmUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarAbmUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:AdministrarAbmUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="EliminarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ActivarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaABMUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaABMUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaGrillaABMUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaGrillaABMUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaGrillaABMUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaGrillaABMUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaGrillaABMUsuariosConParametrosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaGrillaABMUsuariosConParametros" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaGrillaABMUsuariosConParametrosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaGrillaABMUsuariosConParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaGrillaABMUsuariosFiltroSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaGrillaABMUsuariosFiltro" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaGrillaABMUsuariosFiltroSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaGrillaABMUsuariosFiltroResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarPoliticasGeneralesSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarPoliticasGenerales" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarPoliticasGeneralesSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarPoliticasGeneralesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaEntornoCIPOLAdministradorSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaEntornoCIPOLAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaEntornoCIPOLAdministradorSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaEntornoCIPOLAdministradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarPoliticasGeneralesSoapIn">
+    <wsdl:part name="parameters" element="tns:AdministrarPoliticasGenerales" />
+  </wsdl:message>
+  <wsdl:message name="AdministrarPoliticasGeneralesSoapOut">
+    <wsdl:part name="parameters" element="tns:AdministrarPoliticasGeneralesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaVisorSucesosSeguridadSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaVisorSucesosSeguridad" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaVisorSucesosSeguridadSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaVisorSucesosSeguridadResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaMonitorActividadesSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaMonitorActividades" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarDatosParaMonitorActividadesSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosParaMonitorActividadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarSesionActivaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarSesionActiva" />
+  </wsdl:message>
+  <wsdl:message name="EliminarSesionActivaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarSesionActivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornarLogAuditoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornarLogAuditoria" />
+  </wsdl:message>
+  <wsdl:message name="RetornarLogAuditoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornarLogAuditoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTipoSeguridadSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoSeguridad" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarTipoSeguridadSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoSeguridadResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSistemasHabilitadosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarSistemasHabilitados" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSistemasHabilitadosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarSistemasHabilitadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarSistemaHabilitadoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarSistemaHabilitado" />
+  </wsdl:message>
+  <wsdl:message name="InsertarSistemaHabilitadoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarSistemaHabilitadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarSistemaHabilitadoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarSistemaHabilitado" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarSistemaHabilitadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarSistemaHabilitadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarSistemaHabilitadoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarSistemaHabilitado" />
+  </wsdl:message>
+  <wsdl:message name="EliminarSistemaHabilitadoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarSistemaHabilitadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSIST_HabilitadosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarSIST_Habilitados" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSIST_HabilitadosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarSIST_HabilitadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperaTablasDeSistemasSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperaTablasDeSistemas" />
+  </wsdl:message>
+  <wsdl:message name="RecuperaTablasDeSistemasSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperaTablasDeSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperaTerminalesSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperaTerminales" />
+  </wsdl:message>
+  <wsdl:message name="RecuperaTerminalesSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperaTerminalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarFechaMinimaSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarFechaMinima" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarFechaMinimaSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarFechaMinimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProbarStringSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:ProbarStringSQL" />
+  </wsdl:message>
+  <wsdl:message name="ProbarStringSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:ProbarStringSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarEventosAuditoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarEventosAuditoria" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarEventosAuditoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarEventosAuditoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStringSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaStringSQL" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStringSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaStringSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSupervisoresSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarSupervisores" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSupervisoresSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarSupervisoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditarIntentoInicioSesionConSesionActivaSoapIn">
+    <wsdl:part name="parameters" element="tns:AuditarIntentoInicioSesionConSesionActiva" />
+  </wsdl:message>
+  <wsdl:message name="AuditarIntentoInicioSesionConSesionActivaSoapOut">
+    <wsdl:part name="parameters" element="tns:AuditarIntentoInicioSesionConSesionActivaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsSeguridadSoap">
+    <wsdl:operation name="RecuperarAreas">
+      <wsdl:input message="tns:RecuperarAreasSoapIn" />
+      <wsdl:output message="tns:RecuperarAreasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AltaDeAreas">
+      <wsdl:input message="tns:AltaDeAreasSoapIn" />
+      <wsdl:output message="tns:AltaDeAreasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarArea">
+      <wsdl:input message="tns:ActualizarAreaSoapIn" />
+      <wsdl:output message="tns:ActualizarAreaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArea">
+      <wsdl:input message="tns:EliminarAreaSoapIn" />
+      <wsdl:output message="tns:EliminarAreaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarArea">
+      <wsdl:input message="tns:AgregarAreaSoapIn" />
+      <wsdl:output message="tns:AgregarAreaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteRolesXUsuario">
+      <wsdl:input message="tns:RecuperarReporteRolesXUsuarioSoapIn" />
+      <wsdl:output message="tns:RecuperarReporteRolesXUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteRolesXUsuarioDetalle">
+      <wsdl:input message="tns:RecuperarReporteRolesXUsuarioDetalleSoapIn" />
+      <wsdl:output message="tns:RecuperarReporteRolesXUsuarioDetalleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuariosXRolDetalle">
+      <wsdl:input message="tns:RecuperarReporteUsuariosXRolDetalleSoapIn" />
+      <wsdl:output message="tns:RecuperarReporteUsuariosXRolDetalleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuariosXRol">
+      <wsdl:input message="tns:RecuperarReporteUsuariosXRolSoapIn" />
+      <wsdl:output message="tns:RecuperarReporteUsuariosXRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuariosXArea">
+      <wsdl:input message="tns:RecuperarReporteUsuariosXAreaSoapIn" />
+      <wsdl:output message="tns:RecuperarReporteUsuariosXAreaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteRolesComposicion">
+      <wsdl:input message="tns:RecuperarReporteRolesComposicionSoapIn" />
+      <wsdl:output message="tns:RecuperarReporteRolesComposicionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaReporteUsuariosXRoles">
+      <wsdl:input message="tns:RecuperarDatosParaReporteUsuariosXRolesSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaReporteUsuariosXRolesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaReporteRolesXUsuarios">
+      <wsdl:input message="tns:RecuperarDatosParaReporteRolesXUsuariosSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaReporteRolesXUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTerminalesParaReporte">
+      <wsdl:input message="tns:RecuperarTerminalesParaReporteSoapIn" />
+      <wsdl:output message="tns:RecuperarTerminalesParaReporteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuario">
+      <wsdl:input message="tns:RecuperarReporteUsuarioSoapIn" />
+      <wsdl:output message="tns:RecuperarReporteUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuarioSinAcceso">
+      <wsdl:input message="tns:RecuperarReporteUsuarioSinAccesoSoapIn" />
+      <wsdl:output message="tns:RecuperarReporteUsuarioSinAccesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteControlInactividad">
+      <wsdl:input message="tns:RecuperarReporteControlInactividadSoapIn" />
+      <wsdl:output message="tns:RecuperarReporteControlInactividadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaTareasAutorizantesEnUso">
+      <wsdl:input message="tns:VerificaTareasAutorizantesEnUsoSoapIn" />
+      <wsdl:output message="tns:VerificaTareasAutorizantesEnUsoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTareasAutorizantes">
+      <wsdl:input message="tns:EliminarTareasAutorizantesSoapIn" />
+      <wsdl:output message="tns:EliminarTareasAutorizantesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMGrupos">
+      <wsdl:input message="tns:RecuperarDatosParaABMGruposSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaABMGruposSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosDelGrupo">
+      <wsdl:input message="tns:RecuperarDatosDelGrupoSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosDelGrupoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasPorSistemaYGrupo">
+      <wsdl:input message="tns:RecuperarTareasPorSistemaYGrupoSoapIn" />
+      <wsdl:output message="tns:RecuperarTareasPorSistemaYGrupoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarGrupo">
+      <wsdl:input message="tns:AdministrarGrupoSoapIn" />
+      <wsdl:output message="tns:AdministrarGrupoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarGrupo">
+      <wsdl:input message="tns:EliminarGrupoSoapIn" />
+      <wsdl:output message="tns:EliminarGrupoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMTareasAutorizantes">
+      <wsdl:input message="tns:RecuperarDatosParaABMTareasAutorizantesSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaABMTareasAutorizantesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasSinAutorizacion">
+      <wsdl:input message="tns:RecuperarTareasSinAutorizacionSoapIn" />
+      <wsdl:output message="tns:RecuperarTareasSinAutorizacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasQueRequierenAutorizacion">
+      <wsdl:input message="tns:RecuperarTareasQueRequierenAutorizacionSoapIn" />
+      <wsdl:output message="tns:RecuperarTareasQueRequierenAutorizacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarTareasSupervisantes">
+      <wsdl:input message="tns:AdministrarTareasSupervisantesSoapIn" />
+      <wsdl:output message="tns:AdministrarTareasSupervisantesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <wsdl:input message="tns:EliminarRolSoapIn" />
+      <wsdl:output message="tns:EliminarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaArbolDeGruposDeTareas">
+      <wsdl:input message="tns:RecuperarDatosParaArbolDeGruposDeTareasSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaArbolDeGruposDeTareasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarRolAsignadoAUsuarios">
+      <wsdl:input message="tns:VerificarRolAsignadoAUsuariosSoapIn" />
+      <wsdl:output message="tns:VerificarRolAsignadoAUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMRoles">
+      <wsdl:input message="tns:RecuperarDatosParaABMRolesSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaABMRolesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarComposicionRol">
+      <wsdl:input message="tns:RecuperarComposicionRolSoapIn" />
+      <wsdl:output message="tns:RecuperarComposicionRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarRoles">
+      <wsdl:input message="tns:AdministrarRolesSoapIn" />
+      <wsdl:output message="tns:AdministrarRolesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasPrimitivas">
+      <wsdl:input message="tns:RecuperarTareasPrimitivasSoapIn" />
+      <wsdl:output message="tns:RecuperarTareasPrimitivasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarTareaPrimitiva">
+      <wsdl:input message="tns:InsertarTareaPrimitivaSoapIn" />
+      <wsdl:output message="tns:InsertarTareaPrimitivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTareaPrimitiva">
+      <wsdl:input message="tns:ActualizarTareaPrimitivaSoapIn" />
+      <wsdl:output message="tns:ActualizarTareaPrimitivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTareaPrimitiva">
+      <wsdl:input message="tns:EliminarTareaPrimitivaSoapIn" />
+      <wsdl:output message="tns:EliminarTareaPrimitivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarExistenciaIDTarea">
+      <wsdl:input message="tns:VerificarExistenciaIDTareaSoapIn" />
+      <wsdl:output message="tns:VerificarExistenciaIDTareaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSistBloqueados">
+      <wsdl:input message="tns:RecuperarSistBloqueadosSoapIn" />
+      <wsdl:output message="tns:RecuperarSistBloqueadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSistBloqueados">
+      <wsdl:input message="tns:InsertarSistBloqueadosSoapIn" />
+      <wsdl:output message="tns:InsertarSistBloqueadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMTerminales">
+      <wsdl:input message="tns:RecuperarDatosParaABMTerminalesSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaABMTerminalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarTerminales">
+      <wsdl:input message="tns:AdministrarTerminalesSoapIn" />
+      <wsdl:output message="tns:AdministrarTerminalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTerminal">
+      <wsdl:input message="tns:EliminarTerminalSoapIn" />
+      <wsdl:output message="tns:EliminarTerminalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarAbmUsuarios">
+      <wsdl:input message="tns:AdministrarAbmUsuariosSoapIn" />
+      <wsdl:output message="tns:AdministrarAbmUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <wsdl:input message="tns:EliminarUsuarioSoapIn" />
+      <wsdl:output message="tns:EliminarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivarUsuario">
+      <wsdl:input message="tns:ActivarUsuarioSoapIn" />
+      <wsdl:output message="tns:ActivarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMUsuarios">
+      <wsdl:input message="tns:RecuperarDatosParaABMUsuariosSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaABMUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaGrillaABMUsuarios">
+      <wsdl:input message="tns:RecuperarDatosParaGrillaABMUsuariosSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaGrillaABMUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaGrillaABMUsuariosConParametros">
+      <wsdl:input message="tns:RecuperarDatosParaGrillaABMUsuariosConParametrosSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaGrillaABMUsuariosConParametrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaGrillaABMUsuariosFiltro">
+      <wsdl:input message="tns:RecuperarDatosParaGrillaABMUsuariosFiltroSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaGrillaABMUsuariosFiltroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarPoliticasGenerales">
+      <wsdl:input message="tns:RecuperarPoliticasGeneralesSoapIn" />
+      <wsdl:output message="tns:RecuperarPoliticasGeneralesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaEntornoCIPOLAdministrador">
+      <wsdl:input message="tns:RecuperarDatosParaEntornoCIPOLAdministradorSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaEntornoCIPOLAdministradorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarPoliticasGenerales">
+      <wsdl:input message="tns:AdministrarPoliticasGeneralesSoapIn" />
+      <wsdl:output message="tns:AdministrarPoliticasGeneralesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaVisorSucesosSeguridad">
+      <wsdl:input message="tns:RecuperarDatosParaVisorSucesosSeguridadSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaVisorSucesosSeguridadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaMonitorActividades">
+      <wsdl:input message="tns:RecuperarDatosParaMonitorActividadesSoapIn" />
+      <wsdl:output message="tns:RecuperarDatosParaMonitorActividadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSesionActiva">
+      <wsdl:input message="tns:EliminarSesionActivaSoapIn" />
+      <wsdl:output message="tns:EliminarSesionActivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarLogAuditoria">
+      <wsdl:input message="tns:RetornarLogAuditoriaSoapIn" />
+      <wsdl:output message="tns:RetornarLogAuditoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoSeguridad">
+      <wsdl:input message="tns:ActualizarTipoSeguridadSoapIn" />
+      <wsdl:output message="tns:ActualizarTipoSeguridadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSistemasHabilitados">
+      <wsdl:input message="tns:RecuperarSistemasHabilitadosSoapIn" />
+      <wsdl:output message="tns:RecuperarSistemasHabilitadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSistemaHabilitado">
+      <wsdl:input message="tns:InsertarSistemaHabilitadoSoapIn" />
+      <wsdl:output message="tns:InsertarSistemaHabilitadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSistemaHabilitado">
+      <wsdl:input message="tns:ActualizarSistemaHabilitadoSoapIn" />
+      <wsdl:output message="tns:ActualizarSistemaHabilitadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSistemaHabilitado">
+      <wsdl:input message="tns:EliminarSistemaHabilitadoSoapIn" />
+      <wsdl:output message="tns:EliminarSistemaHabilitadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSIST_Habilitados">
+      <wsdl:input message="tns:RecuperarSIST_HabilitadosSoapIn" />
+      <wsdl:output message="tns:RecuperarSIST_HabilitadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarUsuarios">
+      <wsdl:input message="tns:RecuperarUsuariosSoapIn" />
+      <wsdl:output message="tns:RecuperarUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaTablasDeSistemas">
+      <wsdl:input message="tns:RecuperaTablasDeSistemasSoapIn" />
+      <wsdl:output message="tns:RecuperaTablasDeSistemasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaTerminales">
+      <wsdl:input message="tns:RecuperaTerminalesSoapIn" />
+      <wsdl:output message="tns:RecuperaTerminalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarFechaMinima">
+      <wsdl:input message="tns:RecuperarFechaMinimaSoapIn" />
+      <wsdl:output message="tns:RecuperarFechaMinimaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProbarStringSQL">
+      <wsdl:input message="tns:ProbarStringSQLSoapIn" />
+      <wsdl:output message="tns:ProbarStringSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarEventosAuditoria">
+      <wsdl:input message="tns:RecuperarEventosAuditoriaSoapIn" />
+      <wsdl:output message="tns:RecuperarEventosAuditoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStringSQL">
+      <wsdl:input message="tns:RetornaStringSQLSoapIn" />
+      <wsdl:output message="tns:RetornaStringSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSupervisores">
+      <wsdl:input message="tns:RecuperarSupervisoresSoapIn" />
+      <wsdl:output message="tns:RecuperarSupervisoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditarIntentoInicioSesionConSesionActiva">
+      <wsdl:input message="tns:AuditarIntentoInicioSesionConSesionActivaSoapIn" />
+      <wsdl:output message="tns:AuditarIntentoInicioSesionConSesionActivaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsSeguridadSoap" type="tns:wsSeguridadSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecuperarAreas">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarAreas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaDeAreas">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/AltaDeAreas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarArea">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/ActualizarArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArea">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarArea">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/AgregarArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteRolesXUsuario">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteRolesXUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteRolesXUsuarioDetalle">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteRolesXUsuarioDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuariosXRolDetalle">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuariosXRolDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuariosXRol">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuariosXRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuariosXArea">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuariosXArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteRolesComposicion">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteRolesComposicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaReporteUsuariosXRoles">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaReporteUsuariosXRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaReporteRolesXUsuarios">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaReporteRolesXUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTerminalesParaReporte">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTerminalesParaReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuario">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuarioSinAcceso">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuarioSinAcceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteControlInactividad">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteControlInactividad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaTareasAutorizantesEnUso">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/VerificaTareasAutorizantesEnUso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTareasAutorizantes">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarTareasAutorizantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMGrupos">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMGrupos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosDelGrupo">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosDelGrupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasPorSistemaYGrupo">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTareasPorSistemaYGrupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarGrupo">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarGrupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarGrupo">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarGrupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMTareasAutorizantes">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMTareasAutorizantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasSinAutorizacion">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTareasSinAutorizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasQueRequierenAutorizacion">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTareasQueRequierenAutorizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarTareasSupervisantes">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarTareasSupervisantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaArbolDeGruposDeTareas">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaArbolDeGruposDeTareas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarRolAsignadoAUsuarios">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/VerificarRolAsignadoAUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMRoles">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarComposicionRol">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarComposicionRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarRoles">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasPrimitivas">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTareasPrimitivas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarTareaPrimitiva">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/InsertarTareaPrimitiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTareaPrimitiva">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/ActualizarTareaPrimitiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTareaPrimitiva">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarTareaPrimitiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarExistenciaIDTarea">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/VerificarExistenciaIDTarea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSistBloqueados">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarSistBloqueados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSistBloqueados">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/InsertarSistBloqueados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMTerminales">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMTerminales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarTerminales">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarTerminales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTerminal">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarTerminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarAbmUsuarios">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarAbmUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivarUsuario">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/ActivarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMUsuarios">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaGrillaABMUsuarios">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaGrillaABMUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaGrillaABMUsuariosConParametros">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaGrillaABMUsuariosConParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaGrillaABMUsuariosFiltro">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaGrillaABMUsuariosFiltro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarPoliticasGenerales">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarPoliticasGenerales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaEntornoCIPOLAdministrador">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaEntornoCIPOLAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarPoliticasGenerales">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarPoliticasGenerales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaVisorSucesosSeguridad">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaVisorSucesosSeguridad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaMonitorActividades">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaMonitorActividades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSesionActiva">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarSesionActiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarLogAuditoria">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RetornarLogAuditoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoSeguridad">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/ActualizarTipoSeguridad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSistemasHabilitados">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarSistemasHabilitados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSistemaHabilitado">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/InsertarSistemaHabilitado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSistemaHabilitado">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/ActualizarSistemaHabilitado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSistemaHabilitado">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarSistemaHabilitado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSIST_Habilitados">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarSIST_Habilitados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarUsuarios">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaTablasDeSistemas">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperaTablasDeSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaTerminales">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperaTerminales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarFechaMinima">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarFechaMinima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProbarStringSQL">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/ProbarStringSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarEventosAuditoria">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarEventosAuditoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStringSQL">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RetornaStringSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSupervisores">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarSupervisores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditarIntentoInicioSesionConSesionActiva">
+      <soap:operation soapAction="http://RGP/CIPOL/Seguridad/AuditarIntentoInicioSesionConSesionActiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsSeguridadSoap12" type="tns:wsSeguridadSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecuperarAreas">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarAreas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaDeAreas">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/AltaDeAreas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarArea">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/ActualizarArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArea">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarArea">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/AgregarArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteRolesXUsuario">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteRolesXUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteRolesXUsuarioDetalle">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteRolesXUsuarioDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuariosXRolDetalle">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuariosXRolDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuariosXRol">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuariosXRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuariosXArea">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuariosXArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteRolesComposicion">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteRolesComposicion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaReporteUsuariosXRoles">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaReporteUsuariosXRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaReporteRolesXUsuarios">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaReporteRolesXUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTerminalesParaReporte">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTerminalesParaReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuario">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteUsuarioSinAcceso">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteUsuarioSinAcceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarReporteControlInactividad">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarReporteControlInactividad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaTareasAutorizantesEnUso">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/VerificaTareasAutorizantesEnUso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTareasAutorizantes">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarTareasAutorizantes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMGrupos">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMGrupos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosDelGrupo">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosDelGrupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasPorSistemaYGrupo">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTareasPorSistemaYGrupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarGrupo">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarGrupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarGrupo">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarGrupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMTareasAutorizantes">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMTareasAutorizantes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasSinAutorizacion">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTareasSinAutorizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasQueRequierenAutorizacion">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTareasQueRequierenAutorizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarTareasSupervisantes">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarTareasSupervisantes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaArbolDeGruposDeTareas">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaArbolDeGruposDeTareas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarRolAsignadoAUsuarios">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/VerificarRolAsignadoAUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMRoles">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarComposicionRol">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarComposicionRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarRoles">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTareasPrimitivas">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarTareasPrimitivas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarTareaPrimitiva">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/InsertarTareaPrimitiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTareaPrimitiva">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/ActualizarTareaPrimitiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTareaPrimitiva">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarTareaPrimitiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarExistenciaIDTarea">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/VerificarExistenciaIDTarea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSistBloqueados">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarSistBloqueados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSistBloqueados">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/InsertarSistBloqueados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMTerminales">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMTerminales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarTerminales">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarTerminales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTerminal">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarTerminal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarAbmUsuarios">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarAbmUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivarUsuario">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/ActivarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaABMUsuarios">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaABMUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaGrillaABMUsuarios">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaGrillaABMUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaGrillaABMUsuariosConParametros">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaGrillaABMUsuariosConParametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaGrillaABMUsuariosFiltro">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaGrillaABMUsuariosFiltro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarPoliticasGenerales">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarPoliticasGenerales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaEntornoCIPOLAdministrador">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaEntornoCIPOLAdministrador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdministrarPoliticasGenerales">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/AdministrarPoliticasGenerales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaVisorSucesosSeguridad">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaVisorSucesosSeguridad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosParaMonitorActividades">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarDatosParaMonitorActividades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSesionActiva">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarSesionActiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarLogAuditoria">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RetornarLogAuditoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoSeguridad">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/ActualizarTipoSeguridad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSistemasHabilitados">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarSistemasHabilitados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSistemaHabilitado">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/InsertarSistemaHabilitado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSistemaHabilitado">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/ActualizarSistemaHabilitado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSistemaHabilitado">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/EliminarSistemaHabilitado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSIST_Habilitados">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarSIST_Habilitados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarUsuarios">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaTablasDeSistemas">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperaTablasDeSistemas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaTerminales">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperaTerminales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarFechaMinima">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarFechaMinima" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProbarStringSQL">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/ProbarStringSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarEventosAuditoria">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarEventosAuditoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStringSQL">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RetornaStringSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSupervisores">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/RecuperarSupervisores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditarIntentoInicioSesionConSesionActiva">
+      <soap12:operation soapAction="http://RGP/CIPOL/Seguridad/AuditarIntentoInicioSesionConSesionActiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsSeguridad">
+    <wsdl:port name="wsSeguridadSoap" binding="tns:wsSeguridadSoap">
+      <soap:address location="http://localhost:59859/wsSeguridad.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsSeguridadSoap12" binding="tns:wsSeguridadSoap12">
+      <soap12:address location="http://localhost:59859/wsSeguridad.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

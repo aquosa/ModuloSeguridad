@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://RGP/SIRActualizaciones/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://RGP/SIRActualizaciones/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://RGP/SIRActualizaciones/">
+      <s:element name="ExisteActualizacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UltimaFechaActualizacion" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExisteActualizacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExisteActualizacionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarListaArchivos">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarListaArchivosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarListaArchivosResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RecuperarURLActualizador_ServidorLAN">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarURLActualizador_ServidorLANResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarURLActualizador_ServidorLANResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarArchivosADescagar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtsCliente">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarArchivosADescagarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarArchivosADescagarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DescargarArchivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DescargarArchivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DescargarArchivoResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DescargarArchivoParcial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intOffset" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intLeido" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DescargarArchivoParcialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DescargarArchivoParcialResult" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="intLeido" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarFechaLiberacionVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarFechaLiberacionVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RecuperarFechaLiberacionVersionResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarNombreServidor">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecuperarNombreServidorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarNombreServidorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExisteActualizacionSoapIn">
+    <wsdl:part name="parameters" element="tns:ExisteActualizacion" />
+  </wsdl:message>
+  <wsdl:message name="ExisteActualizacionSoapOut">
+    <wsdl:part name="parameters" element="tns:ExisteActualizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarListaArchivosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarListaArchivos" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarListaArchivosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarListaArchivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarURLActualizador_ServidorLANSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarURLActualizador_ServidorLAN" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarURLActualizador_ServidorLANSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarURLActualizador_ServidorLANResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarArchivosADescagarSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarArchivosADescagar" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarArchivosADescagarSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarArchivosADescagarResponse" />
+  </wsdl:message>
+  <wsdl:message name="DescargarArchivoSoapIn">
+    <wsdl:part name="parameters" element="tns:DescargarArchivo" />
+  </wsdl:message>
+  <wsdl:message name="DescargarArchivoSoapOut">
+    <wsdl:part name="parameters" element="tns:DescargarArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DescargarArchivoParcialSoapIn">
+    <wsdl:part name="parameters" element="tns:DescargarArchivoParcial" />
+  </wsdl:message>
+  <wsdl:message name="DescargarArchivoParcialSoapOut">
+    <wsdl:part name="parameters" element="tns:DescargarArchivoParcialResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarFechaLiberacionVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarFechaLiberacionVersion" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarFechaLiberacionVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarFechaLiberacionVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarNombreServidorSoapIn">
+    <wsdl:part name="parameters" element="tns:RecuperarNombreServidor" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarNombreServidorSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarNombreServidorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsSIRActualizacionesSoap">
+    <wsdl:operation name="ExisteActualizacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determina si existen actualizaciones para descargar</wsdl:documentation>
+      <wsdl:input message="tns:ExisteActualizacionSoapIn" />
+      <wsdl:output message="tns:ExisteActualizacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarListaArchivos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Recupera los nombres de los archivos de la versión que se libera</wsdl:documentation>
+      <wsdl:input message="tns:RecuperarListaArchivosSoapIn" />
+      <wsdl:output message="tns:RecuperarListaArchivosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarURLActualizador_ServidorLAN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Recupera la URL del webservice de actualización localizado en servidor LAN</wsdl:documentation>
+      <wsdl:input message="tns:RecuperarURLActualizador_ServidorLANSoapIn" />
+      <wsdl:output message="tns:RecuperarURLActualizador_ServidorLANSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarArchivosADescagar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Recupera los nombres de los archivos de la versión que se libera</wsdl:documentation>
+      <wsdl:input message="tns:RecuperarArchivosADescagarSoapIn" />
+      <wsdl:output message="tns:RecuperarArchivosADescagarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DescargarArchivo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Serializa el contenido de un archivo hacia el cliente</wsdl:documentation>
+      <wsdl:input message="tns:DescargarArchivoSoapIn" />
+      <wsdl:output message="tns:DescargarArchivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DescargarArchivoParcial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Serializa el contenido de un archivo hacia el cliente</wsdl:documentation>
+      <wsdl:input message="tns:DescargarArchivoParcialSoapIn" />
+      <wsdl:output message="tns:DescargarArchivoParcialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarFechaLiberacionVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la fecha de liberacion de version</wsdl:documentation>
+      <wsdl:input message="tns:RecuperarFechaLiberacionVersionSoapIn" />
+      <wsdl:output message="tns:RecuperarFechaLiberacionVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarNombreServidor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el nombre del servidor</wsdl:documentation>
+      <wsdl:input message="tns:RecuperarNombreServidorSoapIn" />
+      <wsdl:output message="tns:RecuperarNombreServidorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsSIRActualizacionesSoap" type="tns:wsSIRActualizacionesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExisteActualizacion">
+      <soap:operation soapAction="http://RGP/SIRActualizaciones/ExisteActualizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarListaArchivos">
+      <soap:operation soapAction="http://RGP/SIRActualizaciones/RecuperarListaArchivos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarURLActualizador_ServidorLAN">
+      <soap:operation soapAction="http://RGP/SIRActualizaciones/RecuperarURLActualizador_ServidorLAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarArchivosADescagar">
+      <soap:operation soapAction="http://RGP/SIRActualizaciones/RecuperarArchivosADescagar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DescargarArchivo">
+      <soap:operation soapAction="http://RGP/SIRActualizaciones/DescargarArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DescargarArchivoParcial">
+      <soap:operation soapAction="http://RGP/SIRActualizaciones/DescargarArchivoParcial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarFechaLiberacionVersion">
+      <soap:operation soapAction="http://RGP/SIRActualizaciones/RecuperarFechaLiberacionVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarNombreServidor">
+      <soap:operation soapAction="http://RGP/SIRActualizaciones/RecuperarNombreServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsSIRActualizacionesSoap12" type="tns:wsSIRActualizacionesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExisteActualizacion">
+      <soap12:operation soapAction="http://RGP/SIRActualizaciones/ExisteActualizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarListaArchivos">
+      <soap12:operation soapAction="http://RGP/SIRActualizaciones/RecuperarListaArchivos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarURLActualizador_ServidorLAN">
+      <soap12:operation soapAction="http://RGP/SIRActualizaciones/RecuperarURLActualizador_ServidorLAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarArchivosADescagar">
+      <soap12:operation soapAction="http://RGP/SIRActualizaciones/RecuperarArchivosADescagar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DescargarArchivo">
+      <soap12:operation soapAction="http://RGP/SIRActualizaciones/DescargarArchivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DescargarArchivoParcial">
+      <soap12:operation soapAction="http://RGP/SIRActualizaciones/DescargarArchivoParcial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarFechaLiberacionVersion">
+      <soap12:operation soapAction="http://RGP/SIRActualizaciones/RecuperarFechaLiberacionVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarNombreServidor">
+      <soap12:operation soapAction="http://RGP/SIRActualizaciones/RecuperarNombreServidor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsSIRActualizaciones">
+    <wsdl:port name="wsSIRActualizacionesSoap" binding="tns:wsSIRActualizacionesSoap">
+      <soap:address location="http://localhost:59859/wsSIRActualizaciones.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsSIRActualizacionesSoap12" binding="tns:wsSIRActualizacionesSoap12">
+      <soap12:address location="http://localhost:59859/wsSIRActualizaciones.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

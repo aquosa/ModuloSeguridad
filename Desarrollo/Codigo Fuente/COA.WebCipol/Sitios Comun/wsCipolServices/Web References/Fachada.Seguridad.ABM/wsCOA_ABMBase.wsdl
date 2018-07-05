@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://WSCOA_ABMBASE" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://WSCOA_ABMBASE" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://WSCOA_ABMBASE">
+      <s:element name="EstablecerConexionActiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDConexion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstablecerConexionActivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstablecerConexionActivaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recuperar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreTabla" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecuperarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Grabar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreTabla" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoProceso" type="tns:TipoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="TipoProceso">
+        <s:restriction base="s:string">
+          <s:enumeration value="Insertar" />
+          <s:enumeration value="Eliminar" />
+          <s:enumeration value="Actualizar" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GrabarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GrabarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FechaServidor">
+        <s:complexType />
+      </s:element>
+      <s:element name="FechaServidorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FechaServidorResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EstablecerConexionActivaSoapIn">
+    <wsdl:part name="parameters" element="tns:EstablecerConexionActiva" />
+  </wsdl:message>
+  <wsdl:message name="EstablecerConexionActivaSoapOut">
+    <wsdl:part name="parameters" element="tns:EstablecerConexionActivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSoapIn">
+    <wsdl:part name="parameters" element="tns:Recuperar" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarSoapOut">
+    <wsdl:part name="parameters" element="tns:RecuperarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrabarSoapIn">
+    <wsdl:part name="parameters" element="tns:Grabar" />
+  </wsdl:message>
+  <wsdl:message name="GrabarSoapOut">
+    <wsdl:part name="parameters" element="tns:GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="FechaServidorSoapIn">
+    <wsdl:part name="parameters" element="tns:FechaServidor" />
+  </wsdl:message>
+  <wsdl:message name="FechaServidorSoapOut">
+    <wsdl:part name="parameters" element="tns:FechaServidorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsCOA_ABMBaseSoap">
+    <wsdl:operation name="EstablecerConexionActiva">
+      <wsdl:input message="tns:EstablecerConexionActivaSoapIn" />
+      <wsdl:output message="tns:EstablecerConexionActivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recuperar">
+      <wsdl:input message="tns:RecuperarSoapIn" />
+      <wsdl:output message="tns:RecuperarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Grabar">
+      <wsdl:input message="tns:GrabarSoapIn" />
+      <wsdl:output message="tns:GrabarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FechaServidor">
+      <wsdl:input message="tns:FechaServidorSoapIn" />
+      <wsdl:output message="tns:FechaServidorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsCOA_ABMBaseSoap" type="tns:wsCOA_ABMBaseSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstablecerConexionActiva">
+      <soap:operation soapAction="http://WSCOA_ABMBASE/EstablecerConexionActiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recuperar">
+      <soap:operation soapAction="http://WSCOA_ABMBASE/Recuperar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Grabar">
+      <soap:operation soapAction="http://WSCOA_ABMBASE/Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FechaServidor">
+      <soap:operation soapAction="http://WSCOA_ABMBASE/FechaServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsCOA_ABMBaseSoap12" type="tns:wsCOA_ABMBaseSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstablecerConexionActiva">
+      <soap12:operation soapAction="http://WSCOA_ABMBASE/EstablecerConexionActiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recuperar">
+      <soap12:operation soapAction="http://WSCOA_ABMBASE/Recuperar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Grabar">
+      <soap12:operation soapAction="http://WSCOA_ABMBASE/Grabar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FechaServidor">
+      <soap12:operation soapAction="http://WSCOA_ABMBASE/FechaServidor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCOA_ABMBase">
+    <wsdl:port name="wsCOA_ABMBaseSoap" binding="tns:wsCOA_ABMBaseSoap">
+      <soap:address location="http://localhost:59859/wsCOA_ABMBase.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsCOA_ABMBaseSoap12" binding="tns:wsCOA_ABMBaseSoap12">
+      <soap12:address location="http://localhost:59859/wsCOA_ABMBase.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

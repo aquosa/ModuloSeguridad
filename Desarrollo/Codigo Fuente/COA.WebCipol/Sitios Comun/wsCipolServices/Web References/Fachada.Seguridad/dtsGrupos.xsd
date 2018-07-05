@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsGrupos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsGrupos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsGrupos.xsd" id="dtsGrupos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="dtsGrupos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_SIST_HABILITADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" type="xs:short" />
+              <xs:element name="DESCSISTEMA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_GRUPO_TAREA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPO" type="xs:short" />
+              <xs:element name="DESCGRUPO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_TAREAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTAREA" type="xs:int" />
+              <xs:element name="DESCRIPCIONTAREA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_TAREAS_ASIGNADAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTAREA" type="xs:int" />
+              <xs:element name="DESCRIPCIONTAREA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GRUPO_EXCLUYENTE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPO" type="xs:short" />
+              <xs:element name="DESCGRUPO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GRUPO_NO_EXCLUYENTE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPO" type="xs:short" />
+              <xs:element name="DESCGRUPO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Auditoria">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SQLAuditar" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Auditoria1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SQLAuditar" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_Grupo_Exclusion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdGrupoActual" type="xs:long" />
+              <xs:element minOccurs="0" name="IdGrupExcluyente" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dtsGruposKey2">
+      <xs:selector xpath=".//mstns:SE_GRUPO_TAREA" />
+      <xs:field xpath="mstns:IDGRUPO" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dtsGruposKey1">
+      <xs:selector xpath=".//mstns:SE_TAREAS" />
+      <xs:field xpath="mstns:IDTAREA" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dtsGruposKey4">
+      <xs:selector xpath=".//mstns:SE_TAREAS_ASIGNADAS" />
+      <xs:field xpath="mstns:IDTAREA" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dtsGruposKey3">
+      <xs:selector xpath=".//mstns:GRUPO_EXCLUYENTE" />
+      <xs:field xpath="mstns:IDGRUPO" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dtsGruposKey5">
+      <xs:selector xpath=".//mstns:GRUPO_NO_EXCLUYENTE" />
+      <xs:field xpath="mstns:IDGRUPO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

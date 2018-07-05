@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BE1D679-DBAA-4F88-8FB7-C6EE57907DFA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COA.WebCipol.Inicio</RootNamespace>
+    <AssemblyName>COA.WebCipol.Inicio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChangedPassword\frmCambiarContrasenia.aspx" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\EstiloSistemasPermitidos.css" />
+    <Content Include="css\iconFont.min.css" />
+    <Content Include="css\ie.css" />
+    <Content Include="css\metro-bootstrap.css" />
+    <Content Include="css\overcast\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\overcast\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\overcast\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\overcast\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\overcast\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\overcast\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\overcast\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\overcast\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\overcast\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\overcast\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\overcast\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\overcast\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\overcast\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\overcast\jquery-ui-1.8.18.custom.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="fonts\asap-bold-webfont.svg" />
+    <Content Include="fonts\asap-bolditalic-webfont.svg" />
+    <Content Include="fonts\asap-italic-webfont.svg" />
+    <Content Include="fonts\asap-regular-webfont.svg" />
+    <Content Include="fonts\generator_config.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\iconFont.dev.svg" />
+    <Content Include="fonts\iconFont.svg" />
+    <Content Include="fonts\metroSysIcons.svg" />
+    <Content Include="frmLogin.aspx" />
+    <Content Include="frmLoginSSO.aspx" />
+    <Content Include="frmLogueado.aspx" />
+    <Content Include="frmMensaje.aspx" />
+    <Content Include="frmMensajeSistemasPermitidos.aspx" />
+    <Content Include="frmNoDisponeDePermiso.aspx" />
+    <Content Include="frmSistemasPermitidos.aspx" />
+    <Content Include="frmTipoSeguridad.aspx" />
+    <Content Include="Gestion_Error.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\bg_body.png" />
+    <Content Include="Images\icons-msj.png" />
+    <Content Include="Images\icons.png" />
+    <Content Include="Images\icon\error.png" />
+    <Content Include="Images\icon\img_CIPOL_CIPOL.jpg" />
+    <Content Include="Images\icon\img_CIPOL_CIPOL.png" />
+    <Content Include="Images\icon\info.png" />
+    <Content Include="Images\icon\services.png" />
+    <Content Include="Images\icon\success.png" />
+    <Content Include="Images\icon\warning.png" />
+    <Content Include="Images\logo_login.jpg" />
+    <Content Include="Images\mas.png" />
+    <Content Include="Images\menos.png" />
+    <Content Include="Images\prod_cipol.gif" />
+    <Content Include="Images\select-icon.png" />
+    <Content Include="Images\select-multiple-icon.png" />
+    <Content Include="js\jsfrmLogueado.js" />
+    <Content Include="js\jsfrmMensaje.js" />
+    <Content Include="js\jsfrmMensajeSistemasPermitidos.js" />
+    <Content Include="js\jsfrmSistemasPermitidos.js" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\global.js" />
+    <Content Include="Scripts\html5shiv-printshiv.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.magnic-popup\jquery.magnific-popup.js" />
+    <Content Include="Scripts\jquery.magnic-popup\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\jquery.magnic-popup\magnific-popup.css" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\animated-overlay.gif" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Scripts\jquery.ui\css\smoothness\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Scripts\jquery.ui\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Scripts\jsfrmTipoSeguridad.js" />
+    <Content Include="PageBuilders\wsAjaxwsSeguridad.asmx" />
+    <Content Include="PageBuilders\wsInterfaceSistemas.asmx" />
+    <Content Include="PageBuilders\ws\wsTipoSeguridad.asmx" />
+    <Content Include="Scripts\blockUI-2.39.js" />
+    <Content Include="Scripts\holder.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\jsCIPOL.js" />
+    <Content Include="Scripts\jsControles.js" />
+    <Content Include="Scripts\jsfrmLogin.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\jstree\jstree.js" />
+    <Content Include="Scripts\jstree\jstree.min.js" />
+    <Content Include="Scripts\jstree\themes\default\d.png" />
+    <Content Include="Scripts\jstree\themes\default\dots_rtl.gif" />
+    <Content Include="Scripts\jstree\themes\default\style.css" />
+    <Content Include="Scripts\jstree\themes\default\throbber.gif" />
+    <Content Include="Scripts\jsValidarCampos.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="SesionExpirada.aspx" />
+    <Content Include="Template\AuthenticateToken.xslt" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangedPassword\frmCambiarContrasenia.aspx.cs">
+      <DependentUpon>frmCambiarContrasenia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangedPassword\frmCambiarContrasenia.aspx.designer.cs">
+      <DependentUpon>frmCambiarContrasenia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlers\cFormLogin.cs" />
+    <Compile Include="Controlers\cInicioSesion.cs" />
+    <Compile Include="EstructuraSitioSimple.Master.cs">
+      <DependentUpon>EstructuraSitioSimple.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EstructuraSitioSimple.Master.designer.cs">
+      <DependentUpon>EstructuraSitioSimple.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EstructuraSitioSimplePadre.Master.cs">
+      <DependentUpon>EstructuraSitioSimplePadre.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EstructuraSitioSimplePadre.Master.designer.cs">
+      <DependentUpon>EstructuraSitioSimplePadre.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginSSO.aspx.cs">
+      <DependentUpon>frmLoginSSO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLoginSSO.aspx.designer.cs">
+      <DependentUpon>frmLoginSSO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogueado.aspx.cs">
+      <DependentUpon>frmLogueado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogueado.aspx.designer.cs">
+      <DependentUpon>frmLogueado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMensaje.aspx.cs">
+      <DependentUpon>frmMensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMensaje.aspx.designer.cs">
+      <DependentUpon>frmMensaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMensajeSistemasPermitidos.aspx.cs">
+      <DependentUpon>frmMensajeSistemasPermitidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMensajeSistemasPermitidos.aspx.designer.cs">
+      <DependentUpon>frmMensajeSistemasPermitidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNoDisponeDePermiso.aspx.cs">
+      <DependentUpon>frmNoDisponeDePermiso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmNoDisponeDePermiso.aspx.designer.cs">
+      <DependentUpon>frmNoDisponeDePermiso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSistemasPermitidos.aspx.cs">
+      <DependentUpon>frmSistemasPermitidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSistemasPermitidos.aspx.designer.cs">
+      <DependentUpon>frmSistemasPermitidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoSeguridad.aspx.cs">
+      <DependentUpon>frmTipoSeguridad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTipoSeguridad.aspx.designer.cs">
+      <DependentUpon>frmTipoSeguridad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_Error.aspx.cs">
+      <DependentUpon>Gestion_Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion_Error.aspx.designer.cs">
+      <DependentUpon>Gestion_Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="model\mFormLogin.cs" />
+    <Compile Include="model\mSession.cs" />
+    <Compile Include="PageBuilders\KeepSessionAlive.ashx.cs">
+      <DependentUpon>KeepSessionAlive.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBuilders\Utiles.cs" />
+    <Compile Include="PageBuilders\wsAjaxwsSeguridad.asmx.cs">
+      <DependentUpon>wsAjaxwsSeguridad.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PageBuilders\wsInterfaceSistemas.asmx.cs">
+      <DependentUpon>wsInterfaceSistemas.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PageBuilders\ws\wsTipoSeguridad.asmx.cs">
+      <DependentUpon>wsTipoSeguridad.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PaginaPadre.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\bootbox.js.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scripts\bootbox.js.designer.cs">
+      <DependentUpon>bootbox.js.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SesionExpirada.aspx.cs">
+      <DependentUpon>SesionExpirada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SesionExpirada.aspx.designer.cs">
+      <DependentUpon>SesionExpirada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utiles\cPrincipal.cs" />
+    <Compile Include="Utiles\DatosSesion.cs" />
+    <Compile Include="Utiles\ManejoSesion.cs" />
+    <Compile Include="view\EntidadesBase.cs" />
+    <Compile Include="view\vSistemasPermitidos.cs" />
+    <Compile Include="view\vTipoSeguridad.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChangedPassword\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EstructuraSitioSimple.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\asap-bold-webfont.eot" />
+    <Content Include="fonts\asap-bold-webfont.ttf" />
+    <Content Include="fonts\asap-bold-webfont.woff" />
+    <Content Include="fonts\asap-bolditalic-webfont.eot" />
+    <Content Include="fonts\asap-bolditalic-webfont.ttf" />
+    <Content Include="fonts\asap-bolditalic-webfont.woff" />
+    <Content Include="fonts\asap-italic-webfont.eot" />
+    <Content Include="fonts\asap-italic-webfont.ttf" />
+    <Content Include="fonts\asap-italic-webfont.woff" />
+    <Content Include="fonts\asap-regular-webfont.eot" />
+    <Content Include="fonts\asap-regular-webfont.ttf" />
+    <Content Include="fonts\asap-regular-webfont.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\iconFont.eot" />
+    <Content Include="fonts\iconFont.json" />
+    <Content Include="fonts\iconFont.ttf" />
+    <Content Include="fonts\iconFont.woff" />
+    <Content Include="fonts\metroSysIcons.ttf" />
+    <Content Include="fonts\metroSysIcons.woff" />
+    <Content Include="PageBuilders\KeepSessionAlive.ashx" />
+    <Content Include="EstructuraSitioSimplePadre.Master" />
+    <None Include="Properties\PublishProfiles\WSCipol.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FrameworkCOA\COA.Logger\COA.Logger.csproj">
+      <Project>{2d1f1635-d708-46b2-a3ca-bb68c1db12ae}</Project>
+      <Name>COA.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FrameworkCOA\EntidadesEmpresariales\frmkEntidadesEmpresariales.vbproj">
+      <Project>{dc802dc9-8dc3-42d6-b436-e5e42b30cc37}</Project>
+      <Name>frmkEntidadesEmpresariales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FrameworkCOA\Fachada\frmkFachada.vbproj">
+      <Project>{1e3ec879-1d8f-4a7c-af45-1b778432cbac}</Project>
+      <Name>frmkFachada</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FrameworkCOA\UtilidadesCOA\UtilidadesCOA.vbproj">
+      <Project>{ecd0fb0b-d5ab-43b2-9a07-4404274e2936}</Project>
+      <Name>UtilidadesCOA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sitios Comun\COA.WebCipol.Comun\COA.WebCipol.Comun.csproj">
+      <Project>{46b8f321-ad6c-4ef4-8c0c-9cdc7c539b95}</Project>
+      <Name>COA.WebCipol.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sitios Comun\COA.WebCipol.Fachada\COA.WebCipol.Fachada.csproj">
+      <Project>{45206d17-e4a5-4fc8-b1b0-ec806f5ced91}</Project>
+      <Name>COA.WebCipol.Fachada</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sitios Comun\Entidates.WebCipol\COA.WebCipol.Entidades.csproj">
+      <Project>{f636e939-5c7b-48e2-90ee-bf20b2345db4}</Project>
+      <Name>COA.WebCipol.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\COA.ConectorServicio\COA.ConectorServicio.csproj">
+      <Project>{b8ecacf7-9456-4aee-89a5-02670969752f}</Project>
+      <Name>COA.ConectorServicio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58088</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

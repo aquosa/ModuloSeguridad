@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsAuditoriaEventos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsAuditoriaEventos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsAuditoriaEventos.xsd" id="dtsAuditoriaEventos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dtsAuditoriaEventos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_USUARIOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="USUARIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOMBRES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_TERMINALES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODTERMINAL" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SIST_EVENTOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHAHORALOG" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="OPERACION" type="xs:string" />
+              <xs:element minOccurs="0" name="TABLA" type="xs:string" />
+              <xs:element minOccurs="0" name="STRINGSQL" type="xs:string" />
+              <xs:element minOccurs="0" name="USUARIO" type="xs:string" />
+              <xs:element minOccurs="0" name="SUPERVISOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBREPC" type="xs:string" />
+              <xs:element minOccurs="0" name="SISTEMA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_SIST_HABILITADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DESCSISTEMA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TablasDeSistema">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NombreTabla" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtOperaciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codigo" type="xs:string" />
+              <xs:element minOccurs="0" name="Operacion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtFiltros">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHADESDE" type="xs:dateTime" />
+              <xs:element name="FECHAHASTA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="OPERACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TABLA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="USUARIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SUPERVISOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOMBREPC" type="xs:string" />
+              <xs:element minOccurs="0" name="SISTEMA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TEXTOBUSCAR" type="xs:string" />
+              <xs:element minOccurs="0" name="CantidadRegistrosDefault" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtSupervisores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="USUARIO" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRES" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ResultadoConsulta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CantidadRegistros" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="3303" viewPortTop="950" zoom="100">
+    <SE_GRUPO_EXCLUSION_XmlElement left="8784" top="1746" width="8837" height="2964" selected="0" zOrder="1" index="0" expanded="1" />
+    <SE_ROLES_XmlElement left="2619" top="1772" width="5292" height="2963" selected="0" zOrder="2" index="1" expanded="1" />
+    <ArbolGrupo_XmlElement left="2805" top="4895" width="6879" height="4656" selected="0" zOrder="4" index="2" expanded="1" />
+    <Roles_Composicion_XmlElement left="10028" top="5212" width="6932" height="5504" selected="0" zOrder="6" index="3" expanded="1" />
+    <UsuariosPorRol_XmlElement left="18255" top="1000" width="5292" height="2963" selected="0" zOrder="8" index="4" expanded="1" />
+</XSDDesignerLayout>

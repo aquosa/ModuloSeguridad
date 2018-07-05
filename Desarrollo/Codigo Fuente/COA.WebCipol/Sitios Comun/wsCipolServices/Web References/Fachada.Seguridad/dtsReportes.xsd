@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsReportes.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsReportes.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsReportes.xsd" id="dtsReportes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dtsReportes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_TERMINALES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTERMINAL" type="xs:int" />
+              <xs:element name="CODTERMINAL" type="xs:string" />
+              <xs:element name="NOMBRECOMPUTADORA" type="xs:string" />
+              <xs:element name="USOHABILITADO" type="xs:string" />
+              <xs:element minOccurs="0" name="MODELOPROCESADOR" type="xs:string" />
+              <xs:element minOccurs="0" name="CANTMEMORIARAM" type="xs:long" />
+              <xs:element minOccurs="0" name="TAMANIODISCO" type="xs:long" />
+              <xs:element minOccurs="0" name="MODELOMONITOR" type="xs:string" />
+              <xs:element minOccurs="0" name="MODELOACELVIDEO" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCADICIONAL" type="xs:string" />
+              <xs:element minOccurs="0" name="IDAREA" type="xs:int" />
+              <xs:element minOccurs="0" name="NOMBREAREA" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreNetBios" type="xs:string" />
+              <xs:element minOccurs="0" name="USOHABILITADOSINENC" type="xs:string" />
+              <xs:element minOccurs="0" name="ORIGENACTUALIZACION" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="KAREAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAREA" type="xs:short" />
+              <xs:element name="NOMBREAREA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dtsTerminalesKey1">
+      <xs:selector xpath=".//mstns:SE_TERMINALES" />
+      <xs:field xpath="mstns:IDTERMINAL" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

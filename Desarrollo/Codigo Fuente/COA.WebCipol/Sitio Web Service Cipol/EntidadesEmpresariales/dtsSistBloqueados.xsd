@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsSistBloqueados" targetNamespace="http://tempuri.org/Inhabilitacion.xsd" xmlns:mstns="http://tempuri.org/Inhabilitacion.xsd" xmlns="http://tempuri.org/Inhabilitacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsPropertyName="COARRHHConnectionString" ConnectionStringObject="Data Source=SRVTESTING;Initial Catalog=COARRHH;Persist Security Info=True;User ID=sa;Password=.coasa." IsAppSettingsProperty="False" Modifier="Assembly" Name="COARRHHConnectionString" ParameterPrefix="@" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsSistBloqueados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dtsSistBloqueados" msprop:Generator_DataSetName="dtsSistBloqueados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SIST_BLOQUEADOS" msprop:Generator_UserTableName="SIST_BLOQUEADOS" msprop:Generator_RowDeletedName="SIST_BLOQUEADOSRowDeleted" msprop:Generator_RowChangedName="SIST_BLOQUEADOSRowChanged" msprop:Generator_RowClassName="SIST_BLOQUEADOSRow" msprop:Generator_RowChangingName="SIST_BLOQUEADOSRowChanging" msprop:Generator_RowEvArgName="SIST_BLOQUEADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="SIST_BLOQUEADOSRowChangeEventHandler" msprop:Generator_TableClassName="SIST_BLOQUEADOSDataTable" msprop:Generator_TableVarName="tableSIST_BLOQUEADOS" msprop:Generator_RowDeletingName="SIST_BLOQUEADOSRowDeleting" msprop:Generator_TablePropName="SIST_BLOQUEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" msprop:Generator_UserColumnName="IDSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSISTEMA" msprop:Generator_ColumnPropNameInTable="IDSISTEMAColumn" type="xs:short" />
+              <xs:element name="DESCSISTEMA" msprop:Generator_UserColumnName="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_USUARIOS" msprop:Generator_UserTableName="SE_USUARIOS" msprop:Generator_RowDeletedName="SE_USUARIOSRowDeleted" msprop:Generator_RowChangedName="SE_USUARIOSRowChanged" msprop:Generator_RowClassName="SE_USUARIOSRow" msprop:Generator_RowChangingName="SE_USUARIOSRowChanging" msprop:Generator_RowEvArgName="SE_USUARIOSRowChangeEvent" msprop:Generator_RowEvHandlerName="SE_USUARIOSRowChangeEventHandler" msprop:Generator_TableClassName="SE_USUARIOSDataTable" msprop:Generator_TableVarName="tableSE_USUARIOS" msprop:Generator_RowDeletingName="SE_USUARIOSRowDeleting" msprop:Generator_TablePropName="SE_USUARIOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDUSUARIO" msdata:Caption="IDGRUPO" msprop:Generator_UserColumnName="IDUSUARIO" msprop:Generator_ColumnVarNameInTable="columnIDUSUARIO" msprop:Generator_ColumnPropNameInRow="IDUSUARIO" msprop:Generator_ColumnPropNameInTable="IDUSUARIOColumn" type="xs:short" />
+              <xs:element name="NOMBRES" msdata:Caption="DESCGRUPO" msprop:Generator_UserColumnName="NOMBRES" msprop:Generator_ColumnVarNameInTable="columnNOMBRES" msprop:Generator_ColumnPropNameInRow="NOMBRES" msprop:Generator_ColumnPropNameInTable="NOMBRESColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="USU_DESBLOQUEADOS" msprop:Generator_UserTableName="USU_DESBLOQUEADOS" msprop:Generator_RowDeletedName="USU_DESBLOQUEADOSRowDeleted" msprop:Generator_RowChangedName="USU_DESBLOQUEADOSRowChanged" msprop:Generator_RowClassName="USU_DESBLOQUEADOSRow" msprop:Generator_RowChangingName="USU_DESBLOQUEADOSRowChanging" msprop:Generator_RowEvArgName="USU_DESBLOQUEADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="USU_DESBLOQUEADOSRowChangeEventHandler" msprop:Generator_TableClassName="USU_DESBLOQUEADOSDataTable" msprop:Generator_TableVarName="tableUSU_DESBLOQUEADOS" msprop:Generator_RowDeletingName="USU_DESBLOQUEADOSRowDeleting" msprop:Generator_TablePropName="USU_DESBLOQUEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDUSUARIO" msdata:Caption="IDGRUPO" msprop:Generator_UserColumnName="IDUSUARIO" msprop:Generator_ColumnVarNameInTable="columnIDUSUARIO" msprop:Generator_ColumnPropNameInRow="IDUSUARIO" msprop:Generator_ColumnPropNameInTable="IDUSUARIOColumn" type="xs:short" />
+              <xs:element name="NOMBRES" msdata:Caption="DESCGRUPO" msprop:Generator_UserColumnName="NOMBRES" msprop:Generator_ColumnVarNameInTable="columnNOMBRES" msprop:Generator_ColumnPropNameInRow="NOMBRES" msprop:Generator_ColumnPropNameInTable="NOMBRESColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_SIST_BLOQUEADOS" msprop:Generator_UserTableName="SE_SIST_BLOQUEADOS" msprop:Generator_RowDeletedName="SE_SIST_BLOQUEADOSRowDeleted" msprop:Generator_RowChangedName="SE_SIST_BLOQUEADOSRowChanged" msprop:Generator_RowClassName="SE_SIST_BLOQUEADOSRow" msprop:Generator_RowChangingName="SE_SIST_BLOQUEADOSRowChanging" msprop:Generator_RowEvArgName="SE_SIST_BLOQUEADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="SE_SIST_BLOQUEADOSRowChangeEventHandler" msprop:Generator_TableClassName="SE_SIST_BLOQUEADOSDataTable" msprop:Generator_TableVarName="tableSE_SIST_BLOQUEADOS" msprop:Generator_RowDeletingName="SE_SIST_BLOQUEADOSRowDeleting" msprop:Generator_TablePropName="SE_SIST_BLOQUEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" msdata:Caption="IDSistema" msprop:Generator_UserColumnName="IDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSistema" msprop:Generator_ColumnVarNameInTable="columnIDSistema" msprop:Generator_ColumnPropNameInTable="IDSistemaColumn" type="xs:decimal" />
+              <xs:element name="IDUSUARIO" msdata:Caption="IDUsuario" msprop:Generator_UserColumnName="IDUSUARIO" msprop:Generator_ColumnPropNameInRow="IDUsuario" msprop:Generator_ColumnVarNameInTable="columnIDUsuario" msprop:Generator_ColumnPropNameInTable="IDUsuarioColumn" type="xs:decimal" />
+              <xs:element name="DESCSISTEMA" msprop:Generator_UserColumnName="DESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRES" msprop:Generator_UserColumnName="NOMBRES" msprop:Generator_ColumnPropNameInRow="NOMBRES" msprop:Generator_ColumnVarNameInTable="columnNOMBRES" msprop:Generator_ColumnPropNameInTable="NOMBRESColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SIST_DESBLOQUEADOS" msprop:Generator_UserTableName="SIST_DESBLOQUEADOS" msprop:Generator_RowDeletedName="SIST_DESBLOQUEADOSRowDeleted" msprop:Generator_TableClassName="SIST_DESBLOQUEADOSDataTable" msprop:Generator_RowChangedName="SIST_DESBLOQUEADOSRowChanged" msprop:Generator_RowClassName="SIST_DESBLOQUEADOSRow" msprop:Generator_RowChangingName="SIST_DESBLOQUEADOSRowChanging" msprop:Generator_RowEvArgName="SIST_DESBLOQUEADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="SIST_DESBLOQUEADOSRowChangeEventHandler" msprop:Generator_TablePropName="SIST_DESBLOQUEADOS" msprop:Generator_TableVarName="tableSIST_DESBLOQUEADOS" msprop:Generator_RowDeletingName="SIST_DESBLOQUEADOSRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" msprop:Generator_UserColumnName="IDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDSISTEMA" msprop:Generator_ColumnPropNameInTable="IDSISTEMAColumn" type="xs:short" />
+              <xs:element name="DESCSISTEMA" msprop:Generator_UserColumnName="DESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="USU_BLOQUEADOS" msprop:Generator_UserTableName="USU_BLOQUEADOS" msprop:Generator_RowDeletedName="USU_BLOQUEADOSRowDeleted" msprop:Generator_TableClassName="USU_BLOQUEADOSDataTable" msprop:Generator_RowChangedName="USU_BLOQUEADOSRowChanged" msprop:Generator_RowClassName="USU_BLOQUEADOSRow" msprop:Generator_RowChangingName="USU_BLOQUEADOSRowChanging" msprop:Generator_RowEvArgName="USU_BLOQUEADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="USU_BLOQUEADOSRowChangeEventHandler" msprop:Generator_TablePropName="USU_BLOQUEADOS" msprop:Generator_TableVarName="tableUSU_BLOQUEADOS" msprop:Generator_RowDeletingName="USU_BLOQUEADOSRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDUSUARIO" msdata:Caption="IDGRUPO" msprop:Generator_UserColumnName="IDUSUARIO" msprop:Generator_ColumnPropNameInRow="IDUSUARIO" msprop:Generator_ColumnVarNameInTable="columnIDUSUARIO" msprop:Generator_ColumnPropNameInTable="IDUSUARIOColumn" type="xs:short" />
+              <xs:element name="NOMBRES" msdata:Caption="DESCGRUPO" msprop:Generator_UserColumnName="NOMBRES" msprop:Generator_ColumnPropNameInRow="NOMBRES" msprop:Generator_ColumnVarNameInTable="columnNOMBRES" msprop:Generator_ColumnPropNameInTable="NOMBRESColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_SIST_HABILITADOS" msprop:Generator_UserTableName="SE_SIST_HABILITADOS" msprop:Generator_RowDeletedName="SE_SIST_HABILITADOSRowDeleted" msprop:Generator_TableClassName="SE_SIST_HABILITADOSDataTable" msprop:Generator_RowChangedName="SE_SIST_HABILITADOSRowChanged" msprop:Generator_RowClassName="SE_SIST_HABILITADOSRow" msprop:Generator_RowChangingName="SE_SIST_HABILITADOSRowChanging" msprop:Generator_RowEvArgName="SE_SIST_HABILITADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="SE_SIST_HABILITADOSRowChangeEventHandler" msprop:Generator_TablePropName="SE_SIST_HABILITADOS" msprop:Generator_TableVarName="tableSE_SIST_HABILITADOS" msprop:Generator_RowDeletingName="SE_SIST_HABILITADOSRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" msprop:Generator_UserColumnName="IDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDSISTEMA" msprop:Generator_ColumnPropNameInTable="IDSISTEMAColumn" type="xs:short" />
+              <xs:element name="DESCSISTEMA" msprop:Generator_UserColumnName="DESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SIST_BLOQUEADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+    </xs:unique>
+    <xs:unique name="dtsGruposKey5" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_USUARIOS" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique name="USU_DESBLOQUEADOS_dtsGruposKey5" msdata:ConstraintName="dtsGruposKey5" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:USU_DESBLOQUEADOS" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique name="SE_SIST_BLOQUEADOS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_SIST_BLOQUEADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique name="SIST_DESBLOQUEADOS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SIST_DESBLOQUEADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+    </xs:unique>
+    <xs:unique name="USU_BLOQUEADOS_dtsGruposKey5" msdata:ConstraintName="dtsGruposKey5" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:USU_BLOQUEADOS" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique name="SE_SIST_HABILITADOS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_SIST_HABILITADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="2554" viewPortTop="-421" zoom="100">
+    <SE_SIST_HABILITADOS_XmlElement left="8732" top="265" width="5292" height="2963" selected="0" zOrder="1" index="0" expanded="1" />
+    <SE_GRUPO_TAREA_XmlElement left="14393" top="292" width="5292" height="2963" selected="0" zOrder="2" index="1" expanded="1" />
+    <SE_TAREAS_XmlElement left="3043" top="3419" width="5292" height="2963" selected="0" zOrder="4" index="2" expanded="1" />
+    <SE_TAREAS_ASIGNADAS_XmlElement left="8677" top="3418" width="5292" height="2963" selected="0" zOrder="6" index="3" expanded="1" />
+    <GRUPO_EXCLUYENTE_XmlElement left="2989" top="6530" width="5292" height="2963" selected="0" zOrder="8" index="4" expanded="1" />
+    <GRUPO_NO_EXCLUYENTE_XmlElement left="8705" top="6583" width="5292" height="2963" selected="0" zOrder="10" index="5" expanded="1" />
+    <Auditoria_XmlElement left="14505" top="3468" width="5292" height="2963" selected="0" zOrder="12" index="6" expanded="1" />
+    <Auditoria1_XmlElement left="14556" top="6582" width="5292" height="2963" selected="0" zOrder="14" index="7" expanded="1" />
+    <SE_Grupo_Exclusion_XmlElement left="7502" top="10880" width="5292" height="2963" selected="0" zOrder="16" index="8" expanded="1" />
+</XSDDesignerLayout>

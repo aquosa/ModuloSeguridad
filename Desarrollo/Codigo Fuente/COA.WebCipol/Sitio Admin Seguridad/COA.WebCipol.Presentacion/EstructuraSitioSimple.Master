@@ -1,0 +1,2 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EstructuraSitioSimple.master.cs"
+    Inherits="COA.WebCipol.Presentacion.Formularios.EstructuraSitioSimple"  MasterPageFile="~/EstructuraSitioSimplePadre.Master" %>

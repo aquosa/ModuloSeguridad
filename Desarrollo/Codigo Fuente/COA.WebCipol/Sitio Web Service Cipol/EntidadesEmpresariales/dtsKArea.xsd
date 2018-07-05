@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsKArea" targetNamespace="http://tempuri.org/dtsKArea.xsd" xmlns:mstns="http://tempuri.org/dtsKArea.xsd" xmlns="http://tempuri.org/dtsKArea.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" PropertyReference="ApplicationSettings.Fachada.Seguridad.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.OracleClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsKArea" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="dtsKArea" msprop:Generator_DataSetName="dtsKArea">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KAREAS" msprop:Generator_UserTableName="KAREAS" msprop:Generator_RowDeletedName="KAREASRowDeleted" msprop:Generator_RowChangedName="KAREASRowChanged" msprop:Generator_RowClassName="KAREASRow" msprop:Generator_RowChangingName="KAREASRowChanging" msprop:Generator_RowEvArgName="KAREASRowChangeEvent" msprop:Generator_RowEvHandlerName="KAREASRowChangeEventHandler" msprop:Generator_TableClassName="KAREASDataTable" msprop:Generator_TableVarName="tableKAREAS" msprop:Generator_RowDeletingName="KAREASRowDeleting" msprop:Generator_TablePropName="KAREAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdArea" msprop:Generator_UserColumnName="IdArea" msprop:Generator_ColumnPropNameInRow="IdArea" msprop:Generator_ColumnVarNameInTable="columnIdArea" msprop:Generator_ColumnPropNameInTable="IdAreaColumn" type="xs:integer" minOccurs="0" />
+              <xs:element name="NombreArea" msprop:Generator_UserColumnName="NombreArea" msprop:Generator_ColumnPropNameInRow="NombreArea" msprop:Generator_ColumnVarNameInTable="columnNombreArea" msprop:Generator_ColumnPropNameInTable="NombreAreaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="baja" msprop:Generator_UserColumnName="baja" msprop:Generator_ColumnPropNameInRow="baja" msprop:Generator_ColumnVarNameInTable="columnbaja" msprop:Generator_ColumnPropNameInTable="bajaColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SIST_KAREAS" msprop:Generator_UserTableName="SIST_KAREAS" msprop:Generator_RowDeletedName="SIST_KAREASRowDeleted" msprop:Generator_RowChangedName="SIST_KAREASRowChanged" msprop:Generator_RowClassName="SIST_KAREASRow" msprop:Generator_RowChangingName="SIST_KAREASRowChanging" msprop:Generator_RowEvArgName="SIST_KAREASRowChangeEvent" msprop:Generator_RowEvHandlerName="SIST_KAREASRowChangeEventHandler" msprop:Generator_TableClassName="SIST_KAREASDataTable" msprop:Generator_TableVarName="tableSIST_KAREAS" msprop:Generator_RowDeletingName="SIST_KAREASRowDeleting" msprop:Generator_TablePropName="SIST_KAREAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAREA" msprop:Generator_UserColumnName="IDAREA" msprop:Generator_ColumnPropNameInRow="IDAREA" msprop:Generator_ColumnVarNameInTable="columnIDAREA" msprop:Generator_ColumnPropNameInTable="IDAREAColumn" type="xs:decimal" />
+              <xs:element name="NOMBREAREA" msprop:Generator_UserColumnName="NOMBREAREA" msprop:Generator_ColumnPropNameInRow="NOMBREAREA" msprop:Generator_ColumnVarNameInTable="columnNOMBREAREA" msprop:Generator_ColumnPropNameInTable="NOMBREAREAColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RESPONSABLE" msprop:Generator_UserColumnName="RESPONSABLE" msprop:Generator_ColumnPropNameInRow="RESPONSABLE" msprop:Generator_ColumnVarNameInTable="columnRESPONSABLE" msprop:Generator_ColumnPropNameInTable="RESPONSABLEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CARGORESPONSABLE" msprop:Generator_UserColumnName="CARGORESPONSABLE" msprop:Generator_ColumnPropNameInRow="CARGORESPONSABLE" msprop:Generator_ColumnVarNameInTable="columnCARGORESPONSABLE" msprop:Generator_ColumnPropNameInTable="CARGORESPONSABLEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COMENTARIOS" msprop:Generator_UserColumnName="COMENTARIOS" msprop:Generator_ColumnPropNameInRow="COMENTARIOS" msprop:Generator_ColumnVarNameInTable="columnCOMENTARIOS" msprop:Generator_ColumnPropNameInTable="COMENTARIOSColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BAJA" msprop:Generator_UserColumnName="BAJA" msprop:Generator_ColumnPropNameInRow="BAJA" msprop:Generator_ColumnVarNameInTable="columnBAJA" msprop:Generator_ColumnPropNameInTable="BAJAColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FICTICIA" msprop:Generator_UserColumnName="FICTICIA" msprop:Generator_ColumnPropNameInRow="FICTICIA" msprop:Generator_ColumnVarNameInTable="columnFICTICIA" msprop:Generator_ColumnPropNameInTable="FICTICIAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FICTICIA_VIEW" msdata:ReadOnly="true" msdata:Expression="FICTICIA = 'S'" msprop:Generator_UserColumnName="FICTICIA_VIEW" msprop:Generator_ColumnVarNameInTable="columnFICTICIA_VIEW" msprop:Generator_ColumnPropNameInRow="FICTICIA_VIEW" msprop:Generator_ColumnPropNameInTable="FICTICIA_VIEWColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SIST_KAREAS" />
+      <xs:field xpath="mstns:IDAREA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

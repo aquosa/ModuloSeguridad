@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F636E939-5C7B-48E2-90EE-BF20B2345DB4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COA.WebCipol.Entidades</RootNamespace>
+    <AssemblyName>COA.WebCipol.Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClasesDataSet\dtsAuditoriaEventos.cs" />
+    <Compile Include="ClasesDataSet\dtsCtrlInactividad.cs" />
+    <Compile Include="ClasesDataSet\dtsGrupos.cs" />
+    <Compile Include="ClasesDataSet\dtsKArea.cs" />
+    <Compile Include="ClasesDataSet\dtsReportes.cs" />
+    <Compile Include="ClasesDataSet\dtsRoles.cs" />
+    <Compile Include="ClasesDataSet\dtsRolesXUsuarios.cs" />
+    <Compile Include="ClasesDataSet\dtsSistBloqueados.cs" />
+    <Compile Include="ClasesDataSet\dtsSistHabilitados.cs" />
+    <Compile Include="ClasesDataSet\dtsSucesosSeguridad.cs" />
+    <Compile Include="ClasesDataSet\dtsTareas.cs" />
+    <Compile Include="ClasesDataSet\dtsTerminales.cs" />
+    <Compile Include="ClasesDataSet\DtsUsuarios.cs" />
+    <Compile Include="ClasesDataSet\dtsAuditoria.cs" />
+    <Compile Include="ClasesDataSet\dtsUsuariosABM.cs" />
+    <Compile Include="ClasesDataSet\dtsUsuariosXAreas.cs" />
+    <Compile Include="ClasesWs\dcActualizarArea.cs" />
+    <Compile Include="ClasesWs\dcActualizarSistemaHabilitado.cs" />
+    <Compile Include="ClasesWs\dcActualizarTareaPrimitiva.cs" />
+    <Compile Include="ClasesWs\dcAdministrarAbmUsuarios.cs" />
+    <Compile Include="ClasesWs\dcAdministrarGrupo.cs" />
+    <Compile Include="ClasesWs\dcAdministrarPoliticasGenerales.cs" />
+    <Compile Include="ClasesWs\dcAdministrarRoles.cs" />
+    <Compile Include="ClasesWs\dcAdministrarTareasSupervisantes.cs" />
+    <Compile Include="ClasesWs\dcAdministrarTerminales.cs" />
+    <Compile Include="ClasesWs\dcAltaDeAreas.cs" />
+    <Compile Include="ClasesWs\dcEliminarSesionActiva.cs" />
+    <Compile Include="ClasesWs\dcEliminarSistemaHabilitado.cs" />
+    <Compile Include="ClasesWs\dcEliminarTareaPrimitiva.cs" />
+    <Compile Include="ClasesWs\dcInsertarSistBloqueados.cs" />
+    <Compile Include="ClasesWs\dcInsertarSistemaHabilitado.cs" />
+    <Compile Include="ClasesWs\dcInsertarTareaPrimitiva.cs" />
+    <Compile Include="ClasesWs\dcRecuperarAreas.cs" />
+    <Compile Include="ClasesWs\dcRecuperarComposicionRol.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosDelGrupo.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaABMGrupos.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaABMRoles.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaABMTareasAutorizantes.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaABMTerminales.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaABMUsuarios.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaArbolDeGruposDeTareas.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaEntornoCIPOLAdministrador.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaGrillaABMUsuarios.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaGrillaABMUsuariosFiltro.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaMonitorActividades.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaReporteRolesXUsuarios.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaReporteUsuariosXRoles.cs" />
+    <Compile Include="ClasesWs\dcRecuperarDatosParaVisorSucesosSeguridad.cs" />
+    <Compile Include="ClasesWs\dcRecuperarEventosAuditoria.cs" />
+    <Compile Include="ClasesWs\dcRecuperarPoliticasGenerales.cs" />
+    <Compile Include="ClasesWs\dcRecuperarReporteControlInactividad.cs" />
+    <Compile Include="ClasesWs\dcRecuperarReporteRolesComposicion.cs" />
+    <Compile Include="ClasesWs\dcRecuperarReporteRolesXUsuario.cs" />
+    <Compile Include="ClasesWs\dcRecuperarReporteRolesXUsuarioDetalle.cs" />
+    <Compile Include="ClasesWs\dcRecuperarReporteUsuario.cs" />
+    <Compile Include="ClasesWs\dcRecuperarReporteUsuarioSinAcceso.cs" />
+    <Compile Include="ClasesWs\dcRecuperarReporteUsuariosXArea.cs" />
+    <Compile Include="ClasesWs\dcRecuperarReporteUsuariosXRol.cs" />
+    <Compile Include="ClasesWs\dcRecuperarReporteUsuariosXRolDetalle.cs" />
+    <Compile Include="ClasesWs\dcRecuperarSistBloqueados.cs" />
+    <Compile Include="ClasesWs\dcRecuperarSistemasHabilitados.cs" />
+    <Compile Include="ClasesWs\dcRecuperarSIST_Habilitados.cs" />
+    <Compile Include="ClasesWs\dcRecuperarSupervisores.cs" />
+    <Compile Include="ClasesWs\dcRecuperarTareasPorSistemaYGrupo.cs" />
+    <Compile Include="ClasesWs\dcRecuperarTareasPrimitivas.cs" />
+    <Compile Include="ClasesWs\dcRecuperarTareasQueRequierenAutorizacion.cs" />
+    <Compile Include="ClasesWs\dcRecuperarTareasSinAutorizacion.cs" />
+    <Compile Include="ClasesWs\dcRecuperarTerminalesParaReporte.cs" />
+    <Compile Include="ClasesWs\dcRecuperarUsuarios.cs" />
+    <Compile Include="ClasesWs\dcRecuperaTablasDeSistemas.cs" />
+    <Compile Include="ClasesWs\dcRecuperaTerminales.cs" />
+    <Compile Include="ClasesWs\dcRetornarLogAuditoria.cs" />
+    <Compile Include="ClasesWs\dcRetornaStringSQL.cs" />
+    <Compile Include="ClasesWs\dcValidarSupervisor.cs" />
+    <Compile Include="ClasesWs\Filtros\dcFiltrosUsuarios.cs" />
+    <Compile Include="ClasesWs\Interfaces\ISE_Horarios_Usuario.cs" />
+    <Compile Include="ClasesWs\SIST_USUARIOS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClasesBase\SE_ATRIBUTOSTAREAS.cs" />
+    <Compile Include="ClasesBase\SE_AUDITORIA.cs" />
+    <Compile Include="ClasesBase\SE_AUDITORIASUPERVISION.cs" />
+    <Compile Include="ClasesBase\SE_AUDITORIATAREAS.cs" />
+    <Compile Include="ClasesBase\SE_AUTORIZACION.cs" />
+    <Compile Include="ClasesBase\SE_CODAUDITORIA.cs" />
+    <Compile Include="ClasesBase\SE_COMP_ROLES.cs" />
+    <Compile Include="ClasesBase\SE_GRUPO_EXCLUSION.cs" />
+    <Compile Include="ClasesBase\SE_GRUPO_TAREA.cs" />
+    <Compile Include="ClasesBase\SE_HISTORIAL_USUARIO.cs" />
+    <Compile Include="ClasesBase\SE_HORARIOS_USUARIO.cs" />
+    <Compile Include="ClasesBase\SE_INSTANCIAUSUARIO.cs" />
+    <Compile Include="ClasesBase\SE_MENSAJES.cs" />
+    <Compile Include="ClasesBase\SE_MENUES.cs" />
+    <Compile Include="ClasesBase\SE_PARAMETROS.cs" />
+    <Compile Include="ClasesBase\SE_PARAMETROSok.cs" />
+    <Compile Include="ClasesBase\SE_REL_AUTORIZ.cs" />
+    <Compile Include="ClasesBase\SE_ROLES.cs" />
+    <Compile Include="ClasesBase\SE_SESIONESACTIVAS.cs" />
+    <Compile Include="ClasesBase\SE_SIST_BLOQUEADOS.cs" />
+    <Compile Include="ClasesBase\SE_SIST_EVENTOS.cs" />
+    <Compile Include="ClasesBase\SE_SIST_HABILITADOS.cs" />
+    <Compile Include="ClasesBase\SE_SIST_HABILITADOS_ok.cs" />
+    <Compile Include="ClasesBase\SE_SIST_HABILITADOS_okMIO.cs" />
+    <Compile Include="ClasesBase\SE_TAREAS.cs" />
+    <Compile Include="ClasesBase\SE_TAREAS_USUARIO.cs" />
+    <Compile Include="ClasesBase\SE_TERMINALES.cs" />
+    <Compile Include="ClasesBase\SE_TERM_USUARIO.cs" />
+    <Compile Include="ClasesBase\SE_USUARIOS.cs" />
+    <Compile Include="ClasesBase\SIST_KAREAS.cs" />
+    <Compile Include="ClasesBase\SIST_KDOCUMENTOS.cs" />
+    <Compile Include="ClasesBase\SIST_SESION_USUARIO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\COA.WebCipol.Comun\COA.WebCipol.Comun.csproj">
+      <Project>{46B8F321-AD6C-4EF4-8C0C-9CDC7C539B95}</Project>
+      <Name>COA.WebCipol.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades.WebCipol.Core\COA.WebCipol.Entidades.Core.csproj">
+      <Project>{2E97DEE2-AB64-4258-8D28-600B1B3DA676}</Project>
+      <Name>COA.WebCipol.Entidades.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

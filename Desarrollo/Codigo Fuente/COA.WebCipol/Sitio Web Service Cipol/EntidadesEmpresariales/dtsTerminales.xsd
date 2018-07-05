@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsTerminales" targetNamespace="http://tempuri.org/dtsTerminales.xsd" xmlns:mstns="http://tempuri.org/dtsTerminales.xsd" xmlns="http://tempuri.org/dtsTerminales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsTerminales" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="dtsTerminales" msprop:Generator_UserDSName="dtsTerminales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_TERMINALES" msprop:Generator_UserTableName="SE_TERMINALES" msprop:Generator_RowEvArgName="SE_TERMINALESRowChangeEvent" msprop:Generator_TableVarName="tableSE_TERMINALES" msprop:Generator_TablePropName="SE_TERMINALES" msprop:Generator_RowDeletingName="SE_TERMINALESRowDeleting" msprop:Generator_RowChangingName="SE_TERMINALESRowChanging" msprop:Generator_RowDeletedName="SE_TERMINALESRowDeleted" msprop:Generator_RowEvHandlerName="SE_TERMINALESRowChangeEventHandler" msprop:Generator_TableClassName="SE_TERMINALESDataTable" msprop:Generator_RowChangedName="SE_TERMINALESRowChanged" msprop:Generator_RowClassName="SE_TERMINALESRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTERMINAL" msprop:Generator_ColumnVarNameInTable="columnIDTERMINAL" msprop:Generator_ColumnPropNameInRow="IDTERMINAL" msprop:Generator_ColumnPropNameInTable="IDTERMINALColumn" msprop:Generator_UserColumnName="IDTERMINAL" type="xs:int" />
+              <xs:element name="CODTERMINAL" msprop:Generator_ColumnVarNameInTable="columnCODTERMINAL" msprop:Generator_ColumnPropNameInRow="CODTERMINAL" msprop:Generator_ColumnPropNameInTable="CODTERMINALColumn" msprop:Generator_UserColumnName="CODTERMINAL" type="xs:string" />
+              <xs:element name="NOMBRECOMPUTADORA" msprop:Generator_ColumnVarNameInTable="columnNOMBRECOMPUTADORA" msprop:Generator_ColumnPropNameInRow="NOMBRECOMPUTADORA" msprop:Generator_ColumnPropNameInTable="NOMBRECOMPUTADORAColumn" msprop:Generator_UserColumnName="NOMBRECOMPUTADORA" type="xs:string" />
+              <xs:element name="USOHABILITADO" msprop:Generator_ColumnVarNameInTable="columnUSOHABILITADO" msprop:Generator_ColumnPropNameInRow="USOHABILITADO" msprop:Generator_ColumnPropNameInTable="USOHABILITADOColumn" msprop:Generator_UserColumnName="USOHABILITADO" type="xs:string" />
+              <xs:element name="MODELOPROCESADOR" msprop:Generator_ColumnVarNameInTable="columnMODELOPROCESADOR" msprop:Generator_ColumnPropNameInRow="MODELOPROCESADOR" msprop:Generator_ColumnPropNameInTable="MODELOPROCESADORColumn" msprop:Generator_UserColumnName="MODELOPROCESADOR" type="xs:string" minOccurs="0" />
+              <xs:element name="CANTMEMORIARAM" msprop:Generator_ColumnVarNameInTable="columnCANTMEMORIARAM" msprop:Generator_ColumnPropNameInRow="CANTMEMORIARAM" msprop:Generator_ColumnPropNameInTable="CANTMEMORIARAMColumn" msprop:Generator_UserColumnName="CANTMEMORIARAM" type="xs:long" minOccurs="0" />
+              <xs:element name="TAMANIODISCO" msprop:Generator_ColumnVarNameInTable="columnTAMANIODISCO" msprop:Generator_ColumnPropNameInRow="TAMANIODISCO" msprop:Generator_ColumnPropNameInTable="TAMANIODISCOColumn" msprop:Generator_UserColumnName="TAMANIODISCO" type="xs:long" minOccurs="0" />
+              <xs:element name="MODELOMONITOR" msprop:Generator_ColumnVarNameInTable="columnMODELOMONITOR" msprop:Generator_ColumnPropNameInRow="MODELOMONITOR" msprop:Generator_ColumnPropNameInTable="MODELOMONITORColumn" msprop:Generator_UserColumnName="MODELOMONITOR" type="xs:string" minOccurs="0" />
+              <xs:element name="MODELOACELVIDEO" msprop:Generator_ColumnVarNameInTable="columnMODELOACELVIDEO" msprop:Generator_ColumnPropNameInRow="MODELOACELVIDEO" msprop:Generator_ColumnPropNameInTable="MODELOACELVIDEOColumn" msprop:Generator_UserColumnName="MODELOACELVIDEO" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCADICIONAL" msprop:Generator_ColumnVarNameInTable="columnDESCADICIONAL" msprop:Generator_ColumnPropNameInRow="DESCADICIONAL" msprop:Generator_ColumnPropNameInTable="DESCADICIONALColumn" msprop:Generator_UserColumnName="DESCADICIONAL" type="xs:string" minOccurs="0" />
+              <xs:element name="IDAREA" msprop:Generator_ColumnVarNameInTable="columnIDAREA" msprop:Generator_ColumnPropNameInRow="IDAREA" msprop:Generator_ColumnPropNameInTable="IDAREAColumn" msprop:Generator_UserColumnName="IDAREA" type="xs:int" minOccurs="0" />
+              <xs:element name="NOMBREAREA" msprop:Generator_ColumnVarNameInTable="columnNOMBREAREA" msprop:Generator_ColumnPropNameInRow="NOMBREAREA" msprop:Generator_ColumnPropNameInTable="NOMBREAREAColumn" msprop:Generator_UserColumnName="NOMBREAREA" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreNetBios" msprop:Generator_ColumnVarNameInTable="columnNombreNetBios" msprop:Generator_ColumnPropNameInRow="NombreNetBios" msprop:Generator_ColumnPropNameInTable="NombreNetBiosColumn" msprop:Generator_UserColumnName="NombreNetBios" type="xs:string" minOccurs="0" />
+              <xs:element name="ORIGENACTUALIZACION" msprop:Generator_ColumnVarNameInTable="columnORIGENACTUALIZACION" msprop:Generator_ColumnPropNameInRow="ORIGENACTUALIZACION" msprop:Generator_ColumnPropNameInTable="ORIGENACTUALIZACIONColumn" msprop:Generator_UserColumnName="ORIGENACTUALIZACION" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="KAREAS" msprop:Generator_UserTableName="KAREAS" msprop:Generator_RowEvArgName="KAREASRowChangeEvent" msprop:Generator_TableVarName="tableKAREAS" msprop:Generator_TablePropName="KAREAS" msprop:Generator_RowDeletingName="KAREASRowDeleting" msprop:Generator_RowChangingName="KAREASRowChanging" msprop:Generator_RowDeletedName="KAREASRowDeleted" msprop:Generator_RowEvHandlerName="KAREASRowChangeEventHandler" msprop:Generator_TableClassName="KAREASDataTable" msprop:Generator_RowChangedName="KAREASRowChanged" msprop:Generator_RowClassName="KAREASRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAREA" msprop:Generator_ColumnVarNameInTable="columnIDAREA" msprop:Generator_ColumnPropNameInRow="IDAREA" msprop:Generator_ColumnPropNameInTable="IDAREAColumn" msprop:Generator_UserColumnName="IDAREA" type="xs:short" />
+              <xs:element name="NOMBREAREA" msprop:Generator_ColumnVarNameInTable="columnNOMBREAREA" msprop:Generator_ColumnPropNameInRow="NOMBREAREA" msprop:Generator_ColumnPropNameInTable="NOMBREAREAColumn" msprop:Generator_UserColumnName="NOMBREAREA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtsTerminalesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_TERMINALES" />
+      <xs:field xpath="mstns:IDTERMINAL" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

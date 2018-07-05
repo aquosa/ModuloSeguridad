@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E97DEE2-AB64-4258-8D28-600B1B3DA676}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COA.WebCipol.Entidades.Core</RootNamespace>
+    <AssemblyName>COA.WebCipol.Entidades.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CachedEntityDefinitionProvider.cs" />
+    <Compile Include="ColumnPropertyMap.cs" />
+    <Compile Include="ConstructorDelegate.cs" />
+    <Compile Include="DataColumnAttribute.cs" />
+    <Compile Include="DataConverterAttribute.cs" />
+    <Compile Include="DataConverterBase.cs" />
+    <Compile Include="DataExcludeAttribute.cs" />
+    <Compile Include="DataIncludeAttribute.cs" />
+    <Compile Include="DataSetLoader.cs" />
+    <Compile Include="DataTableAttribute.cs" />
+    <Compile Include="EntityDefinitionProvider.cs" />
+    <Compile Include="EntityInfoCache.cs" />
+    <Compile Include="EntityInspector.cs" />
+    <Compile Include="EntityLoader.cs" />
+    <Compile Include="EntityLoaderAttribute.cs" />
+    <Compile Include="EntityPropertyInfo.cs" />
+    <Compile Include="FastProperty.cs" />
+    <Compile Include="IDataConverter.cs" />
+    <Compile Include="IEntityDefinitionProvider.cs" />
+    <Compile Include="InspectionPolicy.cs" />
+    <Compile Include="ListToDataSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionExtensions.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

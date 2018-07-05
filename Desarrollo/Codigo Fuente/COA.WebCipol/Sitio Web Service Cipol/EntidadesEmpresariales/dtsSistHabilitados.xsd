@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsSistHabilitados" targetNamespace="http://tempuri.org/dtsSistHabilitados.xsd" xmlns:mstns="http://tempuri.org/dtsSistHabilitados.xsd" xmlns="http://tempuri.org/dtsSistHabilitados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" PropertyReference="ApplicationSettings.Fachada.Seguridad.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.OracleClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsSistHabilitados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dtsSistHabilitados" msprop:Generator_DataSetName="dtsSistHabilitados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_SIST_HABILITADOS" msprop:Generator_UserTableName="SE_SIST_HABILITADOS" msprop:Generator_RowDeletedName="SE_SIST_HABILITADOSRowDeleted" msprop:Generator_RowChangedName="SE_SIST_HABILITADOSRowChanged" msprop:Generator_RowClassName="SE_SIST_HABILITADOSRow" msprop:Generator_RowChangingName="SE_SIST_HABILITADOSRowChanging" msprop:Generator_RowEvArgName="SE_SIST_HABILITADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="SE_SIST_HABILITADOSRowChangeEventHandler" msprop:Generator_TableClassName="SE_SIST_HABILITADOSDataTable" msprop:Generator_TableVarName="tableSE_SIST_HABILITADOS" msprop:Generator_RowDeletingName="SE_SIST_HABILITADOSRowDeleting" msprop:Generator_TablePropName="SE_SIST_HABILITADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" msprop:Generator_UserColumnName="IDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDSISTEMA" msprop:Generator_ColumnPropNameInTable="IDSISTEMAColumn" type="xs:decimal" />
+              <xs:element name="CODSISTEMA" msprop:Generator_UserColumnName="CODSISTEMA" msprop:Generator_ColumnPropNameInRow="CODSISTEMA" msprop:Generator_ColumnVarNameInTable="columnCODSISTEMA" msprop:Generator_ColumnPropNameInTable="CODSISTEMAColumn" type="xs:string" />
+              <xs:element name="DESCSISTEMA" msprop:Generator_UserColumnName="DESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" type="xs:string" />
+              <xs:element name="FECHAHABILITACION" msprop:Generator_UserColumnName="FECHAHABILITACION" msprop:Generator_ColumnPropNameInRow="FECHAHABILITACION" msprop:Generator_ColumnVarNameInTable="columnFECHAHABILITACION" msprop:Generator_ColumnPropNameInTable="FECHAHABILITACIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NOMBREEXEC" msprop:Generator_UserColumnName="NOMBREEXEC" msprop:Generator_ColumnPropNameInRow="NOMBREEXEC" msprop:Generator_ColumnVarNameInTable="columnNOMBREEXEC" msprop:Generator_ColumnPropNameInTable="NOMBREEXECColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SISTEMAHABILITADO" msprop:Generator_UserColumnName="SISTEMAHABILITADO" msprop:Generator_ColumnPropNameInRow="SISTEMAHABILITADO" msprop:Generator_ColumnVarNameInTable="columnSISTEMAHABILITADO" msprop:Generator_ColumnPropNameInTable="SISTEMAHABILITADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ICONO" msprop:Generator_UserColumnName="ICONO" msprop:Generator_ColumnPropNameInRow="ICONO" msprop:Generator_ColumnVarNameInTable="columnICONO" msprop:Generator_ColumnPropNameInTable="ICONOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OBSERVACIONES" msprop:Generator_UserColumnName="OBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PAGINAPORDEFECTO" msprop:Generator_UserColumnName="PAGINAPORDEFECTO" msprop:Generator_ColumnPropNameInRow="PAGINAPORDEFECTO" msprop:Generator_ColumnVarNameInTable="columnPAGINAPORDEFECTO" msprop:Generator_ColumnPropNameInTable="PAGINAPORDEFECTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCIONCORTA" msprop:Generator_UserColumnName="DESCRIPCIONCORTA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONCORTA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONCORTA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONCORTAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPACTACAJA" msprop:Generator_UserColumnName="IMPACTACAJA" msprop:Generator_ColumnPropNameInRow="IMPACTACAJA" msprop:Generator_ColumnVarNameInTable="columnIMPACTACAJA" msprop:Generator_ColumnPropNameInTable="IMPACTACAJAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_SIST_HABILITADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

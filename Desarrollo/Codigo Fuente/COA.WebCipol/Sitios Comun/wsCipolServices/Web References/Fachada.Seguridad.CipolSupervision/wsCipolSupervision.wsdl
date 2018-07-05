@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://RGP/CIPOL/wsCipolSupervision" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://RGP/CIPOL/wsCipolSupervision" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://RGP/CIPOL/wsCipolSupervision">
+      <s:element name="ValidarSupervisor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarSupervisorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarSupervisorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarSupervisorConAuditoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUsuarioSupervisor" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTareaSupervisar" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Terminal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarSupervisorConAuditoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarSupervisorConAuditoriaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidarSupervisorSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarSupervisor" />
+  </wsdl:message>
+  <wsdl:message name="ValidarSupervisorSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarSupervisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarSupervisorConAuditoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarSupervisorConAuditoria" />
+  </wsdl:message>
+  <wsdl:message name="ValidarSupervisorConAuditoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarSupervisorConAuditoriaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsCipolSupervisionSoap">
+    <wsdl:operation name="ValidarSupervisor">
+      <wsdl:input message="tns:ValidarSupervisorSoapIn" />
+      <wsdl:output message="tns:ValidarSupervisorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarSupervisorConAuditoria">
+      <wsdl:input message="tns:ValidarSupervisorConAuditoriaSoapIn" />
+      <wsdl:output message="tns:ValidarSupervisorConAuditoriaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsCipolSupervisionSoap" type="tns:wsCipolSupervisionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidarSupervisor">
+      <soap:operation soapAction="http://RGP/CIPOL/wsCipolSupervision/ValidarSupervisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarSupervisorConAuditoria">
+      <soap:operation soapAction="http://RGP/CIPOL/wsCipolSupervision/ValidarSupervisorConAuditoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsCipolSupervisionSoap12" type="tns:wsCipolSupervisionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidarSupervisor">
+      <soap12:operation soapAction="http://RGP/CIPOL/wsCipolSupervision/ValidarSupervisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarSupervisorConAuditoria">
+      <soap12:operation soapAction="http://RGP/CIPOL/wsCipolSupervision/ValidarSupervisorConAuditoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCipolSupervision">
+    <wsdl:port name="wsCipolSupervisionSoap" binding="tns:wsCipolSupervisionSoap">
+      <soap:address location="http://localhost:59859/wsCipolSupervision.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsCipolSupervisionSoap12" binding="tns:wsCipolSupervisionSoap12">
+      <soap12:address location="http://localhost:59859/wsCipolSupervision.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

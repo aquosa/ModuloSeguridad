@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsRolesXUsuarios.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsRolesXUsuarios.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsRolesXUsuarios.xsd" id="dtsRolesXUsuarios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="dtsRolesXUsuarios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RolesXUsuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NOMBRES" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCRIPCIONPERFIL" type="xs:string" />
+              <xs:element minOccurs="0" name="CANTTAREASROL" type="xs:int" />
+              <xs:element minOccurs="0" name="CANTAREASUSUARIOROL" type="xs:int" />
+              <xs:element minOccurs="0" name="IDUSUARIO" type="xs:int" />
+              <xs:element minOccurs="0" name="IDROL" type="xs:int" />
+              <xs:element minOccurs="0" name="COMPLETO" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAALTA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FECHABAJA" type="xs:dateTime" />
+              <xs:element name="IDTIPODOCDESC" type="xs:string" />
+              <xs:element minOccurs="0" name="NRODOCUMENTO" type="xs:string" />
+              <xs:element minOccurs="0" name="USUARIO" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAAMODIFICACION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="USUARIOMODIF" type="xs:string" />
+              <xs:element minOccurs="0" name="IDAREA" type="xs:int" />
+              <xs:element minOccurs="0" name="NOMBREAREA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_TAREAS_USUARIO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTAREA" type="xs:int" />
+              <xs:element name="IDROL" type="xs:int" />
+              <xs:element name="IDUSUARIO" type="xs:int" />
+              <xs:element minOccurs="0" name="CANTIDADAUTORIZADA" type="xs:decimal" />
+              <xs:element name="TAREAINHIBIDA" type="xs:string" />
+              <xs:element name="FECHAULTMODIF" type="xs:dateTime" />
+              <xs:element name="IDUSUARIOULTMODIF" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UsuariosXRolDetalle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDUSUARIO" type="xs:int" />
+              <xs:element minOccurs="0" name="USUARIO" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRES" type="xs:string" />
+              <xs:element minOccurs="0" name="NRODOCUMENTO" type="xs:string" />
+              <xs:element minOccurs="0" name="AsignadoPor" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAULTMODIF" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FECHABAJA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NOMBREAREA" type="xs:string" />
+              <xs:element minOccurs="0" name="IDTAREA" type="xs:int" />
+              <xs:element minOccurs="0" name="DESCRIPCIONTAREA" type="xs:string" />
+              <xs:element minOccurs="0" name="TieneAsignada" type="xs:string" />
+              <xs:element minOccurs="0" name="Uso" type="xs:string" />
+              <xs:element minOccurs="0" default="NO" name="TareaInhibida" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RolesXUsuarioDetalle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDTAREA" type="xs:int" />
+              <xs:element minOccurs="0" name="DESCRIPCIONTAREA" type="xs:string" />
+              <xs:element minOccurs="0" name="IDROL" type="xs:int" />
+              <xs:element minOccurs="0" name="DESCRIPCIONPERFIL" type="xs:string" />
+              <xs:element minOccurs="0" name="IDUSUARIO" type="xs:int" />
+              <xs:element minOccurs="0" name="TieneAsignada" type="xs:string" />
+              <xs:element minOccurs="0" default="NO" name="TareaInhibida" type="xs:string" />
+              <xs:element minOccurs="0" name="Uso" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dtsUsuariosKey2">
+      <xs:selector xpath=".//mstns:SE_TAREAS_USUARIO" />
+      <xs:field xpath="mstns:IDTAREA" />
+      <xs:field xpath="mstns:IDROL" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

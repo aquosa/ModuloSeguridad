@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Font Name="Microsoft Sans Serif" Size="8.25" />
+  <Class Name="COA.Datos.Origenes.AccesoDB">
+    <Position X="2.75" Y="0.5" Width="8.25" />
+    <TypeIdentifier>
+      <FileName>AccesoDB.vb</FileName>
+      <HashCode>IAKEISQBAQSBBhAIAiBBD0AEALEQoAIYAgEQBwIkQBM=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="COA.Datos.Origenes.AccesoDB.IdiomaDB" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AccesoDB.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="COA.Datos.Origenes.Oracle" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Oracle.vb</FileName>
+      <HashCode>AAAAACAAAASRAgAAAABAAgAAALAAAAAIAAEAAgAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.Datos.Origenes.SQLServer" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SQLServer.vb</FileName>
+      <HashCode>AAAAACAAAAQRAgAAAABAAgAAALAAAAAIAAEAAgAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.Datos.Origenes.Access" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Access.vb</FileName>
+      <HashCode>AAAAAiAAAAQRAgAEAABAAgAAALAAAAAIAAEAAgAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.Datos.AdmConexion" Collapsed="true">
+    <Position X="4.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdmConexion.vb</FileName>
+      <HashCode>AoAAAgEQAIQAABhFBAAIEgIMAAgAAAAACAAQJACAABE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.Datos.ConexionAlOrigen" Collapsed="true">
+    <Position X="6.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ConexionAlOrigen.vb</FileName>
+      <HashCode>BAAAIAKAAAAAAAABIAAICACIABEAIAABAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.Cursor" Collapsed="true">
+    <Position X="2.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Cursor.vb</FileName>
+      <HashCode>AAAAAAAAEAQAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.General" Collapsed="true">
+    <Position X="4.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>General.vb</FileName>
+      <HashCode>KICQJCGCAIXARBgDWEAADKAQYYIEEAgACi0IEDBBACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.GestionarError" Collapsed="true">
+    <Position X="6.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GestionarError.vb</FileName>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.SerializarPorXML" Collapsed="true">
+    <Position X="4.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SerializarPorXML.vb</FileName>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.TextBoxEx" Collapsed="true">
+    <Position X="2.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TextBoxEx.vb</FileName>
+      <HashCode>AgCAAAAAACAAAAAAAADAAAACAAAAAkAAAAAAAAAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.CifrarDatos.DPAPI" Collapsed="true">
+    <Position X="6.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DPAPI.vb</FileName>
+      <HashCode>AQkAAAAIAAAABAAAAAAAAASCAAAAAAABAAAAAAAAAQI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.CifrarDatos.Hash" Collapsed="true">
+    <Position X="6.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Encriptacion.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.CifrarDatos.TresDES" Collapsed="true">
+    <Position X="4.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Encriptacion.vb</FileName>
+      <HashCode>AAAAAAAAAAAAGAQAAAAAAAAAAAAAAAAAAAgAAACAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.Compresion.GZip" Collapsed="true">
+    <Position X="2.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GZip.vb</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAACAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.IO.InfoArchivos" Collapsed="true">
+    <Position X="4.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>InfoArchivos.vb</FileName>
+      <HashCode>sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COA.Controles.NumeroConfRegional" Collapsed="true">
+    <Position X="6.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>NumeroConfRegional.vb</FileName>
+      <HashCode>AgBAAAIAACQEAIAggECJEACCAAASAIAEAACSGAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="COA.CifrarDatos.TipoHash" Collapsed="true">
+    <Position X="2.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Encriptacion.vb</FileName>
+      <HashCode>AAEAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="COA.CifrarDatos.Accion" Collapsed="true">
+    <Position X="2.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Encriptacion.vb</FileName>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

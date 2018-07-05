@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="wsCipolServices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="wsCipolServices_Fachada_Seguridad_IniciarSesion_wsInicioSesion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:59859/wsInicioSesion.asmx</Value>
+    </Setting>
+    <Setting Name="wsCipolServices_Fachada_Seguridad_ABM_wsCOA_ABMBase" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:59859/wsCOA_ABMBase.asmx</Value>
+    </Setting>
+    <Setting Name="wsCipolServices_Fachada_Seguridad_InicioSesion_Java_wsInicioSesion_Java" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:59859/wsInicioSesion_Java.asmx</Value>
+    </Setting>
+    <Setting Name="wsCipolServices_Fachada_Seguridad_wsSeguridad" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:59859/wsSeguridad.asmx</Value>
+    </Setting>
+    <Setting Name="wsCipolServices_Fachada_Seguridad_Downloader_wsSIRActualizaciones" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:59859/wsSIRActualizaciones.asmx</Value>
+    </Setting>
+    <Setting Name="wsCipolServices_Fachada_Seguridad_CipolSupervision_wsCipolSupervision" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:59859/wsCipolSupervision.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

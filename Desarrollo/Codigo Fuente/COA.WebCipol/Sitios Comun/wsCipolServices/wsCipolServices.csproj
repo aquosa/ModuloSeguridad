@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86DFC171-01A0-4F32-8639-3B462577848E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wsCipolServices</RootNamespace>
+    <AssemblyName>wsCipolServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\wsCipolServices.pubxml" />
+    <None Include="Web References\Fachada.Seguridad.ABM\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Fachada.Seguridad.ABM\wsCOA_ABMBase.wsdl" />
+    <None Include="Web References\Fachada.Seguridad.CipolSupervision\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Fachada.Seguridad.CipolSupervision\wsCipolSupervision.wsdl" />
+    <None Include="Web References\Fachada.Seguridad.Downloader\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Fachada.Seguridad.Downloader\wsSIRActualizaciones.wsdl" />
+    <None Include="Web References\Fachada.Seguridad.IniciarSesion\dtsUsuarios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad.IniciarSesion\dtsUsuarios.xsd" />
+    <None Include="Web References\Fachada.Seguridad.IniciarSesion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Fachada.Seguridad.IniciarSesion\wsInicioSesion.disco" />
+    <None Include="Web References\Fachada.Seguridad.ABM\wsCOA_ABMBase.disco" />
+    <None Include="Web References\Fachada.Seguridad.InicioSesion_Java\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Fachada.Seguridad.InicioSesion_Java\wsInicioSesion_Java.disco" />
+    <None Include="Web References\Fachada.Seguridad\dtsAuditoriaEventos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsAuditoriaEventos.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsCtrlInactividad.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsGrupos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsGrupos.xsc">
+      <DependentUpon>dtsGrupos.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsGrupos.xss">
+      <DependentUpon>dtsGrupos.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsKArea.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsReportes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsRoles.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsRoles.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsRolesXUsuarios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsRolesXUsuarios.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsSistBloqueados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsSistBloqueados.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsSistHabilitados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsSucesosSeguridad.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsTareas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsTerminales.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsUsuarios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsUsuariosABM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\dtsUsuariosXAreas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Fachada.Seguridad\wsSeguridad.disco" />
+    <None Include="Web References\Fachada.Seguridad.Downloader\wsSIRActualizaciones.disco" />
+    <None Include="Web References\Fachada.Seguridad.CipolSupervision\wsCipolSupervision.disco" />
+    <Content Include="wsCipolSupervision.asmx" />
+    <Content Include="wsCOA_ABMBase.asmx" />
+    <Content Include="wsInicioSesion.asmx" />
+    <Content Include="wsInicioSesion_Java.asmx" />
+    <Content Include="wsSeguridad.asmx" />
+    <Content Include="wsSIRActualizaciones.asmx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Web References\Fachada.Seguridad.IniciarSesion\wsInicioSesion.wsdl" />
+    <None Include="Web References\Fachada.Seguridad.InicioSesion_Java\wsInicioSesion_Java.wsdl" />
+    <None Include="Web References\Fachada.Seguridad\dtsCtrlInactividad.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsGrupos.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsKArea.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsReportes.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsSistHabilitados.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsSucesosSeguridad.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsTareas.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsTerminales.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsUsuarios.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsUsuariosABM.xsd" />
+    <None Include="Web References\Fachada.Seguridad\dtsUsuariosXAreas.xsd" />
+    <None Include="Web References\Fachada.Seguridad\wsSeguridad.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConectorWSCipolNET\ConectorwsCipolSupervision.cs" />
+    <Compile Include="ConectorWSCipolNET\ConectorwsCOA_ABMBase.cs" />
+    <Compile Include="ConectorWSCipolNET\ConectorwsIniciosesion.cs" />
+    <Compile Include="ConectorWSCipolNET\ConectorwsInicioSesion_Java.cs" />
+    <Compile Include="ConectorWSCipolNET\ConectorwsSeguridad.cs" />
+    <Compile Include="ConectorWSCipolNET\ConectorwsSIRActualizaciones.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReglasDeNegocio\RNUtiles.cs" />
+    <Compile Include="ReglasDeNegocio\RNwsCipolSupervision.cs" />
+    <Compile Include="ReglasDeNegocio\RNwsCOA_ABMBase.cs" />
+    <Compile Include="ReglasDeNegocio\RNwsInicioSesion.cs" />
+    <Compile Include="ReglasDeNegocio\RNwsInicioSesion_Java.cs" />
+    <Compile Include="ReglasDeNegocio\RNwsSeguridad.cs" />
+    <Compile Include="ReglasDeNegocio\RNwsSIRActualizaciones.cs" />
+    <Compile Include="Web References\Fachada.Seguridad.ABM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Fachada.Seguridad.CipolSupervision\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Fachada.Seguridad.Downloader\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Fachada.Seguridad.IniciarSesion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Fachada.Seguridad.InicioSesion_Java\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Fachada.Seguridad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="wsCipolSupervision.asmx.cs">
+      <DependentUpon>wsCipolSupervision.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="wsCOA_ABMBase.asmx.cs">
+      <DependentUpon>wsCOA_ABMBase.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="wsInicioSesion.asmx.cs">
+      <DependentUpon>wsInicioSesion.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="wsInicioSesion_Java.asmx.cs">
+      <DependentUpon>wsInicioSesion_Java.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="wsSeguridad.asmx.cs">
+      <DependentUpon>wsSeguridad.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="wsSIRActualizaciones.asmx.cs">
+      <DependentUpon>wsSIRActualizaciones.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="DataModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FrameworkCOA\COA.Logger\COA.Logger.csproj">
+      <Project>{2d1f1635-d708-46b2-a3ca-bb68c1db12ae}</Project>
+      <Name>COA.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FrameworkCOA\EntidadesEmpresariales\frmkEntidadesEmpresariales.vbproj">
+      <Project>{dc802dc9-8dc3-42d6-b436-e5e42b30cc37}</Project>
+      <Name>frmkEntidadesEmpresariales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FrameworkCOA\Fachada\frmkFachada.vbproj">
+      <Project>{1e3ec879-1d8f-4a7c-af45-1b778432cbac}</Project>
+      <Name>frmkFachada</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\COA.WebCipol.Comun\COA.WebCipol.Comun.csproj">
+      <Project>{46B8F321-AD6C-4EF4-8C0C-9CDC7C539B95}</Project>
+      <Name>COA.WebCipol.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades.WebCipol.Core\COA.WebCipol.Entidades.Core.csproj">
+      <Project>{2E97DEE2-AB64-4258-8D28-600B1B3DA676}</Project>
+      <Name>COA.WebCipol.Entidades.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidates.WebCipol\COA.WebCipol.Entidades.csproj">
+      <Project>{F636E939-5C7B-48E2-90EE-BF20B2345DB4}</Project>
+      <Name>COA.WebCipol.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:59859/wsCipolSupervision.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Fachada.Seguridad.CipolSupervision\</RelPath>
+      <UpdateFromURL>http://localhost:59859/wsCipolSupervision.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>wsCipolServices_Fachada_Seguridad_CipolSupervision_wsCipolSupervision</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:59859/wsCOA_ABMBase.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Fachada.Seguridad.ABM\</RelPath>
+      <UpdateFromURL>http://localhost:59859/wsCOA_ABMBase.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>wsCipolServices_Fachada_Seguridad_ABM_wsCOA_ABMBase</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:59859/wsInicioSesion.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Fachada.Seguridad.IniciarSesion\</RelPath>
+      <UpdateFromURL>http://localhost:59859/wsInicioSesion.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>wsCipolServices_Fachada_Seguridad_IniciarSesion_wsInicioSesion</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:59859/wsInicioSesion_Java.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Fachada.Seguridad.InicioSesion_Java\</RelPath>
+      <UpdateFromURL>http://localhost:59859/wsInicioSesion_Java.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>wsCipolServices_Fachada_Seguridad_InicioSesion_Java_wsInicioSesion_Java</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:59859/wsSeguridad.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Fachada.Seguridad\</RelPath>
+      <UpdateFromURL>http://localhost:59859/wsSeguridad.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>wsCipolServices_Fachada_Seguridad_wsSeguridad</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:59859/wsSIRActualizaciones.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Fachada.Seguridad.Downloader\</RelPath>
+      <UpdateFromURL>http://localhost:59859/wsSIRActualizaciones.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>wsCipolServices_Fachada_Seguridad_Downloader_wsSIRActualizaciones</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>59859</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59860/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

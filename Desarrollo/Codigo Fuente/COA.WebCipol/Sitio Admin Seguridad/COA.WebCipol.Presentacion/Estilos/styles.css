@@ -1,0 +1,1096 @@
+@charset "utf-8";
+/*
+    Clases de uso comun 
+    
+.btn 
+    La clase btn se puede aplicar sobre elementos <a> y el <button>
+    permite que tomen forma rectangular y que sobre estos actuen otras clases (como .green, .grey, etc)   
+    
+.grey 
+    La clase grey afecta:
+    A los elementos <a> y <button>
+    Si estos previamente tienen la clase .btn toman un fondo color gris, sino no sucede nada.
+    A los elementos <div> que tienen clase .row
+    Si estos pertenecen a un elemento de dialog (div.ui-dialog) tomaran un fondo gris, sino no sucede nada
+    A los elementos <span>
+    Si estos pertenecen a un elemento de dialog (div.ui-dialog) tomaran un color de fuente gris, sino no sucede nada
+
+.white
+    La clase white afecta
+    A los elementos <div> haciendo que tomen un fondo color blanco
+    A los elementos <span> haciendo que tomen un color de fuente blanco y un tamaño de fuente de 16px
+
+.green
+    La clase .green afecta a todos los elementos dandole un color de fuente verde.
+    Tambien afecta en particular a los elementos:
+    <section> y <div> dandole un color de fondo verde.
+    <a> y <button> dandole un color de fondo verde si estos previamente tienen la clase .btn
+
+.big
+    La clase big afecta a los elementos <a> y <button> que previamente tengan la clase .btn
+    Modifica su tamaño.
+
+.block
+    La clase .block da a todos los elementos el efecto de sombra (como el de los boxes de contenido principales)
+
+.bold 
+    La clase .bold da a todos los elementos tamaño de fuente 14px y texto en negrita
+
+.small-caption
+    La clase .small-caption da a todos los elementos tamaño de fuente de 11px
+
+.medium-caption
+    La clase .medium-caption da a todos los elementos tamaño de fuente de 16px
+
+.large-caption
+    La clase .large-caption da a todos los elementos tamaño de fuente de 24px
+
+.aling-right
+    La clase .aling-right alinea los hijos inline del elemento donde se aplique hacia la derecha
+.aling-left
+    La clase .aling-left alinea los hijos inline del elemento donde se aplique hacia la izquierda
+.aling-center
+    La clase .aling-center alinea los hijos inline del elemento donde se aplique hacia el centro
+    
+.border
+    La clase .border afecta a los elementos pertenecientes a un formulario agregandole un borde de 1px a la derecha
+
+.large
+    La clase .large afecta a los select[multiple] modificando su tamño 
+    (Esto esta mejor explicado en el manual de uso) 
+
+.box1
+    La clase .box1 afecta a los elementos <div> dandole las cualidades de caja principal 
+    (Esto esta mejor explicado en el manual de uso)
+
+.btn-search
+   La clase .btn-search afecta a los elementos <a> agregandole el icono de busqueda
+   (Esto esta mejor explicado en el manual de uso)
+
+.btn-edit
+    La clase .btn-edit afecta a los elementos <a> agregandole el icono de editar
+   (Esto esta mejor explicado en el manual de uso)
+
+.btn-delete
+   La clase .btn-delete afecta a los elementos <a> agregandole el icono de eliminar
+   (Esto esta mejor explicado en el manual de uso)
+    
+*/
+
+@font-face {
+    font-family: 'asapbold';
+    src: url('../fonts/asap-bold-webfont.eot');
+    src: url('../fonts/asap-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/asap-bold-webfont.woff') format('woff'),
+         url('../fonts/asap-bold-webfont.ttf') format('truetype'),
+         url('../fonts/asap-bold-webfont.svg#asapbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'asapbold_italic';
+    src: url('../fonts/asap-bolditalic-webfont.eot');
+    src: url('../fonts/asap-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/asap-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/asap-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/asap-bolditalic-webfont.svg#asapbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'asapitalic';
+    src: url('../fonts/asap-italic-webfont.eot');
+    src: url('../fonts/asap-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/asap-italic-webfont.woff') format('woff'),
+         url('../fonts/asap-italic-webfont.ttf') format('truetype'),
+         url('../fonts/asap-italic-webfont.svg#asapitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'asapregular';
+    src: url('../fonts/asap-regular-webfont.eot');
+    src: url('../fonts/asap-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/asap-regular-webfont.woff') format('woff'),
+         url('../fonts/asap-regular-webfont.ttf') format('truetype'),
+         url('../fonts/asap-regular-webfont.svg#asapregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*
+        General
+*/
+body {
+    background:#cfeded url(../Imagenes/bg_body.png) repeat;
+     overflow: scroll;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+.btn {
+    font-family: 'asapregular';
+    padding:0;
+    margin:0;
+}
+h1.bold,
+h2.bold,
+h3.bold,
+h4.bold,
+h5.bold,
+h6.bold,
+label.bold,
+.btn.bold {
+    font-family: 'asapbold';
+}
+label {
+    line-height:15px;
+}
+h1 {
+    font-weight:700;
+    font-size:30px;
+    color:#7a7a7a;
+}
+h2 {
+    font-weight:700;
+    font-size:24px;
+    color:#7b7b7b;
+}
+h3 {
+    color:#7a7a7a;
+    font-size:16px;
+    font-weight:400;
+}
+section {
+    margin:0 0 30px 0;
+}
+.aling-right {
+    text-align:right !important;
+    top: 0px;
+    left: 0px;
+}
+.aling-left {
+    text-align:left !important;
+}
+.aling-center {
+    text-align:center !important;
+}
+.small-caption {
+    font-size:11px !important;
+}
+.medium-caption {
+    font-size:16px !important;
+}
+.large-caption {
+    font-size:24px !important;
+}
+.form-control {
+    height:42px;
+}
+input:not([type]),
+input[type="color"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+select {
+    -moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+    border-radius:0 !important;
+    border:1px solid #ababab !important;
+    height:24px;
+    background:#fff;
+}
+select {
+    padding:0;
+}
+select[multiple] {
+    height:24px;
+}
+select[multiple].large {
+    width:100%;
+    margin:20px 0 0 0;
+    height:200px;
+    background:#fff !important;
+}
+textarea {
+    overflow:visible;
+    border:1px solid #ababab !important;
+    resize:none;
+}
+label.control-label {
+    padding:2px 0 0 0;
+}
+/*
+        radio & checkbox
+*/
+label.radio-inline {
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+}
+label.radio-inline span.custom {
+    content: "";  
+    display: inline-block;  
+    width: 16px;  
+    height: 16px;  
+    margin-right: 0;  
+    position: absolute;  
+    left: 0;
+    border:2px solid #ccc; 
+    bottom: 2px; 
+    border-radius: 8px;  
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    background-color: #fff; 
+    padding:0; 
+}
+label.checkbox-inline {
+
+}
+label.checkbox-inline span.custom {
+    content: "";  
+    display: inline-block;  
+    width: 16px;  
+    height: 16px;  
+    margin-right: 0;  
+    position: absolute;  
+    left: 0;
+    border:1px solid #ccc; 
+    bottom: 2px; 
+    background-color: #fff; 
+    padding:0; 
+    left:15px;
+}
+label.radio-inline span.custom span {
+    position: absolute;
+    top: -3px;
+    left: 1px;
+    font-size: 15px;
+    font-family: Arial;
+    color: #A3A3A3;
+}
+label.checkbox-inline span.custom span {
+    position: absolute;
+    top: -3px;
+    left: 3px;
+    font-size: 13px;
+    font-family: Arial;
+    color: #A3A3A3;
+}
+label.radio-inline:hover span.custom {
+    border:2px solid #aaa; 
+}
+input[type="radio"],
+input[type="checkbox"] {
+   /* display: none;*/
+}
+table {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align:center;
+    vertical-align:middle;
+   
+}
+div .form {
+    position:relative;
+    overflow:auto;
+}
+label {
+    color:#000000;
+    font-weight:400;
+    font-size:15px;
+    margin:0 0 12px 0;
+}
+div.white {
+    background:#fff;
+}
+span.white {
+    font-weight:700;
+    color:#fff;
+    font-size:12px;
+}
+.green {
+    color:#009fa1;
+}
+.bold {
+    font-size:14px;
+    font-weigth:700;
+    color:#656565;
+}
+nav.green,
+section.green,
+div.green {
+    background:#009fa1;
+}
+nav li a {
+    background:#008688;
+}
+.btn.green {
+
+    background:#009fa1;
+    color:#fff;
+}
+.btn.green.selected{background:#e5ffff; color:#656565}
+.btn.green.selected:hover{background:#e5ffff; color:#656565}
+
+
+div#login-block div#logo {
+    width:70%;
+    float:left;
+}
+div#login-block div#submit {
+    width:30%;
+    float:left;
+    text-align:right;
+}
+div#login-block div#submit .btn.green {
+    text-align:center;
+}
+
+.btn.grey {
+    color:#fff;
+    background:#afafaf;
+}
+.btn.grey:hover {
+    background:#C4C4C4;
+}
+.btn.big {
+    font-size: 36px;
+    font-weight: 400;
+    padding: 0 0 8px 0;
+    width: 70%;
+    text-align: center;
+    line-height: 28px;
+}
+.btn.green:hover {
+    background:#00BABD;
+}
+.block {
+    -webkit-box-shadow: 0px 0px 5px 1px #aaa;
+    box-shadow: 0px 0px 5px 1px #aaa;	
+}
+.table {
+    margin:0;
+}
+.float {
+    float:left;
+}
+.vertical-aligner {
+    position:relative;
+    height:100%;
+}
+.middle-control {
+    text-align:center;
+    padding:45px 0 0 0;
+}
+.navbar-default .navbar-toggle,
+navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    border-color:transparent !important;
+    background:none !important;
+    background-color:transparent !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background:#fff;
+}
+.navbar-default .navbar-toggle:hover  .icon-bar {
+    background:#7A7A7A;
+}
+.navbar-nav {
+    margin:0;
+}
+.navbar-default .navbar-toggle {
+    background:none;
+    border:none;
+}
+.navbar-default .navbar-nav>.dropdown>a .caret,
+.navbar-default .navbar-nav>.dropdown>a:hover .caret,
+.navbar-default .navbar-nav>.dropdown>a:focus .caret {
+    border-top-color: #FFF !important;
+    border-bottom-color: #FFF !important;
+}
+.navbar-collapse.in {
+    overflow-y:none !important;
+    max-height:none !important;
+}
+nav,
+.navbar-collapse {
+    -moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+    border-radius:0 !important;
+    background:#009FA1 !important;
+    border:none !important;
+    padding:0 !important;
+    margin:0 !important;
+    -webkit-box-shadow:none !important;
+    box-shadow:none !important;	
+}
+.navbar-nav>li {
+    display:inline-block;
+    float:none;
+}
+nav ul {
+    width:100%;
+    text-align:center;
+}
+nav ul li a {
+    padding:2px 36px;
+    border-radius:0;
+    -moz-border-radius:0;
+    -webkit-border-radius:0;
+    font-weight:lighter;
+    color:#fff !important;
+    text-shadow:none !important;
+    font-size:15px;
+    text-align: center;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    background:rgba(0, 0, 0, 0);
+    -webkit-box-shadow:none;
+    box-shadow:none;	
+}
+.navbar-default .navbar-nav>.selected>a,
+.navbar-default .navbar-nav>.selected>a:hover,
+.navbar-default .navbar-nav>.selected>a:focus,
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    background:#026B6D;
+}
+nav ul.dropdown-menu {
+    background:#66B3B4;
+    border-top:none;
+    -moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+    border-radius:0 !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+nav ul.dropdown-menu li a {
+    background:#66B3B4;
+    text-align: left;
+    font-size:12px !important;
+    padding-top:3px !important;
+    padding-bottom:3px !important;
+}
+nav ul.dropdown-menu li a:hover {
+    text-decoration:none;
+    background:#87C1C2 !important;
+}
+nav ul.dropdown-menu li a:hover,
+nav ul.dropdown-menu li a:focus, 
+nav ul.dropdown-menu li a.active {
+
+}
+.btn {
+    -moz-border-radius:0;
+    -webkit-border-radius:0;
+    border-radius:0;
+    font-weight:normal;
+    padding:5px 20px;
+    text-align:left;
+}
+a.btn-search {
+    display:inline-block;
+    background:url(../Imagenes/icons.png) 0 0;
+    height:22px;
+    width:30px;
+}
+a.btn-edit {
+    display:inline-block;
+    background:url(../Imagenes/icons.png) 51px 0;
+    height:22px;
+    width:30px;
+}
+a.btn-delete {
+    display: inline-block;
+    background: url(../Imagenes/icons.png) 19px 0;
+    height: 22px;
+    width: 20px;
+}
+a.btn-active
+{
+    display: inline-block;
+    background: url(../Imagenes/active-icon.png);
+    height: 20px;
+    width: 20px; 
+}
+div.title {
+    background:#fff;
+    padding:10px 225px;
+}
+div.title h1 {
+    color:#7a7a7a;
+    font-size:25px;
+}
+div.subtitle {
+    text-align:center;
+    padding:10px 0;
+}
+div.subtitle h2{
+    font-size:18px;
+}
+div.box1 {
+    margin:0 0 20px 0;
+}
+div.box1 div.head {
+    background:#009fa1;
+    padding:5px 25px;
+}
+div.box1 div.body {
+    background:#e5ffff;
+    padding:15px 0;
+}
+
+div.box1 form#filter .border{
+    border-right:1px solid #009fa1;
+}
+
+/*[IvanSa]*/
+div.box1 .form-filter .border{
+    border-right:1px solid #009fa1;
+}
+
+div.box1 form#filter div.body label {
+    color:#656565;
+}
+
+/*[IvanSa]*/
+div.box1 .form-filter div.body label {
+    color:#656565;
+}
+
+table thead {
+    background:#abdfe0;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{padding:1px}
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background:#fff;
+}
+table thead tr {
+    height:10px;
+}
+table thead tr th {
+    font-weight:400;
+}
+table.bighead thead tr {
+    border-left: 2px solid #009fa1;
+    height:72px;
+}
+table tbody tr td {
+    background:#e5e5e5;
+}
+table thead tr th,
+table tbody tr td {
+    text-align:center !important;
+    vertical-align: middle !important;
+}
+table tbody tr td.opts {
+    width:120px;
+}
+
+.field-desc {
+    display:block;
+    margin:10px 0;
+}
+/*
+        Usuarios
+*/
+.roles-tree {
+    overflow:scroll;
+    width:100%;
+    height:270px;
+}
+.middle-control {
+    text-align:center;
+}
+/*
+        Login
+*/
+section#login h1 {
+    color:#656565;
+}
+section#login h2 {
+    display:block;
+    margin:20px 0;
+    padding:15px 0;
+    border-top:1px solid #7f7f7f;
+    border-bottom:1px solid #7f7f7f;
+    font-size:16px;
+    font-weight:400;
+    color:#656565;
+}
+section#login #form-login {
+    padding:40px 10px;
+}
+section#login #form-login .bottom {
+    margin-top:35px;
+}
+
+.ui-dialog {
+    position: relative;
+    padding: 0;
+    width: auto;
+    max-width: 900px;
+    height:auto !important; 
+    overflow:hidden !important;
+    margin:0 auto;
+}
+.ui-dialog ul.nav {
+    background:#fff; 
+}
+.ui-dialog ul.nav li a {
+    -moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+    border-radius:0 !important;
+    color:#347172;
+}
+.ui-dialog ul.nav li.active a {
+    -moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+    border-radius:0 !important;
+    color:#555;
+}
+.ui-dialog .form {
+    background:#fff;
+}
+.ui-dialog .form div.row {
+    padding:8px 0;
+    background:#fff;
+}
+.ui-dialog .form .row.grey {
+    background:#ebebeb !important;
+}
+.ui-dialog .form .border {
+    border-right:1px solid #ddd;
+}
+.ui-dialog .form .control-label,
+.ui-dialog .form .checkbox-inline {
+    text-align:left;
+    font-weight:lighter;
+    color:#2c2c2c;
+    font-size:12px;
+    padding:0 15px;
+    margin:0;
+}
+.ui-dialog .form .checkbox-inline,
+.ui-dialog .form .radio-inline {
+    padding:0 40px;
+}
+.ui-dialog .form .control-label {
+    width:110px;
+}
+.ui-dialog .form .checkbox-inline span,
+.ui-dialog .form .radio-inline span {
+    bottom: 10px;
+    left:20px;
+}
+.ui-dialog .form span.grey {
+    font-size:18px;
+    font-weight:400;
+    color:#9e9e9e;
+    float:left;
+    display:block;
+    margin:10px 0 0 20px;
+}
+.ui-dialog .form button {
+    margin:0 0 0 7px;
+}
+.ui-dialog .form textarea {
+   /* height:110px;		
+    padding:15px;*/
+}
+.ui-dialog .form button#aceptar,
+.ui-dialog .form button#cancelar {
+    margin:52px 0 0 0;
+}
+
+/*
+        respuestas
+*/
+.alert span {
+    display:inline-block;
+    margin:0;
+    vertical-align:middle;
+}
+.alert-success .icon {
+    margin:0;
+    width:46px;
+    height:21px;
+    background:url(../Imagenes/icons-msj.png) 0 0 no-repeat;
+}
+.alert-warning .icon {
+    margin:0;
+    width:40px;
+    height:23px;
+    background:url(../Imagenes/icons-msj.png) 0 -70px no-repeat;
+}
+.alert-danger .icon {
+    margin:0;
+    width:40px;
+    height:23px;
+    background:url(../Imagenes/icons-msj.png) 0 -106px no-repeat;
+}
+.alert-info .icon {
+    margin:0;
+    width:40px;
+    height:23px;
+    background:url(../Imagenes/icons-msj.png) 0 -33px no-repeat;
+}
+/*
+    jQuery ui
+*/
+.ui-dialog .ui-dialog-titlebar {
+    display:none;
+}
+.ui-corner-all {
+    border-radius: 0;
+}
+.ui-dialog .ui-dialog-content {
+    padding:.1em 1em;
+}
+/* XSmall devices (tablets, 768px and down) */
+@media (max-width: 767px) {
+    .navbar-nav>li {
+        width:100%;
+    }
+    .nav-fixer {
+        padding:0;
+    }
+    nav ul.dropdown-menu {
+        width:100%;
+    }
+    div.box1 form#filter .border {
+        border-right:none;
+    }
+    .middle-control .btn.big {
+        width: 40px;
+        margin: 5px 8px;
+    }
+    nav ul li a {
+        font-size:14px !important;
+        text-align:left;
+    }
+    #usuarios-limpiar {
+        margin:20px 0 20px 5px;
+    }
+    #usuarios-filtrar {
+        margin:20px 0;
+    }
+    #login-block {
+        margin-left:10%;
+        width:80%;
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .navbar-nav>li {
+        width:auto;
+    }
+    .nav-fixer {
+        padding:inherit;
+    }
+    nav ul.dropdown-menu {
+        width:inherit;
+    }
+    nav ul li a {
+        font-size: 12px !important;
+        padding-left: 7px !important;
+        padding-right: 7px !important;
+        text-align:center;
+    }
+    div.box1 form#filter .border {
+        border-right:none;
+    }
+    .middle-control .btn.big {
+        width: 60px;
+        margin: 5px 16px;
+    }	
+    #usuarios-limpiar {
+        margin:20px 0 20px 5px;
+    }
+    #usuarios-filtrar {
+        margin:20px 0;
+    }
+    #login-block {
+        margin-left:25%;
+        width:404px;
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .nav-fixer {
+        padding:inherit;
+    }
+    nav ul.dropdown-menu {
+        width:inherit;
+    }	
+    nav ul li a {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        font-size:14px !important;
+        text-align:center;
+    }
+    button#usuarios-filtrar {
+        margin:0 0 0 20px;
+    }
+    form#filter .border {
+        border-right:1px solid #009fa1;
+    }
+    .middle-control .btn.big {
+        width: 60px;
+        margin: 5px 16px;
+    }
+    #usuarios-limpiar {
+        margin:0 0 0 5px;
+    }
+    #login-block {
+        margin-left:25%;
+        width:404px;
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .nav-fixer {
+        padding:inherit;
+    }
+    nav ul.dropdown-menu {
+        width:inherit;
+    }
+    nav ul li a {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+        font-size:15px !important;
+        text-align:center;
+    }
+    button#usuarios-filtrar {
+        margin:0 0 0 30px;
+    }
+    form#filter .border {
+        border-right:1px solid #009fa1;
+    }
+    .middle-control .btn.big {
+        width: 60px;
+        margin: 5px 16px;
+    }
+    #usuarios-limpiar {
+        margin:0 0 0 3px;
+    }
+    #login-block {
+        margin-left:25%;
+        width:404px;
+    }
+}
+
+/*Estilos para controles del jquery ui popup*/
+.ui-dialog-buttonset > button{
+    font-family: 'asapregular' !Important;
+    padding:0;
+    margin:0;
+    background:#009fa1;
+    color:#fff;
+    text-align:center;
+    -moz-border-radius:0;
+    -webkit-border-radius:0;
+    border-radius:0;
+    font-weight:lighter;
+    padding:5px 10px;
+    text-align:left;
+    border:none !important;
+}
+        
+.ui-dialog-buttonset > button:hover {
+    background:#00BABD;
+}
+
+ .ui-widget-content{
+    border:none;    
+ }
+ 
+ 
+ /*bootbox*/
+.btn.btn-primary, .btn.btn-default
+{
+font-family: 'asapregular' !Important;
+    padding:0;
+    margin:0;
+    background:#009fa1;
+    color:#fff;
+    text-align:center;
+    -moz-border-radius:0;
+    -webkit-border-radius:0;
+    border-radius:0;
+    font-weight:700;
+    padding:10px 20px;
+    text-align:left;
+    border:none !important;
+    font-weight: lighter;
+    }
+	 
+.btn.btn-primary:hover , .btn.btn-default:hover {
+    background:#00BABD;
+}
+
+.bootbox-close-button.close {
+    display:none;
+ }
+    
+ .modal-content
+ {
+    position: relative;
+    padding: 0;
+    width: auto;
+    max-width: 900px;
+    height:auto !important; 
+    overflow:hidden !important;
+    margin:0 auto;
+    border-radius: 0 !important;
+     
+}     
+
+.modal-content ul.nav li a {
+    -moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+    border-radius:0 !important;
+    color:#347172;
+}
+
+.modal-content ul.nav li.active a {
+    -moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+    border-radius:0 !important;
+    color:#555;
+}
+
+.modal-content .modal-content-titlebar {
+   /* display:none;*/
+}
+
+.ui-corner-all {
+    border-radius: 0;
+}
+
+.modal-content .modal-content-content {
+    padding:.1em 1em;
+}
+
+.form-group{margin-bottom:0}
+
+#dvTareasDisponibles
+{
+   overflow: scroll; height: 400px; width:315px;background:#FFFFFF !important;border:2px solid #ababab !important;
+    
+    }
+    
+#dvTareasAsignadas
+{
+    overflow: scroll; height: 400px; width:315px;background:#FFFFFF !important;border:2px solid #ababab !important;
+    }
+    
+.filter{cursor:pointer; cursor: hand}
+
+.form-group span.required {color:red}
+
+
+/*REPORTES*/
+.report-content table tbody tr td{ background:#FFFFFF !important} 
+
+
+.SelectRolLista
+{
+    text-decoration: underline;
+    }
+    
+.selectedAsig {text-decoration: underline;}
+
+.select-no-padding {padding-right:0px !important}   
+
+
+.metro .unstyled {
+padding-left: 0;
+list-style: none;
+}
+
+.metro .four-columns {
+    -moz-columns: 4;
+    -webkit-columns: 4;
+    -o-columns: 4;
+    -ms-columns: 4;
+    columns: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    -o-column-gap: 20px;
+    -ms-column-gap: 20px;
+    column-gap: 20px; 
+    height:450px;
+    column-count: 4;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+}
+
+ol li {  cursor:pointer; cursor: hand ; }
+
+.square{width:22px; height:18px; float:left; margin-left:5px;cursor:pointer; cursor: hand ;}
+
+.square-select{border:2px solid #2E1700}
+
+.select-icon{ background:#A4A4A4}
+
+
+.orange{background-color: #f06409;}
+
+.blue{background-color:#0071c7;}
+
+.red{background-color: #ad193e;}
+
+.violet{background-color: #5f3bba;}
+
+
+.tile.orange{background-color: #f06409 !important;}
+
+.tile.blue{background-color:#0071c7 !important;}
+
+.tile.red{background-color: #ad193e !important;}
+
+.tile.violet{background-color: #5f3bba !important;}
+
+.tile.green{background:#009fa1 !important;}
+
+
+    .metro .tile .brand .name, 
+    .metro .tile .tile-status .name, 
+    .metro .tile .brand .label, 
+    .metro .tile .tile-status .label, 
+    .metro .tile .brand .text, 
+    .metro .tile .tile-status .text{
+        margin:0; 
+        line-height: 14px;
+        margin-top: -5px;
+    }
+ 
+    .tile.green{background:#009fa1}
+    
+    .tile-status{ text-align:center}
+    
+    .metro .tile .tile-content.icon [class*="icon-"], 
+    .metro .tile .tile-content.icon img{ margin-top:-38px}
+    
+   
+
+

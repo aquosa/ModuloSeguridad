@@ -1,0 +1,11 @@
+La referencia a la librería SoapExtension de compresión debe establecerce
+en el app.config/web.config del cliente y del servidor, dentro de 
+<configuration>
+  <system.web>
+    <webServices>
+      <soapExtensionTypes>
+        <add type="WsTransporte.WsCompresion,WsTransporte" priority="1" group="High"/>
+      </soapExtensionTypes>
+    </webServices>
+  </system.web>
+</configuration>

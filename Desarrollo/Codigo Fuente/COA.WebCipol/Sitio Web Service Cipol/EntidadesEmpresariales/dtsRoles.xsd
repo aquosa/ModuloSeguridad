@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsRoles" targetNamespace="http://tempuri.org/dtsRoles.xsd" xmlns:mstns="http://tempuri.org/dtsRoles.xsd" xmlns="http://tempuri.org/dtsRoles.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsRoles" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="dtsRoles" msprop:Generator_DataSetName="dtsRoles">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_GRUPO_EXCLUSION" msprop:Generator_UserTableName="SE_GRUPO_EXCLUSION" msprop:Generator_RowDeletedName="SE_GRUPO_EXCLUSIONRowDeleted" msprop:Generator_RowChangedName="SE_GRUPO_EXCLUSIONRowChanged" msprop:Generator_RowClassName="SE_GRUPO_EXCLUSIONRow" msprop:Generator_RowChangingName="SE_GRUPO_EXCLUSIONRowChanging" msprop:Generator_RowEvArgName="SE_GRUPO_EXCLUSIONRowChangeEvent" msprop:Generator_RowEvHandlerName="SE_GRUPO_EXCLUSIONRowChangeEventHandler" msprop:Generator_TableClassName="SE_GRUPO_EXCLUSIONDataTable" msprop:Generator_TableVarName="tableSE_GRUPO_EXCLUSION" msprop:Generator_RowDeletingName="SE_GRUPO_EXCLUSIONRowDeleting" msprop:Generator_TablePropName="SE_GRUPO_EXCLUSION">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPOACTUAL" msprop:Generator_UserColumnName="IDGRUPOACTUAL" msprop:Generator_ColumnPropNameInRow="IDGRUPOACTUAL" msprop:Generator_ColumnVarNameInTable="columnIDGRUPOACTUAL" msprop:Generator_ColumnPropNameInTable="IDGRUPOACTUALColumn" type="xs:int" />
+              <xs:element name="IDGRUPEXCLUYENTE" msprop:Generator_UserColumnName="IDGRUPEXCLUYENTE" msprop:Generator_ColumnPropNameInRow="IDGRUPEXCLUYENTE" msprop:Generator_ColumnVarNameInTable="columnIDGRUPEXCLUYENTE" msprop:Generator_ColumnPropNameInTable="IDGRUPEXCLUYENTEColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_ROLES" msprop:Generator_UserTableName="SE_ROLES" msprop:Generator_RowDeletedName="SE_ROLESRowDeleted" msprop:Generator_RowChangedName="SE_ROLESRowChanged" msprop:Generator_RowClassName="SE_ROLESRow" msprop:Generator_RowChangingName="SE_ROLESRowChanging" msprop:Generator_RowEvArgName="SE_ROLESRowChangeEvent" msprop:Generator_RowEvHandlerName="SE_ROLESRowChangeEventHandler" msprop:Generator_TableClassName="SE_ROLESDataTable" msprop:Generator_TableVarName="tableSE_ROLES" msprop:Generator_RowDeletingName="SE_ROLESRowDeleting" msprop:Generator_TablePropName="SE_ROLES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDROL" msprop:Generator_UserColumnName="IDROL" msprop:Generator_ColumnPropNameInRow="IDROL" msprop:Generator_ColumnVarNameInTable="columnIDROL" msprop:Generator_ColumnPropNameInTable="IDROLColumn" type="xs:int" />
+              <xs:element name="DESCRIPCIONPERFIL" msprop:Generator_UserColumnName="DESCRIPCIONPERFIL" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONPERFIL" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONPERFIL" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONPERFILColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ArbolGrupo" msprop:Generator_UserTableName="ArbolGrupo" msprop:Generator_RowDeletedName="ArbolGrupoRowDeleted" msprop:Generator_RowChangedName="ArbolGrupoRowChanged" msprop:Generator_RowClassName="ArbolGrupoRow" msprop:Generator_RowChangingName="ArbolGrupoRowChanging" msprop:Generator_RowEvArgName="ArbolGrupoRowChangeEvent" msprop:Generator_RowEvHandlerName="ArbolGrupoRowChangeEventHandler" msprop:Generator_TableClassName="ArbolGrupoDataTable" msprop:Generator_TableVarName="tableArbolGrupo" msprop:Generator_RowDeletingName="ArbolGrupoRowDeleting" msprop:Generator_TablePropName="ArbolGrupo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPO" msprop:Generator_UserColumnName="IDGRUPO" msprop:Generator_ColumnPropNameInRow="IDGRUPO" msprop:Generator_ColumnVarNameInTable="columnIDGRUPO" msprop:Generator_ColumnPropNameInTable="IDGRUPOColumn" type="xs:short" />
+              <xs:element name="DESCGRUPO" msprop:Generator_UserColumnName="DESCGRUPO" msprop:Generator_ColumnPropNameInRow="DESCGRUPO" msprop:Generator_ColumnVarNameInTable="columnDESCGRUPO" msprop:Generator_ColumnPropNameInTable="DESCGRUPOColumn" type="xs:string" />
+              <xs:element name="IDSISTEMA" msprop:Generator_UserColumnName="IDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDSISTEMA" msprop:Generator_ColumnPropNameInTable="IDSISTEMAColumn" type="xs:short" />
+              <xs:element name="DESCSISTEMA" msprop:Generator_UserColumnName="DESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" type="xs:string" />
+              <xs:element name="IDTAREA" msprop:Generator_UserColumnName="IDTAREA" msprop:Generator_ColumnPropNameInRow="IDTAREA" msprop:Generator_ColumnVarNameInTable="columnIDTAREA" msprop:Generator_ColumnPropNameInTable="IDTAREAColumn" type="xs:int" />
+              <xs:element name="DESCRIPCIONTAREA" msprop:Generator_UserColumnName="DESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONTAREA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONTAREAColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Roles_Composicion" msprop:Generator_UserTableName="Roles_Composicion" msprop:Generator_RowDeletedName="Roles_ComposicionRowDeleted" msprop:Generator_RowChangedName="Roles_ComposicionRowChanged" msprop:Generator_RowClassName="Roles_ComposicionRow" msprop:Generator_RowChangingName="Roles_ComposicionRowChanging" msprop:Generator_RowEvArgName="Roles_ComposicionRowChangeEvent" msprop:Generator_RowEvHandlerName="Roles_ComposicionRowChangeEventHandler" msprop:Generator_TableClassName="Roles_ComposicionDataTable" msprop:Generator_TableVarName="tableRoles_Composicion" msprop:Generator_RowDeletingName="Roles_ComposicionRowDeleting" msprop:Generator_TablePropName="Roles_Composicion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdRol" msprop:Generator_UserColumnName="IdRol" msprop:Generator_ColumnPropNameInRow="IdRol" msprop:Generator_ColumnVarNameInTable="columnIdRol" msprop:Generator_ColumnPropNameInTable="IdRolColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DescripcionPerfil" msprop:Generator_UserColumnName="DescripcionPerfil" msprop:Generator_ColumnPropNameInRow="DescripcionPerfil" msprop:Generator_ColumnVarNameInTable="columnDescripcionPerfil" msprop:Generator_ColumnPropNameInTable="DescripcionPerfilColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IdGrupo" msprop:Generator_UserColumnName="IdGrupo" msprop:Generator_ColumnPropNameInRow="IdGrupo" msprop:Generator_ColumnVarNameInTable="columnIdGrupo" msprop:Generator_ColumnPropNameInTable="IdGrupoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DescGrupo" msprop:Generator_UserColumnName="DescGrupo" msprop:Generator_ColumnPropNameInRow="DescGrupo" msprop:Generator_ColumnVarNameInTable="columnDescGrupo" msprop:Generator_ColumnPropNameInTable="DescGrupoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="idSistema" msprop:Generator_UserColumnName="idSistema" msprop:Generator_ColumnPropNameInRow="idSistema" msprop:Generator_ColumnVarNameInTable="columnidSistema" msprop:Generator_ColumnPropNameInTable="idSistemaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DescSistema" msprop:Generator_UserColumnName="DescSistema" msprop:Generator_ColumnPropNameInRow="DescSistema" msprop:Generator_ColumnVarNameInTable="columnDescSistema" msprop:Generator_ColumnPropNameInTable="DescSistemaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="idTarea" msprop:Generator_UserColumnName="idTarea" msprop:Generator_ColumnPropNameInRow="idTarea" msprop:Generator_ColumnVarNameInTable="columnidTarea" msprop:Generator_ColumnPropNameInTable="idTareaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DescripcionTarea" msprop:Generator_UserColumnName="DescripcionTarea" msprop:Generator_ColumnPropNameInRow="DescripcionTarea" msprop:Generator_ColumnVarNameInTable="columnDescripcionTarea" msprop:Generator_ColumnPropNameInTable="DescripcionTareaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TareaInhibida" msprop:Generator_UserColumnName="TareaInhibida" msprop:Generator_ColumnPropNameInRow="TareaInhibida" msprop:Generator_ColumnVarNameInTable="columnTareaInhibida" msprop:Generator_ColumnPropNameInTable="TareaInhibidaColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UsuariosPorRol" msprop:Generator_UserTableName="UsuariosPorRol" msprop:Generator_RowDeletedName="UsuariosPorRolRowDeleted" msprop:Generator_RowChangedName="UsuariosPorRolRowChanged" msprop:Generator_RowClassName="UsuariosPorRolRow" msprop:Generator_RowChangingName="UsuariosPorRolRowChanging" msprop:Generator_RowEvArgName="UsuariosPorRolRowChangeEvent" msprop:Generator_RowEvHandlerName="UsuariosPorRolRowChangeEventHandler" msprop:Generator_TableClassName="UsuariosPorRolDataTable" msprop:Generator_TableVarName="tableUsuariosPorRol" msprop:Generator_RowDeletingName="UsuariosPorRolRowDeleting" msprop:Generator_TablePropName="UsuariosPorRol">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDROL" msprop:Generator_UserColumnName="IDROL" msprop:Generator_ColumnPropNameInRow="IDROL" msprop:Generator_ColumnVarNameInTable="columnIDROL" msprop:Generator_ColumnPropNameInTable="IDROLColumn" type="xs:decimal" />
+              <xs:element name="IDSISTEMA" msprop:Generator_UserColumnName="IDSISTEMA" msprop:Generator_ColumnPropNameInRow="IDSISTEMA" msprop:Generator_ColumnVarNameInTable="columnIDSISTEMA" msprop:Generator_ColumnPropNameInTable="IDSISTEMAColumn" type="xs:decimal" />
+              <xs:element name="IDTAREA" msprop:Generator_UserColumnName="IDTAREA" msprop:Generator_ColumnPropNameInRow="IDTAREA" msprop:Generator_ColumnVarNameInTable="columnIDTAREA" msprop:Generator_ColumnPropNameInTable="IDTAREAColumn" type="xs:decimal" />
+              <xs:element name="DESCRIPCIONPERFIL" msprop:Generator_UserColumnName="DESCRIPCIONPERFIL" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONPERFIL" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONPERFIL" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONPERFILColumn" type="xs:string" />
+              <xs:element name="DESCSISTEMA" msprop:Generator_UserColumnName="DESCSISTEMA" msprop:Generator_ColumnPropNameInRow="DESCSISTEMA" msprop:Generator_ColumnVarNameInTable="columnDESCSISTEMA" msprop:Generator_ColumnPropNameInTable="DESCSISTEMAColumn" type="xs:string" />
+              <xs:element name="DESCRIPCIONTAREA" msprop:Generator_UserColumnName="DESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONTAREA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONTAREA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONTAREAColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TareasAsignadas" msprop:Generator_UserTableName="TareasAsignadas" msprop:Generator_RowDeletedName="TareasAsignadasRowDeleted" msprop:Generator_RowChangedName="TareasAsignadasRowChanged" msprop:Generator_RowClassName="TareasAsignadasRow" msprop:Generator_RowChangingName="TareasAsignadasRowChanging" msprop:Generator_RowEvArgName="TareasAsignadasRowChangeEvent" msprop:Generator_RowEvHandlerName="TareasAsignadasRowChangeEventHandler" msprop:Generator_TableClassName="TareasAsignadasDataTable" msprop:Generator_TableVarName="tableTareasAsignadas" msprop:Generator_RowDeletingName="TareasAsignadasRowDeleting" msprop:Generator_TablePropName="TareasAsignadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idTarea" msprop:Generator_UserColumnName="idTarea" msprop:Generator_ColumnVarNameInTable="columnidTarea" msprop:Generator_ColumnPropNameInRow="idTarea" msprop:Generator_ColumnPropNameInTable="idTareaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TareaInhibida" msprop:Generator_UserColumnName="TareaInhibida" msprop:Generator_ColumnPropNameInRow="TareaInhibida" msprop:Generator_ColumnVarNameInTable="columnTareaInhibida" msprop:Generator_ColumnPropNameInTable="TareaInhibidaColumn" type="xs:string" default="_" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TareasNoAsignadas" msprop:Generator_UserTableName="TareasNoAsignadas" msprop:Generator_RowDeletedName="TareasNoAsignadasRowDeleted" msprop:Generator_RowChangedName="TareasNoAsignadasRowChanged" msprop:Generator_RowClassName="TareasNoAsignadasRow" msprop:Generator_RowChangingName="TareasNoAsignadasRowChanging" msprop:Generator_RowEvArgName="TareasNoAsignadasRowChangeEvent" msprop:Generator_RowEvHandlerName="TareasNoAsignadasRowChangeEventHandler" msprop:Generator_TableClassName="TareasNoAsignadasDataTable" msprop:Generator_TableVarName="tableTareasNoAsignadas" msprop:Generator_RowDeletingName="TareasNoAsignadasRowDeleting" msprop:Generator_TablePropName="TareasNoAsignadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idTarea" msprop:Generator_UserColumnName="idTarea" msprop:Generator_ColumnPropNameInRow="idTarea" msprop:Generator_ColumnVarNameInTable="columnidTarea" msprop:Generator_ColumnPropNameInTable="idTareaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TareaInhibida" msprop:Generator_UserColumnName="TareaInhibida" msprop:Generator_ColumnPropNameInRow="TareaInhibida" msprop:Generator_ColumnVarNameInTable="columnTareaInhibida" msprop:Generator_ColumnPropNameInTable="TareaInhibidaColumn" type="xs:string" default="_" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ParametrosDeABM" msprop:Generator_UserTableName="ParametrosDeABM" msprop:Generator_RowDeletedName="ParametrosDeABMRowDeleted" msprop:Generator_RowChangedName="ParametrosDeABMRowChanged" msprop:Generator_RowClassName="ParametrosDeABMRow" msprop:Generator_RowChangingName="ParametrosDeABMRowChanging" msprop:Generator_RowEvArgName="ParametrosDeABMRowChangeEvent" msprop:Generator_RowEvHandlerName="ParametrosDeABMRowChangeEventHandler" msprop:Generator_TableClassName="ParametrosDeABMDataTable" msprop:Generator_TableVarName="tableParametrosDeABM" msprop:Generator_RowDeletingName="ParametrosDeABMRowDeleting" msprop:Generator_TablePropName="ParametrosDeABM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CambioContrasenia" msdata:Caption="IdTerminal" msprop:Generator_UserColumnName="CambioContrasenia" msprop:Generator_ColumnVarNameInTable="columnCambioContrasenia" msprop:Generator_ColumnPropNameInRow="CambioContrasenia" msprop:Generator_ColumnPropNameInTable="CambioContraseniaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MensajesAuditoria" msdata:Caption="IdUsuario" msprop:Generator_UserColumnName="MensajesAuditoria" msprop:Generator_ColumnVarNameInTable="columnMensajesAuditoria" msprop:Generator_ColumnPropNameInRow="MensajesAuditoria" msprop:Generator_ColumnPropNameInTable="MensajesAuditoriaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DiasVencimientoDeClave" msprop:Generator_UserColumnName="DiasVencimientoDeClave" msprop:Generator_ColumnVarNameInTable="columnDiasVencimientoDeClave" msprop:Generator_ColumnPropNameInRow="DiasVencimientoDeClave" msprop:Generator_ColumnPropNameInTable="DiasVencimientoDeClaveColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtsRolesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_GRUPO_EXCLUSION" />
+      <xs:field xpath="mstns:IDGRUPOACTUAL" />
+      <xs:field xpath="mstns:IDGRUPEXCLUYENTE" />
+    </xs:unique>
+    <xs:unique name="dtsRolesKey2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SE_ROLES" />
+      <xs:field xpath="mstns:IDROL" />
+    </xs:unique>
+    <xs:unique name="dtsRolesKey3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ArbolGrupo" />
+      <xs:field xpath="mstns:IDGRUPO" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+      <xs:field xpath="mstns:IDTAREA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

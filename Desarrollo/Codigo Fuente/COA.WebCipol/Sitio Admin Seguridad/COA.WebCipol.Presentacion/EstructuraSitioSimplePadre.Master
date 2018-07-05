@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EstructuraSitioSimplePadre.master.cs" Inherits="COA.WebCipol.Presentacion.EstructuraSitioSimplePadre" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta charset="utf-8">
+   <title>Ingreso al sistema. COA S.A</title>
+    <!-- jQuery -->
+    <script type="text/javascript" src="Scripts/jquery-1.10.2.min.js"></script>
+    <!-- jQuery ui -->
+    <script type="text/javascript" src="Scripts/jquery.ui/jquery-ui-1.10.4.custom.min.js"></script>
+    <link rel="stylesheet" href="Scripts/jquery.ui/css/smoothness/jquery-ui-1.10.4.custom.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="Estilos/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="Estilos/bootstrap-theme.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="Estilos/styles.css">
+   
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript"  src="Scripts/bootbox.js"></script>
+
+
+    <!-- html5shiv -->
+        <!--[if lt IE 9]>
+            <script src="Scripts/html5shiv-printshiv.js"></script>
+        <![endif]-->
+    <!-- respond.js -->
+    <!--[if lt IE 9]>
+    <script src="Scripts/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery magnific-popup -->
+<%--    <script type="text/javascript" src="Scripts/jquery.magnic-popup/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="Scripts/jquery.magnic-popup/magnific-popup.css">--%>
+    <!-- jQuery jstree -->
+    <script type="text/javascript" src="Scripts/jstree/jstree.min.js"></script>
+    <link rel="stylesheet" href="Scripts/jstree/themes/default/style.css">
+    <!-- global.js -->
+    <script type="text/javascript" src="Scripts/global.js"></script>
+    <!--[if IE]>
+    <link rel="stylesheet" href="Estilos/ie.css">
+    <![endif]-->
+
+  <script type="text/javascript" src="Scripts/jquery.ui.datepicker-es.js"></script>
+
+    <script type="text/javascript" src="Scripts/jsValidarCampos.js"></script>
+
+    <script type="text/javascript" src="Scripts/jsCIPOLPRESENTACION.js"></script>
+
+    <script type="text/javascript" src="Scripts/blockUI-2.39.js"></script>
+
+    <script type="text/javascript" src="Scripts/json2.js"></script>
+
+    <script type="text/javascript" src="Scripts/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript" src="Scripts/knockout-3.0.0.js"></script>
+
+    <script type="text/javascript" src="Scripts/knockout.simpleGrid.3.0_COA.js"></script>
+
+    <script type="text/javascript" src="Scripts/jsControles.js"></script>
+
+    <script type="text/javascript" src="Scripts/jsSelectAutocomplete.js"></script>
+
+    <script type="text/javascript" src="Scripts/jsMessages.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%--<form id="formUnico" runat="server" onsubmit="return appCIPOLPRESENTACION.Verifyonsubmit();">--%>
+<form id="formUnico" runat="server">
+    <header>
+    	<div class="title">
+        	<h1>CIPOL / Sistema de seguridad</h1>
+        </div>
+    </header>
+    <asp:ContentPlaceHolder ID="CuerpoPagina" runat="server">
+    </asp:ContentPlaceHolder>
+
+</form>
+</body>
+</html>

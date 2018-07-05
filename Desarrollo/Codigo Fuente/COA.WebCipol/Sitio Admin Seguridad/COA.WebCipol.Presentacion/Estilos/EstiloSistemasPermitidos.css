@@ -1,0 +1,115 @@
+﻿sistemas-permitidos
+{
+    padding:20px;
+    margin-top:20px;
+    }
+	
+div.tile {
+		position: relative;
+		width: 130px !important;
+		min-width: 130px !important;
+		height: 130px !important;
+		display: block;
+		float: left;
+		padding-right: 7px;
+		padding-bottom: 7px;
+}
+
+div.tile :hover {
+	text-decoration:none; !important
+	}
+
+
+	div.tileAccesos {
+		cursor: pointer; 
+		width: 125px; 
+		height: 110px;
+		color: white; 
+		text-align: center; 
+		vertical-align: bottom;
+		font-size: 13px;
+		margin: 3px;
+		padding-top: 15px;
+	}	
+	
+div.tileAccesos.orange{
+		background-color: #f06409; 
+	}
+
+div.tileAccesos.orange.hover {
+		border: 3px #efceb9 solid;
+		margin: 0px;
+	}
+	
+div.tileAccesos.violet {
+		background-color: #5f3bba; 
+	}
+div.tileAccesos.violet.hover {
+		border: 3px #c0b8d2 solid;
+		margin: 0px;
+	}
+div.tileAccesos.red {
+		background-color: #ad193e; 
+	}	
+div.tileAccesos.red.hover {
+		border: 3px #cda0ab solid;
+		margin: 0px;
+	}
+
+div.tileAccesos.green {
+		background-color: #00a300; 
+	}
+	
+.tile a {
+	    text-decoration:none !important;
+	}
+	    
+div.tileAccesos.green.hover {
+		border: 3px #a5d6a5 solid !important;
+		margin: 0px;
+	}
+
+div.tileAccesos.blue {
+		background-color: #0071c7; 
+	}	
+
+div.tileAccesos.blue.hover {
+		border: 3px #c6dae9 solid;
+		margin: 0px;
+	}
+		
+div.tileAccesos .divimg{
+		margin:auto; 
+		margin-bottom: 5px; 
+		width: 48px; 
+		height: 48px; 
+	}
+	
+div.tileAccesos .divtext {
+		display: table-cell;
+		height: 45px;
+		width: 125px;
+		vertical-align: middle;
+	}
+	
+	
+.ctatext {
+		position: relative;
+		top: 143px;
+		left: -0px;
+		width: 105px;
+		background-color: black;
+		height: 15px;
+		filter: progid:DXImageTransform.Microsoft.alpha(opacity=0);
+		color: white;
+		margin-left: 3px;
+		float: left;
+		margin-top: -50px;
+		margin-left: -134px;
+		padding: 10px;
+		text-align: center;
+	}
+
+.ctatext A {
+		color: white !important;
+	}

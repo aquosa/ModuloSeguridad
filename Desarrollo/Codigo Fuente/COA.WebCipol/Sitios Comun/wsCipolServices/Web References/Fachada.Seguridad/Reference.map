@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsRolesXUsuarios" filename="dtsRolesXUsuarios.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsTareas" filename="dtsTareas.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsKArea" filename="dtsKArea.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsAuditoriaEventos" filename="dtsAuditoriaEventos.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsGrupos" filename="dtsGrupos.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsSistBloqueados" filename="dtsSistBloqueados.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsUsuarios" filename="dtsUsuarios.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsSucesosSeguridad" filename="dtsSucesosSeguridad.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsRoles" filename="dtsRoles.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:59859/wsSeguridad.asmx?disco" filename="wsSeguridad.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsSistHabilitados" filename="dtsSistHabilitados.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsUsuariosXAreas" filename="dtsUsuariosXAreas.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsReportes" filename="dtsReportes.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsCtrlInactividad" filename="dtsCtrlInactividad.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:59859/wsSeguridad.asmx?wsdl" filename="wsSeguridad.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsTerminales" filename="dtsTerminales.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:59859/wsSeguridad.asmx?schema=dtsUsuariosABM" filename="dtsUsuariosABM.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

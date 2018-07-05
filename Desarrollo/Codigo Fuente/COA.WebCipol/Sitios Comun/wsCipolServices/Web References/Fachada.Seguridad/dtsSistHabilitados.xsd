@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsSistHabilitados.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsSistHabilitados.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsSistHabilitados.xsd" id="dtsSistHabilitados" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dtsSistHabilitados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_SIST_HABILITADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDSISTEMA" type="xs:decimal" />
+              <xs:element name="CODSISTEMA" type="xs:string" />
+              <xs:element name="DESCSISTEMA" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAHABILITACION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NOMBREEXEC" type="xs:string" />
+              <xs:element minOccurs="0" name="SISTEMAHABILITADO" type="xs:string" />
+              <xs:element minOccurs="0" name="ICONO" type="xs:string" />
+              <xs:element minOccurs="0" name="OBSERVACIONES" type="xs:string" />
+              <xs:element minOccurs="0" name="PAGINAPORDEFECTO" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCRIPCIONCORTA" type="xs:string" />
+              <xs:element minOccurs="0" name="IMPACTACAJA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:SE_SIST_HABILITADOS" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

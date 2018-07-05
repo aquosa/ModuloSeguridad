@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="7883a869-b1cf-43ab-ab94-54b8ce8e6e12" activeEnvironment="Default" name="JPMC - Token" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="38bc399d-c7a5-4b9c-aac3-b3d90ddd7cbb" wsaVersion="NONE" name="APISoap" type="wsdl" bindingName="{http://tempuri.org/}APISoap" soapVersion="1_1" anonymous="optional" definition="file:/E:/Tincho/Documentos/WEBCIPOL/JPMC/new%206.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/E:/Tincho/Documentos/WEBCIPOL/JPMC/new%206.xml"><con:part><con:url>file:/E:/Tincho/Documentos/WEBCIPOL/JPMC/new%206.xml</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GenerateToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="par_sUsuario" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="par_sPassword" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="par_iAppID" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateTokenResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateTokenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuPaginas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuPaginasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMenuPaginasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuariosBaseDatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuariosBaseDatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsuariosBaseDatosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuarioRoles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuarioRolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsuarioRolesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test">
+        <s:complexType/>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GenerateTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateToken"/>
+  </wsdl:message>
+  <wsdl:message name="GenerateTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateTokenResponse"/>
+  </wsdl:message>
+  <wsdl:message name="AuthenticateTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthenticateToken"/>
+  </wsdl:message>
+  <wsdl:message name="AuthenticateTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateTokenResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMenu"/>
+  </wsdl:message>
+  <wsdl:message name="GetMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMenuResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMenuPaginasSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMenuPaginas"/>
+  </wsdl:message>
+  <wsdl:message name="GetMenuPaginasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMenuPaginasResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetUsuariosBaseDatosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsuariosBaseDatos"/>
+  </wsdl:message>
+  <wsdl:message name="GetUsuariosBaseDatosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsuariosBaseDatosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetUsuarioRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsuarioRoles"/>
+  </wsdl:message>
+  <wsdl:message name="GetUsuarioRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsuarioRolesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test"/>
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="APISoap">
+    <wsdl:operation name="GenerateToken">
+      <wsdl:input message="tns:GenerateTokenSoapIn"/>
+      <wsdl:output message="tns:GenerateTokenSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateToken">
+      <wsdl:input message="tns:AuthenticateTokenSoapIn"/>
+      <wsdl:output message="tns:AuthenticateTokenSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <wsdl:input message="tns:GetMenuSoapIn"/>
+      <wsdl:output message="tns:GetMenuSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuPaginas">
+      <wsdl:input message="tns:GetMenuPaginasSoapIn"/>
+      <wsdl:output message="tns:GetMenuPaginasSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosBaseDatos">
+      <wsdl:input message="tns:GetUsuariosBaseDatosSoapIn"/>
+      <wsdl:output message="tns:GetUsuariosBaseDatosSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuarioRoles">
+      <wsdl:input message="tns:GetUsuarioRolesSoapIn"/>
+      <wsdl:output message="tns:GetUsuarioRolesSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn"/>
+      <wsdl:output message="tns:TestSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APISoap" type="tns:APISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GenerateToken">
+      <soap:operation soapAction="http://tempuri.org/GenerateToken" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateToken">
+      <soap:operation soapAction="http://tempuri.org/AuthenticateToken" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <soap:operation soapAction="http://tempuri.org/GetMenu" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuPaginas">
+      <soap:operation soapAction="http://tempuri.org/GetMenuPaginas" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosBaseDatos">
+      <soap:operation soapAction="http://tempuri.org/GetUsuariosBaseDatos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuarioRoles">
+      <soap:operation soapAction="http://tempuri.org/GetUsuarioRoles" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Test" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APISoap12" type="tns:APISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GenerateToken">
+      <soap12:operation soapAction="http://tempuri.org/GenerateToken" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateToken">
+      <soap12:operation soapAction="http://tempuri.org/AuthenticateToken" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <soap12:operation soapAction="http://tempuri.org/GetMenu" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuPaginas">
+      <soap12:operation soapAction="http://tempuri.org/GetMenuPaginas" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosBaseDatos">
+      <soap12:operation soapAction="http://tempuri.org/GetUsuariosBaseDatos" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuarioRoles">
+      <soap12:operation soapAction="http://tempuri.org/GetUsuarioRoles" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Test" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="API">
+    <wsdl:port name="APISoap" binding="tns:APISoap">
+      <soap:address location="https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="APISoap12" binding="tns:APISoap12">
+      <soap12:address location="https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://COA034:8088/mockAPISoap</con:endpoint><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint></con:endpoints><con:operation id="f561624d-00cd-436a-bead-bc7cca7bda57" isOneWay="false" action="http://tempuri.org/AuthenticateToken" name="AuthenticateToken" bindingOperationName="AuthenticateToken" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="91514eac-260e-44f4-b704-548ff28fdf8c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/mockAPISoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AuthenticateToken>
+         <!--Optional:-->
+         <tem:token>abc</tem:token>
+      </tem:AuthenticateToken>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/AuthenticateToken"/><con:wsrmConfig version="1.2"/></con:call><con:call id="4099c569-3ab8-40d2-ba87-72fd68b888b7" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://COA034:8088/mockAPISoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+  <soapenv:Header />
+  <soapenv:Body>
+    <tem:AuthenticateToken>
+      <tem:token>abc</tem:token>
+    </tem:AuthenticateToken>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/AuthenticateToken"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="4fccca0a-ba88-4535-be83-6921fc26b2b6" isOneWay="false" action="http://tempuri.org/GenerateToken" name="GenerateToken" bindingOperationName="GenerateToken" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4e7610d6-d59f-49d9-a794-d67723133a94" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GenerateToken>\r
+         <!--Optional:-->\r
+         <tem:par_sUsuario>?</tem:par_sUsuario>\r
+         <!--Optional:-->\r
+         <tem:par_sPassword>?</tem:par_sPassword>\r
+         <tem:par_iAppID>?</tem:par_iAppID>\r
+      </tem:GenerateToken>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GenerateToken"/></con:call></con:operation><con:operation id="6d464acf-a7d6-492a-b06c-6cc9931623ba" isOneWay="false" action="http://tempuri.org/GetMenu" name="GetMenu" bindingOperationName="GetMenu" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6be0355f-b8b6-40c0-a36b-34a5fdceae81" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetMenu>\r
+         <!--Optional:-->\r
+         <tem:token>?</tem:token>\r
+      </tem:GetMenu>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetMenu"/></con:call></con:operation><con:operation id="b6e0fac4-246d-440e-907a-a7ba64ef195f" isOneWay="false" action="http://tempuri.org/GetMenuPaginas" name="GetMenuPaginas" bindingOperationName="GetMenuPaginas" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="01704ee9-2929-45de-878d-cc4dda17e239" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetMenuPaginas>\r
+         <!--Optional:-->\r
+         <tem:token>?</tem:token>\r
+      </tem:GetMenuPaginas>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetMenuPaginas"/></con:call></con:operation><con:operation id="2c341042-b57d-403d-b959-e135a6819f20" isOneWay="false" action="http://tempuri.org/GetUsuarioRoles" name="GetUsuarioRoles" bindingOperationName="GetUsuarioRoles" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dc2bf58b-e2ce-4f9f-974f-57f1afdc3db0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetUsuarioRoles>\r
+         <!--Optional:-->\r
+         <tem:token>?</tem:token>\r
+      </tem:GetUsuarioRoles>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetUsuarioRoles"/></con:call></con:operation><con:operation id="aaf12e3a-e6d3-4e7d-b598-b36d0d2b2996" isOneWay="false" action="http://tempuri.org/GetUsuariosBaseDatos" name="GetUsuariosBaseDatos" bindingOperationName="GetUsuariosBaseDatos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6e698f44-6e55-4db3-83d8-68d2438a97b9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetUsuariosBaseDatos>\r
+         <!--Optional:-->\r
+         <tem:token>?</tem:token>\r
+      </tem:GetUsuariosBaseDatos>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetUsuariosBaseDatos"/></con:call></con:operation><con:operation id="58e63dda-6abc-46a8-95af-c4e659554954" isOneWay="false" action="http://tempuri.org/Test" name="Test" bindingOperationName="Test" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cb68d42c-dc26-40cc-b958-7edce3e579b9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Test/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Test"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="0a3517ef-4308-4a0c-bb71-0f002a038f5c" wsaVersion="NONE" name="APISoap12" type="wsdl" bindingName="{http://tempuri.org/}APISoap12" soapVersion="1_2" anonymous="optional" definition="file:/E:/Tincho/Documentos/WEBCIPOL/JPMC/new%206.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\E:\Tincho\Documentos\WEBCIPOL\JPMC\new%206.xml"><con:part><con:url>file:\E:\Tincho\Documentos\WEBCIPOL\JPMC\new%206.xml</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GenerateToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="par_sUsuario" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="par_sPassword" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="par_iAppID" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateTokenResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateTokenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuPaginas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuPaginasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMenuPaginasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuariosBaseDatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuariosBaseDatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsuariosBaseDatosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuarioRoles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuarioRolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsuarioRolesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test">
+        <s:complexType/>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GenerateTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateToken"/>
+  </wsdl:message>
+  <wsdl:message name="GenerateTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateTokenResponse"/>
+  </wsdl:message>
+  <wsdl:message name="AuthenticateTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthenticateToken"/>
+  </wsdl:message>
+  <wsdl:message name="AuthenticateTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateTokenResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMenu"/>
+  </wsdl:message>
+  <wsdl:message name="GetMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMenuResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMenuPaginasSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMenuPaginas"/>
+  </wsdl:message>
+  <wsdl:message name="GetMenuPaginasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMenuPaginasResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetUsuariosBaseDatosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsuariosBaseDatos"/>
+  </wsdl:message>
+  <wsdl:message name="GetUsuariosBaseDatosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsuariosBaseDatosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetUsuarioRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsuarioRoles"/>
+  </wsdl:message>
+  <wsdl:message name="GetUsuarioRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsuarioRolesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test"/>
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="APISoap">
+    <wsdl:operation name="GenerateToken">
+      <wsdl:input message="tns:GenerateTokenSoapIn"/>
+      <wsdl:output message="tns:GenerateTokenSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateToken">
+      <wsdl:input message="tns:AuthenticateTokenSoapIn"/>
+      <wsdl:output message="tns:AuthenticateTokenSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <wsdl:input message="tns:GetMenuSoapIn"/>
+      <wsdl:output message="tns:GetMenuSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuPaginas">
+      <wsdl:input message="tns:GetMenuPaginasSoapIn"/>
+      <wsdl:output message="tns:GetMenuPaginasSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosBaseDatos">
+      <wsdl:input message="tns:GetUsuariosBaseDatosSoapIn"/>
+      <wsdl:output message="tns:GetUsuariosBaseDatosSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuarioRoles">
+      <wsdl:input message="tns:GetUsuarioRolesSoapIn"/>
+      <wsdl:output message="tns:GetUsuarioRolesSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn"/>
+      <wsdl:output message="tns:TestSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APISoap" type="tns:APISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GenerateToken">
+      <soap:operation soapAction="http://tempuri.org/GenerateToken" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateToken">
+      <soap:operation soapAction="http://tempuri.org/AuthenticateToken" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <soap:operation soapAction="http://tempuri.org/GetMenu" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuPaginas">
+      <soap:operation soapAction="http://tempuri.org/GetMenuPaginas" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosBaseDatos">
+      <soap:operation soapAction="http://tempuri.org/GetUsuariosBaseDatos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuarioRoles">
+      <soap:operation soapAction="http://tempuri.org/GetUsuarioRoles" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Test" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APISoap12" type="tns:APISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GenerateToken">
+      <soap12:operation soapAction="http://tempuri.org/GenerateToken" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateToken">
+      <soap12:operation soapAction="http://tempuri.org/AuthenticateToken" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <soap12:operation soapAction="http://tempuri.org/GetMenu" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuPaginas">
+      <soap12:operation soapAction="http://tempuri.org/GetMenuPaginas" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosBaseDatos">
+      <soap12:operation soapAction="http://tempuri.org/GetUsuariosBaseDatos" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuarioRoles">
+      <soap12:operation soapAction="http://tempuri.org/GetUsuarioRoles" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Test" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="API">
+    <wsdl:port name="APISoap" binding="tns:APISoap">
+      <soap:address location="https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="APISoap12" binding="tns:APISoap12">
+      <soap12:address location="https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint></con:endpoints><con:operation id="95dacce2-e91c-45e7-a4ef-d20e2f98cdf0" isOneWay="false" action="http://tempuri.org/AuthenticateToken" name="AuthenticateToken" bindingOperationName="AuthenticateToken" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="237c5038-c595-4593-9607-8b82eb4f17c4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:AuthenticateToken>\r
+         <!--Optional:-->\r
+         <tem:token>?</tem:token>\r
+      </tem:AuthenticateToken>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/APISoap/AuthenticateTokenRequest"/></con:call></con:operation><con:operation id="c0fe7bec-c099-4f57-a93b-87f70d527ffb" isOneWay="false" action="http://tempuri.org/GenerateToken" name="GenerateToken" bindingOperationName="GenerateToken" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cc080242-7f76-4cb6-a258-807d96d4e236" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GenerateToken>\r
+         <!--Optional:-->\r
+         <tem:par_sUsuario>?</tem:par_sUsuario>\r
+         <!--Optional:-->\r
+         <tem:par_sPassword>?</tem:par_sPassword>\r
+         <tem:par_iAppID>?</tem:par_iAppID>\r
+      </tem:GenerateToken>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/APISoap/GenerateTokenRequest"/></con:call></con:operation><con:operation id="0441372f-b6e8-4d4e-bf8c-7e1deb08aeb2" isOneWay="false" action="http://tempuri.org/GetMenu" name="GetMenu" bindingOperationName="GetMenu" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9c4199c2-c6c9-494b-a847-c9fc91938aaf" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GetMenu>\r
+         <!--Optional:-->\r
+         <tem:token>?</tem:token>\r
+      </tem:GetMenu>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/APISoap/GetMenuRequest"/></con:call></con:operation><con:operation id="3132e1db-8ddf-45f2-aa00-caba41d080c0" isOneWay="false" action="http://tempuri.org/GetMenuPaginas" name="GetMenuPaginas" bindingOperationName="GetMenuPaginas" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5fa67439-48dc-4718-8054-41c3da5259e5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GetMenuPaginas>\r
+         <!--Optional:-->\r
+         <tem:token>?</tem:token>\r
+      </tem:GetMenuPaginas>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/APISoap/GetMenuPaginasRequest"/></con:call></con:operation><con:operation id="816e2f6b-e989-4994-a63f-6264372a85bd" isOneWay="false" action="http://tempuri.org/GetUsuarioRoles" name="GetUsuarioRoles" bindingOperationName="GetUsuarioRoles" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8c0b9d38-9585-462c-bd93-1706a549be3a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GetUsuarioRoles>\r
+         <!--Optional:-->\r
+         <tem:token>?</tem:token>\r
+      </tem:GetUsuarioRoles>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/APISoap/GetUsuarioRolesRequest"/></con:call></con:operation><con:operation id="4a39a41f-5f71-45c4-8b22-92a5b2050b2c" isOneWay="false" action="http://tempuri.org/GetUsuariosBaseDatos" name="GetUsuariosBaseDatos" bindingOperationName="GetUsuariosBaseDatos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0f8d3ab2-a324-46b9-97c4-a02eeb090cd1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GetUsuariosBaseDatos>\r
+         <!--Optional:-->\r
+         <tem:token>?</tem:token>\r
+      </tem:GetUsuariosBaseDatos>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/APISoap/GetUsuariosBaseDatosRequest"/></con:call></con:operation><con:operation id="b9716958-ffc9-4d75-88a2-55802ab405cd" isOneWay="false" action="http://tempuri.org/Test" name="Test" bindingOperationName="Test" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="21b0f712-a574-4a4f-b2ed-b8cd7113fe22" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://ssoba-arg-uat.svr.amer.jpmchase.net/SSOBA/WS/Api.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:Test/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/APISoap/TestRequest"/></con:call></con:operation></con:interface><con:mockService id="3229be75-aa8f-4cbd-876c-622398698e97" port="8088" path="/mockAPISoap" host="localhost" name="APISoap MockService" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="AuthenticateToken" id="a61aca1b-876c-4bfd-bbe0-4df75fc48644" interface="APISoap" operation="AuthenticateToken"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="bcee8ffb-563b-4fb9-a9aa-54cd1efa8e2a" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AuthenticateTokenResponse>
+         <!--Optional:-->
+         <tem:AuthenticateTokenResult>
+            <xs:schema>
+              <ID_APP>86</ID_APP>
+              <NOMBRE_APP>CTASCTES</NOMBRE_APP>
+              <DESCRIPCION>Cuentas Corriente</DESCRIPCION>
+              <ID_USUARIO>UsuarioSSO</ID_USUARIO>
+              <NOMBRE>Pablo Gustavo Cañone</NOMBRE>
+              <LOGIN>UsuarioSSO</LOGIN>
+              <PASSWORD>Martin.1</PASSWORD>
+              <LOGO_URL>/images/Logojpm.gif</LOGO_URL>
+              <DEFAULT_PAGE>Main.aspx</DEFAULT_PAGE>
+            </xs:schema>
+            <!--You may enter ANY elements at this point-->
+         </tem:AuthenticateTokenResult>
+      </tem:AuthenticateTokenResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/AuthenticateToken"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="GenerateToken" id="6109fc31-7fb1-4a44-95ae-45fc2af8eaac" interface="APISoap" operation="GenerateToken"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="708a5564-b77b-4780-834b-fd91a4c23012" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GenerateTokenResponse>
+         <!--Optional:-->
+         <tem:GenerateTokenResult>?</tem:GenerateTokenResult>
+      </tem:GenerateTokenResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GenerateToken"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="GetMenu" id="5b1373ff-cbd3-40fd-a720-84d28ee0f87c" interface="APISoap" operation="GetMenu"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="4988fdc3-4816-445a-876b-af3141f23e29" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetMenuResponse>
+         <!--Optional:-->
+         <tem:GetMenuResult>
+            <xs:schema>
+               <!--Ignoring type [{http://www.w3.org/2001/XMLSchema}schema]-->
+            </xs:schema>
+            <!--You may enter ANY elements at this point-->
+         </tem:GetMenuResult>
+      </tem:GetMenuResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetMenu"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="GetMenuPaginas" id="94f88d87-2593-41c6-bb21-09a84b899f6e" interface="APISoap" operation="GetMenuPaginas"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="73f5a24c-9be7-4778-ad89-bcfb8244094d" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetMenuPaginasResponse>
+         <!--Optional:-->
+         <tem:GetMenuPaginasResult>
+            <xs:schema>
+               <!--Ignoring type [{http://www.w3.org/2001/XMLSchema}schema]-->
+            </xs:schema>
+            <!--You may enter ANY elements at this point-->
+         </tem:GetMenuPaginasResult>
+      </tem:GetMenuPaginasResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetMenuPaginas"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="GetUsuarioRoles" id="a9f85669-4f4c-4d7f-babe-c692b1d2db5b" interface="APISoap" operation="GetUsuarioRoles"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="dd932998-c83c-41d6-96a6-9c00e2864f3a" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetUsuarioRolesResponse>
+         <!--Optional:-->
+         <tem:GetUsuarioRolesResult>
+            <xs:schema>
+               <!--Ignoring type [{http://www.w3.org/2001/XMLSchema}schema]-->
+            </xs:schema>
+            <!--You may enter ANY elements at this point-->
+         </tem:GetUsuarioRolesResult>
+      </tem:GetUsuarioRolesResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetUsuarioRoles"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="GetUsuariosBaseDatos" id="dd8a4d59-bbdb-4e90-9b3c-9c5524c231ad" interface="APISoap" operation="GetUsuariosBaseDatos"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="3a147424-86b5-4001-b8f3-82fb65263184" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetUsuariosBaseDatosResponse>
+         <!--Optional:-->
+         <tem:GetUsuariosBaseDatosResult>
+            <xs:schema>
+               <!--Ignoring type [{http://www.w3.org/2001/XMLSchema}schema]-->
+            </xs:schema>
+            <!--You may enter ANY elements at this point-->
+         </tem:GetUsuariosBaseDatosResult>
+      </tem:GetUsuariosBaseDatosResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetUsuariosBaseDatos"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="Test" id="d0c3fcb0-8cb3-4a3c-926f-a2836357be7b" interface="APISoap" operation="Test"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="60ef6512-8ff1-4ade-83f7-fc2a613a378f" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:TestResponse>
+         <!--Optional:-->
+         <tem:TestResult>?</tem:TestResult>
+      </tem:TestResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Test"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

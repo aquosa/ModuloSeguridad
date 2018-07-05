@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dtsRoles.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dtsRoles.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dtsRoles.xsd" id="dtsRoles" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="dtsRoles">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SE_GRUPO_EXCLUSION">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPOACTUAL" type="xs:int" />
+              <xs:element name="IDGRUPEXCLUYENTE" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SE_ROLES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDROL" type="xs:int" />
+              <xs:element name="DESCRIPCIONPERFIL" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ArbolGrupo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGRUPO" type="xs:short" />
+              <xs:element name="DESCGRUPO" type="xs:string" />
+              <xs:element name="IDSISTEMA" type="xs:short" />
+              <xs:element name="DESCSISTEMA" type="xs:string" />
+              <xs:element name="IDTAREA" type="xs:int" />
+              <xs:element name="DESCRIPCIONTAREA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Roles_Composicion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdRol" type="xs:int" />
+              <xs:element minOccurs="0" name="DescripcionPerfil" type="xs:string" />
+              <xs:element minOccurs="0" name="IdGrupo" type="xs:int" />
+              <xs:element minOccurs="0" name="DescGrupo" type="xs:string" />
+              <xs:element minOccurs="0" name="idSistema" type="xs:int" />
+              <xs:element minOccurs="0" name="DescSistema" type="xs:string" />
+              <xs:element minOccurs="0" name="idTarea" type="xs:int" />
+              <xs:element minOccurs="0" name="DescripcionTarea" type="xs:string" />
+              <xs:element minOccurs="0" name="TareaInhibida" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UsuariosPorRol">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDROL" type="xs:decimal" />
+              <xs:element name="IDSISTEMA" type="xs:decimal" />
+              <xs:element name="IDTAREA" type="xs:decimal" />
+              <xs:element name="DESCRIPCIONPERFIL" type="xs:string" />
+              <xs:element name="DESCSISTEMA" type="xs:string" />
+              <xs:element name="DESCRIPCIONTAREA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TareasAsignadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="idTarea" type="xs:int" />
+              <xs:element minOccurs="0" default="_" name="TareaInhibida" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TareasNoAsignadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="idTarea" type="xs:int" />
+              <xs:element minOccurs="0" default="_" name="TareaInhibida" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ParametrosDeABM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="IdTerminal" minOccurs="0" name="CambioContrasenia" type="xs:string" />
+              <xs:element msdata:Caption="IdUsuario" minOccurs="0" name="MensajesAuditoria" type="xs:string" />
+              <xs:element minOccurs="0" name="DiasVencimientoDeClave" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dtsRolesKey1">
+      <xs:selector xpath=".//mstns:SE_GRUPO_EXCLUSION" />
+      <xs:field xpath="mstns:IDGRUPOACTUAL" />
+      <xs:field xpath="mstns:IDGRUPEXCLUYENTE" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dtsRolesKey2">
+      <xs:selector xpath=".//mstns:SE_ROLES" />
+      <xs:field xpath="mstns:IDROL" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dtsRolesKey3">
+      <xs:selector xpath=".//mstns:ArbolGrupo" />
+      <xs:field xpath="mstns:IDGRUPO" />
+      <xs:field xpath="mstns:IDSISTEMA" />
+      <xs:field xpath="mstns:IDTAREA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
